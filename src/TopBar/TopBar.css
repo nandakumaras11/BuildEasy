@@ -1,0 +1,55 @@
+.topBar {
+    width: 100%;
+    background-color: #222934;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    padding: 0 15%;
+    font-weight: 200;
+
+}
+
+.topBar .connectWithUs {
+    padding-right: 4%;
+}
+
+.topBar .leftBar,
+.topBar .rightBar {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    /* padding-left: 15%; */
+    /* padding: 0.5% 15%; */
+
+}
+
+.socialMediaIcon {
+    display: flex;
+    gap: 1rem;
+}
+
+.menuBarContainer{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0% 15%;
+}
+.rightBar span{
+    padding: 0% 4%;
+    color: #707070;
+}
+.logo{
+    /* width: 20%; */
+}
+.menus{
+    display: flex;
+    /* width: 50%; */
+    gap: 3rem;
+    display: flex;
+    width: 39%;
+    gap: 2rem;
+    font-weight: 600;
+}

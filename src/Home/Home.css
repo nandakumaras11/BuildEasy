@@ -1,0 +1,8 @@
+.bannerContainer {
+    background-image: url(/Images/bannerbg.jpg);
+    height: 78dvh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(97%);
+}

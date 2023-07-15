@@ -1,0 +1,73 @@
+:root {
+  --font:"Causten"
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Causten";
+}
+
+* , *:before, *:after{ 
+  box-sizing:border-box; 
+  -moz-box-sizing:border-box; 
+  -webkit-box-sizing:border-box; 
+  -ms-box-sizing:border-box;
+}
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Thin.otf) format('woff');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-ExtraLight.otf) format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Light.otf) format('woff');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Light.otf) format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Regular.otf) format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Medium.otf) format('woff');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-SemiBold.otf) format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Causten';
+  src: local('Causten'), url(./assets/Causten-Bold.otf) format('woff');
+  font-weight: 800;
+}
+
