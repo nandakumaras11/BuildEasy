@@ -1,16 +1,23 @@
 .topBar {
-    width: 100%;
-    background-color: #222934;
+    background-color: #252d39;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    line-height: 2.5rem;
-    padding: 0 15%;
-    font-weight: 200;
-
 }
 
+.topBar,
+.menuBarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    line-height: 2.5rem;
+    padding: 0 20%;
+    font-weight: 200;
+    align-items: center;
+
+}
+.menuBarContainer {
+    line-height: 1;
+}
 .topBar .connectWithUs {
     padding-right: 4%;
 }
@@ -19,7 +26,7 @@
 .topBar .rightBar {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 33%;
     /* padding-left: 15%; */
     /* padding: 0.5% 15%; */
 
@@ -30,26 +37,24 @@
     gap: 1rem;
 }
 
-.menuBarContainer{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
-    padding: 0% 15%;
-}
-.rightBar span{
+
+
+.rightBar span {
     padding: 0% 4%;
     color: #707070;
 }
-.logo{
-    /* width: 20%; */
+
+.menus {
+    display: flex;
+    gap: 1.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    align-items: center;
 }
-.menus{
-    display: flex;
-    /* width: 50%; */
-    gap: 3rem;
-    display: flex;
-    width: 39%;
-    gap: 2rem;
-    font-weight: 600;
+
+.sliderIndicator{
+    line-height: 5;
+    font-size: 0.7em;
 }
