@@ -97,13 +97,13 @@ export const Home = () => {
           <div className="shortcreteContentContent2">Shotcrete Products</div>
           <div className="shortcreteContentContent3">BuildEasy Shotcrete Mix is the proprietary productof BuildEasy, boasting a
             mix of raw materials with an ideal ratio.
-            The raw materials are</div>
-          <ul>
-            <li>Cement</li>
-            <li>Sand</li>
-            <li>Aggregates (with size less than 10mm only)</li>
-            <li>Admixtures etc.</li>
-          </ul>
+            The raw materials are
+          
+            <div><i/> Cement</div>
+            <div><i/> Sand</div>
+            <div><i/>  Aggregates (with size less than 10mm only)</div>
+            <div><i/>  Admixtures etc.</div>
+            </div>
 
         </div>
       </section>

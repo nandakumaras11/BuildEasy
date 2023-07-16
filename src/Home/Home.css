@@ -214,6 +214,48 @@
     background-image: url(../assets/shortcrete.png);
     width: 100%;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
-.shortcreteContent {}
+.shortcreteContent {
+    text-align: left;
+}
+
+.shortcreteContentContent1 {
+    color: var(--blue);
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.shortcreteContentContent2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.shortcreteContentContent3 {
+    color: var(--gray);
+    line-height: 2;
+    font-size: 0.9rem;
+    margin: 2%;
+}
+
+.shortcreteContentContent3 div i {
+    background-color: var(--blue);
+    height: 1.2vh;
+    width: 2.2%;
+    border-radius: 50%;
+}
+
+.shortcreteContentContent3 div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 2%;
+    color: black;
+}
+
+.shortcreteContent {
+    line-height: 1.2;
+    font-weight: 400;
+    /* color: var(--); */
+}
