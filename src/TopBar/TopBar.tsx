@@ -23,18 +23,19 @@ export const TopBar = () => {
         </div>
     )
 }
+export const menus = [
+    { name: "Home", to: "/" },
+    { name: "About", to: "/About" },
+    { name: "Products", to: "/Products" },
+    { name: "Gallery", to: "/Gallery" },
+    { name: "Contact Us", to: "/Contact" },
+]
 
 export const MenuBar = () => {
-    const menus = [
-        { name: "Home", to: "/" },
-        { name: "About", to: "/About" },
-        { name: "Products", to: "/Products" },
-        { name: "Gallery", to: "/Gallery" },
-        { name: "Contact Us", to: "/Contact" },
-    ]
+
     return (
         <div className="menuBarContainer">
-            <div className="logo"><img src={logo}/></div>
+            <div className="logo"><img src={logo} /></div>
             <div className="menus">
                 {menus.map((menu) => {
                     return <div className="menuItem">{menu.name}</div>

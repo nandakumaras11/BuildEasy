@@ -1,0 +1,131 @@
+.footerContainer {
+    background-color: #252d39;
+    padding: 3% 15%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: var(--padding1); */
+    color: white;
+    text-align: left;
+
+    .footerHead {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .footerSection1 {
+        width: 38%;
+
+        .aboutCompany {
+            font-size: 0.8em;
+            font-weight: 200;
+            line-height: 1.5;
+        }
+
+        .follow {
+            margin-top: 30%;
+
+            .socialMediaIcon {
+                color: white;
+                margin-top: 2%;
+
+                .circle {
+                    border: 1px solid white;
+                    padding: 4px;
+                    font-size: 1.5em;
+                    border-radius: 50%;
+                }
+
+                /* border-radius: 5px; */
+            }
+        }
+    }
+
+    .footerSection2 {
+        width: 20%;
+
+        .footerMenus {
+            margin-top: 5%;
+            font-size: 0.7rem;
+            line-height: 3;
+
+            .icon {
+                font-weight: 100;
+                font-size: 0.6rem;
+            }
+
+            .name {
+                font-weight: 200;
+            }
+
+            .footerMenu {
+                display: flex;
+                align-items: center;
+                gap: 5%;
+                /* flex-direction: column; */
+            }
+
+        }
+
+        .makeInIndia {
+            margin-top: 25%;
+            padding: 15%;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    .footerSection3 {
+        width: 30%;
+        font-size: 0.7rem;
+
+        .address {
+            margin-top: 7%;
+        }
+
+        .footerLine {
+            line-height: 2;
+        }
+
+        .mobile,
+        .email {
+            margin: 5% 0%;
+        }
+
+        .certification {
+            margin-top: 16%;
+
+            .certificateLogo {
+                margin-top: 2%;
+                padding: 12%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        /* line-height: 3; */
+        /*  */
+
+    }
+
+    .footerSections {
+        padding: var(---padding);
+    }
+
+    .logo {
+        background-image: url(/src/assets/footerlogo.png);
+        padding: 8%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 3%;
+    }
+
+}
+
+.copyRight {
+    padding: 2%;
+    background-color: #1f2630;
+    color: white;
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+
+}

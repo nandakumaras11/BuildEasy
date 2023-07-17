@@ -20,9 +20,12 @@
     min-height: 100vh;
     font-family: "Causten";
     --padding: 0 20%;
+    --padding1: 0 18%;
+    --padding2: 0 24%;
     --margin: 0 15%;
     --blue: #005e9e;
     --gray: #7e7c7c;
+    --bgGray:#f0f0f0;
 
   }
 

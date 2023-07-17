@@ -206,8 +206,8 @@
 
 .shortcreteproductContainer {
     display: flex;
-    padding: var(--padding);
-    margin: 3% 0%;
+    padding: var(--padding1);
+    margin: 5% 0%;
 }
 
 .shortcreteImage {
@@ -221,13 +221,15 @@
     text-align: left;
 }
 
-.shortcreteContentContent1 {
+.shortcreteContentContent1,
+.productSubHead {
     color: var(--blue);
     font-size: 0.9rem;
     font-weight: 800;
 }
 
-.shortcreteContentContent2 {
+.shortcreteContentContent2,
+.productHead {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -236,7 +238,7 @@
     color: var(--gray);
     line-height: 2;
     font-size: 0.9rem;
-    margin: 2%;
+    margin: 1% 0%;
 }
 
 .shortcreteContentContent3 div i {
@@ -259,3 +261,254 @@
     font-weight: 400;
     /* color: var(--); */
 }
+
+/* shotcretePanels */
+.shotcretePanelsContainer {
+    display: flex;
+    padding: var(--padding1);
+    padding-right: 0px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    justify-content: space-between;
+    position: relative;
+}
+
+.shortcretePanels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shotcretePanel {
+    width: 30%;
+    margin: 5% 0%;
+    text-align: center;
+}
+
+.shotcretePanelsLeft {
+    width: 50%;
+}
+
+.shotcretePanelsRight {
+    width: 40%;
+}
+
+.shotcretePanelImage {
+    padding: 55% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.shotcretePanelName {
+    padding-top: 15%;
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+.shotcretePanelCaption {
+    font-size: 0.7em;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.shotcretePanelsRight {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 10% 0%;
+    position: absolute;
+    height: 100%;
+    right: 0;
+}
+
+/* shortcreteMachine */
+.shortcreteMachineContainer {
+    display: flex;
+    padding: var(--padding1);
+    margin: 5% 0%;
+    text-align: left;
+    gap: 8%
+}
+
+.shortcreteMachineLeft {
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 4% 0%;
+    background-position: center;
+}
+
+.shortcreteMachineRight {
+    width: 50%;
+    padding: 4% 0%;
+
+}
+
+/* buildEasyProducts */
+.buildEasyProductsContainer {
+    background-color: var(--bgGray);
+    padding: var(--padding1);
+    padding: 3%;
+}
+
+.productFilter {
+    display: flex;
+    line-height: 3;
+    gap: 8%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.buildEasyProduct {
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+    background-color: white;
+    border-radius: 5px;
+    padding: 1.5%;
+}
+
+.buildEasyProducts {
+    display: flex;
+    padding: var(--padding1);
+    column-gap: 3%;
+    line-height: 1.5;
+    margin: 2% 0%;
+
+    .productName {
+        font-weight: 700;
+    }
+
+    .description {
+        font-size: 0.8em;
+    }
+
+    .size {
+        color: var(--blue);
+        font-weight: 700;
+        font-size: 0.7em;
+    }
+}
+
+
+.productImg {
+    background-size: contain;
+    padding: 50% 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* howItWorks */
+.howItWorksContainer {
+    padding: var(--padding2);
+    margin: 6% 0%;
+
+    .productHead {
+        color: var(--blue);
+        font-size: 1.8em;
+        font-weight: 600;
+    }
+
+    .howItWorksDescription {
+        line-height: 2;
+    }
+
+    .howItWorkItems {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        /* gap: 10%; */
+    }
+
+    .howItWorkItem {
+        width: 33%;
+        margin-top: 5%;
+    }
+
+    .img {
+        padding: 10%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .name {
+        line-height: 1.5;
+        font-size: 0.8em;
+        padding: 0% 24%;
+        margin-top: 3%;
+    }
+}
+
+/* happyClients */
+.happyClientsContainer {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    margin-bottom: 5%;
+    .productHead{
+        margin-bottom: 4%;
+        line-height: 2;
+    }
+    .testimonialContainer {
+        background-color: var(--bgGray);
+        padding: 10%;
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 1.5;
+        color: var(--gray);
+        position: relative;
+
+    }
+    .testimonial{
+        margin-top: 2%;
+        line-height: 2;
+    }
+    .happyClientsLeft, .happyClientRight {
+        width: 49%;
+    }
+    .name{
+        color: var(--blue);
+        font-weight: 700;
+    }
+    .row{
+        display: flex;
+        gap: 3%;
+        /* flex-direction: column; */
+    }
+    .avatar{
+        padding:5%;
+        width: 5%;
+        background-color: #fbc72f;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        background-size: contain;
+        
+    }
+    .location{
+        font-size: 0.9em;
+    }
+    .quote{
+        position: absolute;
+        bottom: 0;
+        color: var(--blue);
+        font-size: 1.4em;
+        right:10%
+    }
+    .happyClients{
+        display: flex;
+        justify-content: space-between;
+    }
+    .happyClientsRight{
+        width: 45%;
+        border-radius: 10px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
