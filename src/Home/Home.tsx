@@ -97,7 +97,7 @@ export const Home = () => {
           <div className="sliderBottom">
             {bottomItems.map(item => {
               return <div className="sliderBottomItem">
-                <div className="itemImage"> <img src={`Images/${item.image}`} alt={item.text} className="src" /> </div>
+                <div className="itemImage" style={{backgroundImage:`url(Images/${item.image})`}}> </div>
                 <div className="itemText">{item.text}</div>
               </div>
             })}
