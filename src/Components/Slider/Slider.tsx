@@ -3,6 +3,7 @@ import shortCreteImg from "../../assets/shortcrete.png"
 import testImage from "../../assets/test.png"
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa"
 import { useEffect, useState } from "react"
+import { motion } from "framer-motion";
 interface MyProps { }
 export const Slider = (props: React.PropsWithChildren<MyProps>) => {
     // let activeSliderIndex = 0;
@@ -28,11 +29,16 @@ export const Slider = (props: React.PropsWithChildren<MyProps>) => {
     ]
     // const [activeSlider, setActiveSlider] = useState(slider[0]);
     const [activeSliderIndex, setActiveSliderIndex] = useState(0);
+    const [animate, setAnimate] = useState(false);
     const changeSlider = () => {
         setTimeout(() => {
-            let sliderIndex = activeSliderIndex == slider.length - 1 ? 0 : activeSliderIndex + 1;
-            setActiveSliderIndex(sliderIndex);
-            changeSlider();
+            // let sliderIndex = activeSliderIndex == slider.length - 1 ? 0 : activeSliderIndex + 1;
+            // setActiveSliderIndex(sliderIndex);
+            // setAnimate(true);
+            // setTimeout(() => {
+            //     setAnimate(false);
+            // }, 500);
+            // changeSlider();
         }, 5000)
     }
     changeSlider();
@@ -41,8 +47,8 @@ export const Slider = (props: React.PropsWithChildren<MyProps>) => {
         <div className="sliderContainer">
             <div className="leftNavigation"><FaChevronLeft /></div>
             <div className="sliderText">
-                <div className="sliderText1">{slider[activeSliderIndex].sliderText1}</div>
-                <div className="sliderText2">
+                <motion.div className="sliderText1">{slider[activeSliderIndex].sliderText1}</motion.div>
+                <div className={animate ? "sliderText2 animate" : "sliderText2"}>
                     {slider[activeSliderIndex].sliderText2}
                 </div>
                 <div className="sliderText3">{slider[activeSliderIndex].sliderText3}
@@ -50,7 +56,7 @@ export const Slider = (props: React.PropsWithChildren<MyProps>) => {
                 <div className="btn1">More Details</div>
                 <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div>
             </div>
-            <div className="productImage"><img src={slider[activeSliderIndex].productImage} /></div>
+            <div className="productImage" style={{ backgroundImage: `url(${slider[activeSliderIndex].productImage})` }}></div>
             <div className="rightNavigation"><FaChevronRight /></div>
             {props.children}
         </div>

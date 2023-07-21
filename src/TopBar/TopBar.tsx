@@ -1,5 +1,5 @@
 import "./TopBar.css"
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaBars } from "react-icons/fa"
 import logo from "../assets/logo.png"
 export const TopBar = () => {
     return (
@@ -43,4 +43,14 @@ export const MenuBar = () => {
             </div>
         </div>
     )
+}
+export const MobileMenu = () => {
+  return (
+    <div className="mobileMenuContainer">
+        <div className="mobileMenu">
+        <div className="mobileLogo" style={{backgroundImage:`url(${logo})`}}></div>
+        <div className="menuOpener"><FaBars /></div>
+        </div>
+    </div>
+  )
 }

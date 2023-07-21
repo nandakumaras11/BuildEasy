@@ -12,24 +12,7 @@ import { FaQuoteRight } from "react-icons/fa";
 import { Footer } from "../Components/Footer/Footer";
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
-  const bottomItems = [
-    {
-      image: "bottomItem1.png",
-      text: "100+ Projects Completed"
-    },
-    {
-      image: "bottomItem2.png",
-      text: "Compatible with the building standards in India"
-    },
-    {
-      image: "bottomItem3.png",
-      text: "Patented Technology"
-    },
-    {
-      image: "bottomItem4.png",
-      text: "10 Years of industry experience"
-    }
-  ];
+
   const fasterStrongerSavings = [
     {
       image: faster,
@@ -37,7 +20,7 @@ export const Home = () => {
     },
     {
       image: strengthImg,
-      text: "30% Stronge"
+      text: "30% Strong"
     },
     {
       image: savings,
@@ -94,20 +77,14 @@ export const Home = () => {
     <>
       <div className="bannerContainer">
         <Slider>
-          <div className="sliderBottom">
-            {bottomItems.map(item => {
-              return <div className="sliderBottomItem">
-                <div className="itemImage" style={{backgroundImage:`url(Images/${item.image})`}}> </div>
-                <div className="itemText">{item.text}</div>
-              </div>
-            })}
-          </div>
 
+          <SliderBottom cls="desktop" />
         </Slider>
       </div>
+      <SliderBottom cls="mobile" />
       <section className="aboutContainer">
-        <div className="aboutImage"></div>
-        <div className="aboutText">
+        <div className="aboutImage wm100"></div>
+        <div className="aboutText wm100">
           <div className="line">
             <div className="first"></div>
             <div className="second"></div>
@@ -180,7 +157,7 @@ export const Home = () => {
         </div>
         <div className="shotcretePanelsRight" style={{ backgroundImage: `url(${house})` }}></div>
       </section>
-      <section className="shortcreteMachineContainer">
+        <section className="shortcreteMachineContainer">
         <div className="shortcreteMachineLeft" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
         <div className="shortcreteMachineRight">
           <div className="shortcreteContentContent1">Buildeasy</div>
@@ -212,7 +189,6 @@ export const Home = () => {
           })}
         </div>
       </section>
-
       <section className="howItWorksContainer">
         <div className="productHead"> How it Works</div>
         <div className="howItWorksDescription">A peek at the implementation process</div>
@@ -229,28 +205,61 @@ export const Home = () => {
         <div className="productSubHead">Buildeasy Client</div>
         <div className="productHead">Our Happy Clients</div>
         <div className="happyClients">
-        <div className="happyClientsLeft">
-          <div className="testimonialContainer">
-            <div className="user">
-              <div className="row">
-                <div className="avatar" style={{ backgroundImage: `url(Images/tony.png)` }}></div>
-                <div className="userInfo">
-                  <div className="name" >Tony Supervisor</div>
-                  <div className="location">Ernakulam</div>
+          <div className="happyClientsLeft">
+            <div className="testimonialContainer">
+              <div className="user">
+                <div className="row">
+                  <div className="avatar" style={{ backgroundImage: `url(Images/tony.png)` }}></div>
+                  <div className="userInfo">
+                    <div className="name" >Tony Supervisor</div>
+                    <div className="location">Ernakulam</div>
+                  </div>
                 </div>
-              </div>
 
-              <div className="testimonial">
-                BuildEasy is very easy to use and build. We used to do 1-2 m3 per day. Now with the same team, we can do up to 5 m3, with ease.
+                <div className="testimonial">
+                  BuildEasy is very easy to use and build. We used to do 1-2 m3 per day. Now with the same team, we can do up to 5 m3, with ease.
+                </div>
+                <div className="quote"><FaQuoteRight /></div>
               </div>
-           <div className="quote"><FaQuoteRight/></div>   
             </div>
           </div>
-        </div>
-        <div className="happyClientsRight" style={{backgroundImage:`url("/Images/videoThumb.png")`}}></div>
+          <div className="happyClientsRight" style={{ backgroundImage: `url("/Images/videoThumb.png")` }}></div>
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
+  )
+}
+type classProps = {
+  cls: string
+}
+export const SliderBottom = ({ cls }: classProps) => {
+  const bottomItems = [
+    {
+      image: "bottomItem1.png",
+      text: "100+ Projects Completed"
+    },
+    {
+      image: "bottomItem2.png",
+      text: "Compatible with the building standards in India"
+    },
+    {
+      image: "bottomItem3.png",
+      text: "Patented Technology"
+    },
+    {
+      image: "bottomItem4.png",
+      text: "10 Years of industry experience"
+    }
+  ];
+  return (
+    <div className={`sliderBottom ${cls}`}>
+      {bottomItems.map(item => {
+        return <div className="sliderBottomItem">
+          <div className="itemImage" style={{ backgroundImage: `url(Images/${item.image})` }}> </div>
+          <div className="itemText">{item.text}</div>
+        </div>
+      })}
+    </div>
   )
 }

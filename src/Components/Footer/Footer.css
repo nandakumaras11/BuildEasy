@@ -129,3 +129,66 @@
     justify-content: center;
 
 }
+
+@media screen and (max-width: 990px) {
+    .footerContainer {
+        padding: var(--padding);
+        flex-direction: column;
+        padding: 10%;
+        .footerSection1,
+        .footerSection2,
+        .footerSection3 {
+            width: 100%;
+        }
+
+        .footerSection2 {
+            .footerMenus {
+                margin-top: 5%;
+                font-size: 0.7rem;
+                line-height: 3;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .makeInIndia {
+                margin: 10% 0%;
+                background-position: center;
+                padding: 15%;
+            }
+
+            .footerMenu {
+                width: 30%;
+            }
+
+        }
+
+        .footerSection3 {
+            .address {
+                margin-top: 5%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .certification {
+                margin: 10% 0% 0% 0%;
+                .certificateLogo {
+                    margin-top: 10%;
+                    background-position: center;
+                }
+            }
+
+           
+        }
+
+        .footerSection1 {
+            .logo{
+                padding: 15%;
+            }
+            .follow {
+                margin: 7% 0%;
+            }
+        }
+
+    }
+
+}

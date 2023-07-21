@@ -2,8 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { MenuBar, TopBar } from './TopBar/TopBar'
+import { MenuBar, MobileMenu, TopBar } from './TopBar/TopBar'
 import { Home } from './Home/Home'
+import "../src/Home/HomeMobile.css"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,7 @@ function App() {
     <>
    <TopBar/>
    <MenuBar/>
+   <MobileMenu/>
    <Home/>
     </>
   )
