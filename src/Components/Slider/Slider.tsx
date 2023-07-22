@@ -3,7 +3,6 @@ import shortCreteImg from "../../assets/shortcrete.png"
 import testImage from "../../assets/test.png"
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa"
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion";
 interface MyProps { }
 export const Slider = (props: React.PropsWithChildren<MyProps>) => {
     // let activeSliderIndex = 0;
@@ -47,7 +46,7 @@ export const Slider = (props: React.PropsWithChildren<MyProps>) => {
         <div className="sliderContainer">
             <div className="leftNavigation"><FaChevronLeft /></div>
             <div className="sliderText">
-                <motion.div className="sliderText1">{slider[activeSliderIndex].sliderText1}</motion.div>
+                <div className="sliderText1">{slider[activeSliderIndex].sliderText1}</div>
                 <div className={animate ? "sliderText2 animate" : "sliderText2"}>
                     {slider[activeSliderIndex].sliderText2}
                 </div>

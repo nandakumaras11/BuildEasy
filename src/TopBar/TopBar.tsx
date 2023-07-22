@@ -18,7 +18,7 @@ export const TopBar = () => {
             <div className="rightBar">
                 <div className="email">{import.meta.env.VITE_EMAIL} {`  `} </div>
                 <span>|</span>
-                <div className="mobile"> {`Call us Now: ${import.meta.env.VITE_MOBILE}`}</div>
+                <div className="mobileNumber"> {`Call us Now: ${import.meta.env.VITE_MOBILE}`}</div>
             </div>
         </div>
     )
