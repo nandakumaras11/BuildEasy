@@ -15,10 +15,42 @@
     width: 20%;
 }
 
+.slick-prev {
+    left: 35px !important;
+    z-index: 100;
+}
+
+.slick-next {
+    right: 35px !important;
+    z-index: 100;
+}
+
 .sliderText {
-    width: 33%;
+    /* width: 100%; */
     text-align: left;
-    align-items:baseline;
+    align-items: baseline;
+}
+
+.slick-dots li button:before {
+    font-size: 0.8rem !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+.slick-dots li button:before{
+    color: white;
+}
+li.slick-active {
+    scale: 1.3;
+    filter: drop-shadow(2px 4px 6px black);
+    filter: drop-shadow(2px 4px 6px black);
+    /* color: transparent !important; */
+}
+
+.sliderDot {
+    text-align: left !important;
+    left: 9% !important;
+    top: 100% !important;
+    width: 50% !important;
 }
 
 .sliderText1 {
@@ -49,14 +81,15 @@
 
 .btn1 {
     background-color: #005e9e;
-    width: 25%;
+    width: 20%;
     text-align: center;
-    padding: 2% 2%;    
+    padding: 1% 1.2%;
     border-radius: 20px;
     font-weight: 100;
     font-size: 0.8rem;
     text-transform: uppercase;
     margin-top: 2%;
-    letter-spacing: 0.05em; 
-    line-height: 2;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    /* line-height: 2; */
 }

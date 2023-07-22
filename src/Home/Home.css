@@ -1,6 +1,7 @@
 .bannerContainer {
     background-image: url(/Images/bannerbg.jpg);
-    height: 78dvh;
+    /* height: 78dvh; */
+    padding: 8% 0%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -290,6 +291,10 @@
 .shortcretePanels {
     display: flex;
     justify-content: space-between;
+    .shotcretePanelImage:hover{
+        transform: skew(-15deg);
+        transition: transform 2s ease;
+    }
 }
 
 .shotcretePanel {
@@ -364,6 +369,7 @@
     background-color: var(--bgGray);
     padding: var(--padding1);
     padding: 5% 0%; 
+    line-height: 2;
 }
 
 .productFilter {
@@ -377,20 +383,25 @@
     font-weight: 500;
 }
 
-.buildEasyProduct {
-    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
-    background-color: white;
-    border-radius: 5px;
-    padding: 1.5%;
-}
+
 
 .buildEasyProducts {
     display: flex;
+    flex-wrap: wrap;
     padding: var(--padding1);
-    column-gap: 3%;
+    column-gap: 1%;
     line-height: 1.5;
-    /* margin: 2% 0%; */
+    /* justify-content: space-between; */
 
+    /* margin: 2% 0%; */
+    .buildEasyProduct {
+        box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
+        background-color: white;
+        border-radius: 5px;
+        padding: 1.5%;
+        width: 24%;
+        margin-top: 2%;
+    }
     .productName {
         font-weight: 700;
     }

@@ -1,4 +1,4 @@
-import { Slider } from "../Components/Slider/Slider"
+import { SliderSimple } from "../Components/Slider/Slider"
 import "./Home.css"
 import faster from "../assets/faster.png";
 import strengthImg from "../assets/strength.png";
@@ -10,6 +10,16 @@ import house from "../assets/house.png";
 import shotcreteMachine from "../assets/shortcreteMachine.png";
 import { FaQuoteRight } from "react-icons/fa";
 import { Footer } from "../Components/Footer/Footer";
+import masonryImg from "../assets/Masonry.png"
+import shortCreteImg from "../assets/shortcrete.png"
+import plasteringImg from "../assets/Plastering.png"
+import tileImg from "../assets/Tile.png"
+import pillerImg from "../assets/piller.png"
+import pillerSupr from "../assets/pillerSupr.png"
+import floorImg from "../assets/floor.png"
+import roofImg from "../assets/roof.png"
+import pccImg from "../assets/pcc.png"
+import bags from "../assets/bags.png"
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
 
@@ -34,36 +44,70 @@ export const Home = () => {
   ]
 
   const products = [
-    {
-      category: "Shotcrete", products: [
+    
         {
-          image: "product1.png",
-          name: "Product 1",
-          description: "Fiing solution for robust interior and exterior wall plastering",
+          image: shortCreteImg,
+          name: "Shotcrete Mix",
+          description: "Boasting a mix of raw materials with an ideal ratio",
+          size: "50 kg"
+
+        },
+          {
+          image:masonryImg,
+          name: "Masonry Mix",
+          description: "Best for masonry works using concrete sand",
           size: "50 kg"
         },
         {
-          image: "product1.png",
-          name: "Product 1",
-          description: "Fiing solution for robust interior and exterior wall plastering",
+          image:plasteringImg,
+          name: "Plastering Mix",
+          description: "Fitting solution for robust interior and exterior wall plastering",
           size: "50 kg"
         },
         {
-          image: "product1.png",
-          name: "Product 1",
-          description: "Fiing solution for robust interior and exterior wall plastering",
+          image:tileImg,
+          name: "Tile Mix 18",
+          description: "Best for tile works using concrete sand",
           size: "50 kg"
         },
         {
-          image: "product1.png",
-          name: "Product 1",
-          description: "Fiing solution for robust interior and exterior wall plastering",
-          size: "50 kg"
+          image: pillerSupr,
+          name: "Pillar Super Mix",
+          description: "Perfect for erecting sturdy pillars/beams",
+          size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
+        },
+        {
+          image: pillerImg,
+          name: "Pillar Mix",
+          description: "Perfect for erecting sturdy pillars/beams",
+          size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
+        },
+        {
+          image: floorImg,
+          name: "Floor Mix",
+          description: "Custom-made for perfecting high strength flooring",
+          size: "Pack Size: 50 kg Grade: M15 Bags Per M3: 40"
+        },
+        {
+          image: roofImg,
+          name: "Roof Mix",
+          description: "Appropriate for durable and strong roofing concrete",
+          size: "Pack Size: 50 kg Grade: M25 Bags Per M3:40"
+        },
+        {
+          image: pccImg,
+          name: "PCC Mix",
+          description: "Ideal for high strength PCC concrete",
+          size: "Pack Size: 50 kg Grade: M7.5 Bags Per M3: 40"
+        },
+        {
+          image: bags,
+          name: "JUMBO BAGS",
+          description: "",
+          size: "500KG , 750KG, 1000KG, 1500KG"
         }
       ]
-    },
 
-  ]
 
   const howItWorks = [
     { image: "labour-day.png", name: "REDUCED LABOUR" },
@@ -76,10 +120,9 @@ export const Home = () => {
   return (
     <>
       <div className="bannerContainer">
-        <Slider>
+        <SliderSimple/>
+        <SliderBottom cls="desktop" />
 
-          <SliderBottom cls="desktop" />
-        </Slider>
       </div>
       <SliderBottom cls="mobile" />
       <section className="aboutContainer">
@@ -172,15 +215,15 @@ export const Home = () => {
       <section className="buildEasyProductsContainer">
         <div className="productSubHead">  Buildeasy Product</div>
         <div className="productHead">   Our BuildEasy Product</div>
-        <div className="productFilter">
+        {/* <div className="productFilter">
           <div className="ShotcreteBtn">Shotcrete</div>
-          <div className="mixProducts">Mix Products</div>
-          <div className="shotcreteBricks">Bricks</div>
-        </div>
+          <div className="mixProducts">Dry Mix</div> */}
+          {/* <div className="shotcreteBricks">Bricks</div> */}
+        {/* </div> */}
         <div className="buildEasyProducts">
-          {products[0].products.map((product) => {
+          {products.map((product) => {
             return <div className="buildEasyProduct">
-              <div className="productImg" style={{ backgroundImage: `url(/Images/${product.image})` }} />
+              <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
               <div className="size">Pack size: {product.size}</div>
