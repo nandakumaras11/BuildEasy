@@ -4,7 +4,7 @@ import { FaArrowRight, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "re
 import { menus } from "../../TopBar/TopBar"
 export const Footer = () => {
     return (<>
-        <div className="footerContainer">
+        <div className="footerContainer" id="contact">
             <div className="footerSection1">
                 <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
                 <div className="aboutCompany">At BuildEasy we are focused on delivering end-to-end basic

@@ -1,6 +1,7 @@
 import "./TopBar.css"
 import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaBars } from "react-icons/fa"
 import logo from "../assets/logo.png"
+import { NavHashLink } from 'react-router-hash-link';
 export const TopBar = () => {
     return (
         <div className="topBar">
@@ -25,10 +26,10 @@ export const TopBar = () => {
 }
 export const menus = [
     { name: "Home", to: "/" },
-    { name: "About", to: "/About" },
-    { name: "Products", to: "/Products" },
-    { name: "Gallery", to: "/Gallery" },
-    { name: "Contact Us", to: "/Contact" },
+    { name: "About", to: "/#about" },
+    { name: "Products", to: "/#product" },
+    // { name: "Gallery", to: "/Gallery" },
+    { name: "Contact Us", to: "/#contact" },
 ]
 
 export const MenuBar = () => {
@@ -38,19 +39,26 @@ export const MenuBar = () => {
             <div className="logo"><img src={logo} /></div>
             <div className="menus">
                 {menus.map((menu) => {
-                    return <div className="menuItem">{menu.name}</div>
+                    return <NavHashLink key={menu.name} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
+                    // return <a href={menu.to} className="href"> <div className="menuItem">{menu.name}</div></a>
                 })}
             </div>
         </div>
     )
 }
 export const MobileMenu = () => {
-  return (
-    <div className="mobileMenuContainer">
-        <div className="mobileMenu">
-        <div className="mobileLogo" style={{backgroundImage:`url(${logo})`}}></div>
-        <div className="menuOpener"><FaBars /></div>
+    return (
+        <div className="mobileMenuContainer">
+            <div className="mobileMenu">
+                <div className="mobileLogo" style={{ backgroundImage: `url(${logo})` }}></div>
+                <div className="menuOpener"><FaBars /></div>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
+
+export const scrollWithOffset = (el: any) => {
+    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+    const yOffset = -80;
+    window.scrollTo({ top: yCoordinate + yOffset, behavior: "smooth" });
+};

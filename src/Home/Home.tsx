@@ -119,13 +119,13 @@ export const Home = () => {
   ]
   return (
     <>
-      <div className="bannerContainer">
+      <div className="bannerContainer" id="home">
         <SliderSimple/>
         <SliderBottom cls="desktop" />
 
       </div>
       <SliderBottom cls="mobile" />
-      <section className="aboutContainer">
+      <section className="aboutContainer"  id="about">
         <div className="aboutImage wm100"></div>
         <div className="aboutText wm100">
           <div className="line">
@@ -163,7 +163,7 @@ export const Home = () => {
         <img src="/Images/process.png" alt="process_img" className="process_img" />
         <div className="QaQ">Our Unique <span>QaQ</span> Approach</div>
       </section>
-      <section className="shortcreteproductContainer">
+      <section className="shortcreteproductContainer" id="product">
         <div className="shortcreteImage"></div>
         <div className="shortcreteContent">
           <div className="shortcreteContentContent1">Buildeasy</div>
@@ -306,3 +306,5 @@ export const SliderBottom = ({ cls }: classProps) => {
     </div>
   )
 }
+
+export default Home;
