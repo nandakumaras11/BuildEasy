@@ -150,8 +150,8 @@ export const Home = () => {
         </div>
       </section>
       <section className="fasterStrongerSavingsContainer">
-        {fasterStrongerSavings.map((item) => {
-          return <div className="fasterStrongerSavingsItem">
+        {fasterStrongerSavings.map((item, index) => {
+          return <div className="fasterStrongerSavingsItem" key={index}>
             <div className="fasterStrongerSavingsImage"  style={{ backgroundImage: `url(${item.image})` }}></div>
             {/* <img src={item.image} alt={item.text} className="src" /> */}
             <div className="fasterStrongerSavingsText">
@@ -193,8 +193,8 @@ export const Home = () => {
             mesh on either side. The mesh is cross welded for extra strength.
           </div>
           <div className="shortcretePanels" data-aos="slide-up">
-            {shotcretePanels.map((shotcretePanel) => {
-              return <div className="shotcretePanel" >
+            {shotcretePanels.map((shotcretePanel, index) => {
+              return <div className="shotcretePanel" key={index}>
                 <div className="shotcretePanelImage"  style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
                 {/* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */}
                 <div className="shotcretePanelName">{shotcretePanel.text}</div>
@@ -226,8 +226,8 @@ export const Home = () => {
         {/* <div className="shotcreteBricks">Bricks</div> */}
         {/* </div> */}
         <div className="buildEasyProducts" >
-          {products.map((product) => {
-            return <div className="buildEasyProduct" data-aos-offset="800"  data-aos="zoom-out">
+          {products.map((product, index) => {
+            return <div  key={index} className="buildEasyProduct" data-aos-offset="800"  data-aos="zoom-out">
               <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
@@ -241,8 +241,8 @@ export const Home = () => {
         <div className="productHead"> How it Works</div>
         <div className="howItWorksDescription">A peek at the implementation process</div>
         <div className="howItWorkItems">
-          {howItWorks.map((item) => {
-            return <div className="howItWorkItem" data-aos="zoom-out" data-aos-offset="800">
+          {howItWorks.map((item, index) => {
+            return <div  key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="800">
               <div className="img" style={{ backgroundImage: `url(/images/${item.image})` }}></div>
               <div className="name">{item.name}</div>
             </div>
@@ -345,8 +345,8 @@ export const SliderBottom = ({ cls }: classProps) => {
   ];
   return (
     <div className={`sliderBottom ${cls}`}>
-      {bottomItems.map(item => {
-        return <div className="sliderBottomItem"  data-aos="zoom-out" data-aos-offset="300">
+      {bottomItems.map((item, index) => {
+        return <div key={index} className="sliderBottomItem"  data-aos="zoom-out" data-aos-offset="300">
           <div className="itemImage" style={{ backgroundImage: `url(/images/${item.image})` }}> </div>
           <div className="itemText">{item.text}</div>
         </div>
@@ -405,8 +405,8 @@ export const Testimonial = () => {
 
   return (
     <Slider {...settings}>
-      {testimonials.map((testimonial) => {
-        return <div className="happyClients">
+      {testimonials.map((testimonial, index) => {
+        return <div  key={index} className="happyClients">
           <div className="happyClientsLeft">
             <div className="testimonialContainer">
               <div className="user">

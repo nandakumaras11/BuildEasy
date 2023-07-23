@@ -50,16 +50,16 @@ export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
             <div className="menuBarContainer">
                 <div className="logo"><img src={logo} /></div>
                 <div className="menus">
-                    {menus.map((menu) => {
-                        return <NavHashLink key={menu.name} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
+                    {menus.map((menu, index) => {
+                        return <NavHashLink key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
                     })}
                 </div>
             </div>
             <div className="mobile">
                 <div className={showMenu ? "mobileMenuLeft showMenu" : "mobileMenuLeft"}>
                     <div className="close" onClick={() => handleShowMenu(false)}><FaTimes /></div>
-                    {menus.map((menu) => {
-                        return <div className="menuItemMobile"><NavHashLink key={menu.name} onClick={() => handleShowMenu(false)} scroll={(el) => scrollWithOffset(el)} to={menu.to}  >{menu.name}</NavHashLink></div>
+                    {menus.map((menu, index) => {
+                        return <div  key={index} className="menuItemMobile"><NavHashLink onClick={() => handleShowMenu(false)} scroll={(el) => scrollWithOffset(el)} to={menu.to}  >{menu.name}</NavHashLink></div>
                     })}
                 </div>
             </div>

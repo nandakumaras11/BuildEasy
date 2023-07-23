@@ -55,8 +55,8 @@ export const SliderSimple = () => {
 
     return (
         <Slider {...settings}>
-            {slider.map((slide) => {
-                return <span><div className="sliderContainer">
+            {slider.map((slide, index) => {
+                return <span key={index}><div className="sliderContainer">
                     <div className="sliderText">
                         <div className="sliderText1" data-aos="slide-left">{slide.sliderText1}</div>
                         <div className={"sliderText2"}  data-aos="slide-right">
