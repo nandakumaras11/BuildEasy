@@ -130,9 +130,9 @@ export const Home = () => {
 
       </div>
       <SliderBottom cls="mobile" />
-      <section className="aboutContainer" id="about">
-        <div className="aboutImage wm100" data-aos="zoom-out"></div>
-        <div className="aboutText wm100" data-aos="zoom-out">
+      <section className="aboutContainer" data-aos="slide-up" id="about">
+        <div className="aboutImage wm100" ></div>
+        <div className="aboutText wm100">
           <div className="line">
             <div className="first"></div>
             <div className="second"></div>
@@ -146,31 +146,31 @@ export const Home = () => {
             pneumatically onto the surface that is typically reinforced
             by steel mesh. Shotcrete is placed and compacted/consolidated at the
             same time, thanks to the force with which it is ejected from the nozzle.</div>
-          <div className="btn1">Read More</div>
+          {/* <div className="btn1">Read More</div> */}
         </div>
       </section>
       <section className="fasterStrongerSavingsContainer">
         {fasterStrongerSavings.map((item) => {
           return <div className="fasterStrongerSavingsItem">
-            <div className="fasterStrongerSavingsImage" data-aos="zoom-out" style={{ backgroundImage: `url(${item.image})` }}></div>
+            <div className="fasterStrongerSavingsImage"  style={{ backgroundImage: `url(${item.image})` }}></div>
             {/* <img src={item.image} alt={item.text} className="src" /> */}
             <div className="fasterStrongerSavingsText">
-              <div className="percentage" data-aos="zoom-in"> {item.text.split(" ")[0]}</div>
-              <div className="caption" data-aos="zoom-in"> {item.text.split(" ")[1]}</div>
+              <div className="percentage"> {item.text.split(" ")[0]}</div>
+              <div className="caption"> {item.text.split(" ")[1]}</div>
             </div>
           </div>
         })}
       </section>
       <section className="customer">
-        <div className="customerHead" data-aos="fade-down">Our Customers Deserve the Best</div>
-        <div className="customerCaption" data-aos="fade-up">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
+        <div className="customerHead" >Our Customers Deserve the Best</div>
+        <div className="customerCaption" >Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
           optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
-        <img src="/Images/process.png" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
-        <div className="QaQ" data-aos="zoom-out" data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
+        <img src="/Images/process.svg" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
+        <div className="QaQ"  data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
       </section>
-      <section className="shortcreteproductContainer" id="product">
-        <div className="shortcreteImage" data-aos-offset="1000" data-aos="zoom-out" ></div>
-        <div className="shortcreteContent" data-aos-offset="1000" data-aos="zoom-in" >
+      <section className="shortcreteproductContainer" id="product" data-aos-offset="600" data-aos="slide-up">
+        <div className="shortcreteImage"   ></div>
+        <div className="shortcreteContent">
           <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Products</div>
           <div className="shortcreteContentContent3">BuildEasy Shotcrete Mix is the proprietary productof BuildEasy, boasting a
@@ -185,17 +185,17 @@ export const Home = () => {
 
         </div>
       </section>
-      <section className="shotcretePanelsContainer">
+      <section className="shotcretePanelsContainer" data-aos-offset="600" data-aos="slide-up">
         <div className="shotcretePanelsLeft">
-          <div className="shortcreteContentContent1" data-aos="zoom-in" >Buildeasy</div>
-          <div className="shortcreteContentContent2" data-aos="fade-up">Shotcrete Panels</div>
-          <div className="shortcreteContentContent3" data-aos="fade-up">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
+          <div className="shortcreteContentContent1"  >Buildeasy</div>
+          <div className="shortcreteContentContent2">Shotcrete Panels</div>
+          <div className="shortcreteContentContent3">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
             mesh on either side. The mesh is cross welded for extra strength.
           </div>
-          <div className="shortcretePanels">
+          <div className="shortcretePanels" data-aos="slide-up">
             {shotcretePanels.map((shotcretePanel) => {
               return <div className="shotcretePanel" >
-                <div className="shotcretePanelImage" data-aos-offset="850" data-aos="zoom-out" style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
+                <div className="shotcretePanelImage"  style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
                 {/* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */}
                 <div className="shotcretePanelName">{shotcretePanel.text}</div>
                 <div className="shotcretePanelCaption">{shotcretePanel.caption}</div>
@@ -203,11 +203,11 @@ export const Home = () => {
             })}
           </div>
         </div>
-        <div className="shotcretePanelsRight"data-aos-offset="1100" data-aos="slide-up" style={{ backgroundImage: `url(${house})` }}></div>
+        <div className="shotcretePanelsRight"data-aos-offset="900" data-aos="slide-up" style={{ backgroundImage: `url(${house})` }}></div>
       </section>
-      <section className="shortcreteMachineContainer">
-        <div className="shortcreteMachineLeft" data-aos-offset="1000" data-aos="zoom-out" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
-        <div className="shortcreteMachineRight" data-aos-offset="1000" data-aos="zoom-out">
+      <section className="shortcreteMachineContainer" data-aos-offset="700"  data-aos="slide-up">
+        <div className="shortcreteMachineLeft"   style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
+        <div className="shortcreteMachineRight"  >
           <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Machine</div>
           <div className="shortcreteContentContent3">BuildEasy Shotcrete Machine is the equipment developed by BuildEasy that
@@ -217,7 +217,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="buildEasyProductsContainer" data-aos="fade-up">
+      <section className="buildEasyProductsContainer" >
         <div className="productSubHead">  Buildeasy Product</div>
         <div className="productHead">   Our BuildEasy Product</div>
         {/* <div className="productFilter">
@@ -225,9 +225,9 @@ export const Home = () => {
           <div className="mixProducts">Dry Mix</div> */}
         {/* <div className="shotcreteBricks">Bricks</div> */}
         {/* </div> */}
-        <div className="buildEasyProducts">
+        <div className="buildEasyProducts" >
           {products.map((product) => {
-            return <div className="buildEasyProduct" data-aos="zoom-out" data-aos-offset="700">
+            return <div className="buildEasyProduct" data-aos-offset="800"  data-aos="zoom-out">
               <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
@@ -242,29 +242,29 @@ export const Home = () => {
         <div className="howItWorksDescription">A peek at the implementation process</div>
         <div className="howItWorkItems">
           {howItWorks.map((item) => {
-            return <div className="howItWorkItem"  data-aos="zoom-out" data-aos-offset="700">
+            return <div className="howItWorkItem" data-aos="zoom-out" data-aos-offset="800">
               <div className="img" style={{ backgroundImage: `url(/Images/${item.image})` }}></div>
               <div className="name">{item.name}</div>
             </div>
           })}
         </div>
       </section>
-      <section className="happyClientsContainer">
+      <section className="happyClientsContainer" data-aos="slide-up">
         <div className="productSubHead">Buildeasy Client</div>
         <div className="productHead">Our Happy Clients</div>
         <Testimonial />
       </section>
-      <section className="contactUs" id="contact" data-aos="fade-up">
+      <section className="contactUs" id="contact" data-aos="slide-up">
         <div className="contactUsLeft">
           <div className="map">
 
           </div>
-          <div className="sectionHead" data-aos="fade-up">
+          <div className="sectionHead" >
             <FaHandshake color="white" /> Contact&nbsp;<span>Us</span>
           </div>
-          <div className="sectionMainHead gap" data-aos="slide-up">Get In Touch</div>
+          <div className="sectionMainHead gap">Get In Touch</div>
 
-          <div className="address mt5" data-aos="fade-up">
+          <div className="address mt5" >
             <div className="conatctUsSubHead bold">Address</div>
             <div className="contactUsValues" >
               <div className="linebreak subContents">{`Eco Best Build LLP
@@ -274,16 +274,16 @@ info@build-easy.in, +91 9645 799 933`}</div>
 
             </div>
           </div>
-          <hr className="contactLine mt5" data-aos="slide-up"></hr>
-          <div className="callUs" data-aos="fade-up">
+          <hr className="contactLine mt5" ></hr>
+          <div className="callUs">
             <div className="conatctUsSubHead bold">Call US</div>
             <div className="contactUsValues subContents">
               {/* {import.meta.env.VITE_EMAIL} */}
               <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a>
             </div>
           </div>
-          <hr className="contactLine" data-aos="slide-up"></hr>
-          <div className="mail" data-aos="fade-up">
+          <hr className="contactLine" ></hr>
+          <div className="mail" >
             <div className="conatctUsSubHead bold">Email</div>
             <div className="contactUsValues subContents">
               {/* <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a> */}
@@ -291,8 +291,8 @@ info@build-easy.in, +91 9645 799 933`}</div>
               <div><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
             </div>
           </div>
-          <hr className="contactLine" data-aos="slide-up"></hr>
-          <div className="followUs mt5" data-aos="slide-up">
+          <hr className="contactLine" ></hr>
+          <div className="followUs mt5" >
             <div className="conatctUsSubHead bold followUsHead">FOLLOW US</div>
             <div className="contactUsValues mt5">
               <div><SocialMediaMenu /></div>

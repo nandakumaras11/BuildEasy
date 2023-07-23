@@ -71,7 +71,9 @@ export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
                         </div>
                         <div className="sliderText3">{slide.sliderText3}
                         </div>
-                        <div className="btn1">More Details</div>
+                        <div className="btn1">
+                            <a href="#product" className="href">More Details</a>
+                            </div>
                         {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
                     </div>
                     <div className="productImage"  data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
