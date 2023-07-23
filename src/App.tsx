@@ -7,13 +7,12 @@ import { Home } from './Home/Home'
 import "../src/Home/HomeMobile.css"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [showMenu, handleShowMenu] = useState(false)
   return (
     <>
    <TopBar/>
-   <MenuBar/>
-   <MobileMenu/>
+   <MenuBar showMenu={showMenu} handleShowMenu={handleShowMenu}/>
+   <MobileMenu handleShowMenu={handleShowMenu}/>
    <Home/>
     </>
   )

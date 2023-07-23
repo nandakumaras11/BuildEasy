@@ -1,10 +1,10 @@
 import "./Footer.css"
 import logo from "../../assets/footerlogo.png"
 import { FaArrowRight, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
-import { menus } from "../../TopBar/TopBar"
+import { SocialMediaMenu, menus } from "../../TopBar/TopBar"
 export const Footer = () => {
     return (<>
-        <div className="footerContainer" id="contact">
+        <div className="footerContainer">
             <div className="footerSection1">
                 <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
                 <div className="aboutCompany">At BuildEasy we are focused on delivering end-to-end basic
@@ -14,12 +14,8 @@ export const Footer = () => {
                     the smallest to the biggest project.</div>
                 <div className="follow">
                     <div className="footerHead">FOLLOW US ON</div>
-                    <div className="socialMediaIcon">
-                        <FaFacebookF className="circle" />
-                        <FaInstagram className="circle" />
-                        <FaYoutube className="circle" />
-                        <FaTwitter className="circle" />
-                    </div>
+                
+                    <SocialMediaMenu cls="circle" />
                 </div>
             </div>
             <div className="footerSection2">
@@ -42,8 +38,8 @@ export const Footer = () => {
                     <div className="footerLine">Angamaly South,</div>
                     <div className="footerLine">Ernakulam- 683573`</div>
                 </div>
-                <div className="mobile">{import.meta.env.VITE_MOBILE}</div>
-                <div className="email">{import.meta.env.VITE_EMAIL}</div>
+                <div className="mobile"><a href={`tel:${import.meta.env.VITE_MOBILE}`}>{import.meta.env.VITE_MOBILE}</a></div>
+                <div className="email"><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
                 <div className="certification">
                     <div className="footerHead">CERTIFICATIONS</div>
                     <div className="certificateLogo" style={{ backgroundImage: `url(/Images/certificate.png)` }}></div>

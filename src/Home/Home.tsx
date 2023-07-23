@@ -8,7 +8,7 @@ import panel2 from "../assets/panel2.png";
 import panel3 from "../assets/panel3.png";
 import house from "../assets/house.png";
 import shotcreteMachine from "../assets/shortcreteMachine.png";
-import { FaQuoteRight } from "react-icons/fa";
+import { FaHandshake, FaQuoteRight } from "react-icons/fa";
 import { Footer } from "../Components/Footer/Footer";
 import masonryImg from "../assets/Masonry.png"
 import shortCreteImg from "../assets/shortcrete.png"
@@ -20,6 +20,10 @@ import floorImg from "../assets/floor.png"
 import roofImg from "../assets/roof.png"
 import pccImg from "../assets/pcc.png"
 import bags from "../assets/bags.png"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import { SocialMediaMenu } from "../TopBar/TopBar";
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
 
@@ -38,75 +42,75 @@ export const Home = () => {
     }
   ]
   const shotcretePanels = [
-    { image: panel1, text: "Shotcrete Panel 1", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
-    { image: panel2, text: "Shotcrete Panel 2", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
-    { image: panel3, text: "Shotcrete Panel 3", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" }
+    { image: panel1, text: "Single Panel", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
+    { image: panel2, text: "Double Panel", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
+    { image: panel3, text: "Floor Panel 3", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" }
   ]
 
   const products = [
-    
-        {
-          image: shortCreteImg,
-          name: "Shotcrete Mix",
-          description: "Boasting a mix of raw materials with an ideal ratio",
-          size: "50 kg"
 
-        },
-          {
-          image:masonryImg,
-          name: "Masonry Mix",
-          description: "Best for masonry works using concrete sand",
-          size: "50 kg"
-        },
-        {
-          image:plasteringImg,
-          name: "Plastering Mix",
-          description: "Fitting solution for robust interior and exterior wall plastering",
-          size: "50 kg"
-        },
-        {
-          image:tileImg,
-          name: "Tile Mix 18",
-          description: "Best for tile works using concrete sand",
-          size: "50 kg"
-        },
-        {
-          image: pillerSupr,
-          name: "Pillar Super Mix",
-          description: "Perfect for erecting sturdy pillars/beams",
-          size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
-        },
-        {
-          image: pillerImg,
-          name: "Pillar Mix",
-          description: "Perfect for erecting sturdy pillars/beams",
-          size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
-        },
-        {
-          image: floorImg,
-          name: "Floor Mix",
-          description: "Custom-made for perfecting high strength flooring",
-          size: "Pack Size: 50 kg Grade: M15 Bags Per M3: 40"
-        },
-        {
-          image: roofImg,
-          name: "Roof Mix",
-          description: "Appropriate for durable and strong roofing concrete",
-          size: "Pack Size: 50 kg Grade: M25 Bags Per M3:40"
-        },
-        {
-          image: pccImg,
-          name: "PCC Mix",
-          description: "Ideal for high strength PCC concrete",
-          size: "Pack Size: 50 kg Grade: M7.5 Bags Per M3: 40"
-        },
-        {
-          image: bags,
-          name: "JUMBO BAGS",
-          description: "",
-          size: "500KG , 750KG, 1000KG, 1500KG"
-        }
-      ]
+    {
+      image: shortCreteImg,
+      name: "Shotcrete Mix",
+      description: "Boasting a mix of raw materials with an ideal ratio",
+      size: "50 kg"
+
+    },
+    {
+      image: masonryImg,
+      name: "Masonry Mix",
+      description: "Best for masonry works using concrete sand",
+      size: "50 kg"
+    },
+    {
+      image: plasteringImg,
+      name: "Plastering Mix",
+      description: "Fitting solution for robust interior and exterior wall plastering",
+      size: "50 kg"
+    },
+    {
+      image: tileImg,
+      name: "Tile Mix 18",
+      description: "Best for tile works using concrete sand",
+      size: "50 kg"
+    },
+    {
+      image: pillerSupr,
+      name: "Pillar Super Mix",
+      description: "Perfect for erecting sturdy pillars/beams",
+      size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
+    },
+    {
+      image: pillerImg,
+      name: "Pillar Mix",
+      description: "Perfect for erecting sturdy pillars/beams",
+      size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
+    },
+    {
+      image: floorImg,
+      name: "Floor Mix",
+      description: "Custom-made for perfecting high strength flooring",
+      size: "Pack Size: 50 kg Grade: M15 Bags Per M3: 40"
+    },
+    {
+      image: roofImg,
+      name: "Roof Mix",
+      description: "Appropriate for durable and strong roofing concrete",
+      size: "Pack Size: 50 kg Grade: M25 Bags Per M3:40"
+    },
+    {
+      image: pccImg,
+      name: "PCC Mix",
+      description: "Ideal for high strength PCC concrete",
+      size: "Pack Size: 50 kg Grade: M7.5 Bags Per M3: 40"
+    },
+    {
+      image: bags,
+      name: "JUMBO BAGS",
+      description: "",
+      size: "500KG , 750KG, 1000KG, 1500KG"
+    }
+  ]
 
 
   const howItWorks = [
@@ -120,12 +124,12 @@ export const Home = () => {
   return (
     <>
       <div className="bannerContainer" id="home">
-        <SliderSimple/>
+        <SliderSimple />
         <SliderBottom cls="desktop" />
 
       </div>
       <SliderBottom cls="mobile" />
-      <section className="aboutContainer"  id="about">
+      <section className="aboutContainer" id="about">
         <div className="aboutImage wm100"></div>
         <div className="aboutText wm100">
           <div className="line">
@@ -200,7 +204,7 @@ export const Home = () => {
         </div>
         <div className="shotcretePanelsRight" style={{ backgroundImage: `url(${house})` }}></div>
       </section>
-        <section className="shortcreteMachineContainer">
+      <section className="shortcreteMachineContainer">
         <div className="shortcreteMachineLeft" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
         <div className="shortcreteMachineRight">
           <div className="shortcreteContentContent1">Buildeasy</div>
@@ -218,7 +222,7 @@ export const Home = () => {
         {/* <div className="productFilter">
           <div className="ShotcreteBtn">Shotcrete</div>
           <div className="mixProducts">Dry Mix</div> */}
-          {/* <div className="shotcreteBricks">Bricks</div> */}
+        {/* <div className="shotcreteBricks">Bricks</div> */}
         {/* </div> */}
         <div className="buildEasyProducts">
           {products.map((product) => {
@@ -247,26 +251,58 @@ export const Home = () => {
       <section className="happyClientsContainer">
         <div className="productSubHead">Buildeasy Client</div>
         <div className="productHead">Our Happy Clients</div>
-        <div className="happyClients">
-          <div className="happyClientsLeft">
-            <div className="testimonialContainer">
-              <div className="user">
-                <div className="row">
-                  <div className="avatar" style={{ backgroundImage: `url(Images/tony.png)` }}></div>
-                  <div className="userInfo">
-                    <div className="name" >Tony Supervisor</div>
-                    <div className="location">Ernakulam</div>
-                  </div>
-                </div>
+        <Testimonial />
+      </section>
+      <section className="contactUs" id="contact" data-aos="fade-up">
+        <div className="contactUsLeft">
+          <div className="map">
 
-                <div className="testimonial">
-                  BuildEasy is very easy to use and build. We used to do 1-2 m3 per day. Now with the same team, we can do up to 5 m3, with ease.
-                </div>
-                <div className="quote"><FaQuoteRight /></div>
-              </div>
+          </div>
+          <div className="sectionHead" data-aos="fade-up">
+            <FaHandshake color="white" /> Contact&nbsp;<span>Us</span>
+          </div>
+          <div className="sectionMainHead gap" data-aos="slide-up">Get In Touch</div>
+
+          <div className="address mt5" data-aos="fade-up">
+            <div className="conatctUsSubHead bold">Address</div>
+            <div className="contactUsValues" >
+              <div className="linebreak subContents">{`Eco Best Build LLP
+6/38/BE, 1st Floor, Koyikkakudiyil Building,
+Above SBI De Paul Branch, Angamaly, Kerala-683589.
+info@build-easy.in, +91 9645 799 933`}</div>
+
             </div>
           </div>
-          <div className="happyClientsRight" style={{ backgroundImage: `url("/Images/videoThumb.png")` }}></div>
+          <hr className="contactLine mt5" data-aos="slide-up"></hr>
+          <div className="callUs" data-aos="fade-up">
+            <div className="conatctUsSubHead bold">Call US</div>
+            <div className="contactUsValues subContents">
+              {/* {import.meta.env.VITE_EMAIL} */}
+              <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a>
+            </div>
+          </div>
+          <hr className="contactLine" data-aos="slide-up"></hr>
+          <div className="mail" data-aos="fade-up">
+            <div className="conatctUsSubHead bold">Email</div>
+            <div className="contactUsValues subContents">
+              {/* <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a> */}
+
+              <div><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
+            </div>
+          </div>
+          <hr className="contactLine" data-aos="slide-up"></hr>
+          <div className="followUs mt5" data-aos="slide-up">
+            <div className="conatctUsSubHead bold followUsHead">FOLLOW US</div>
+            <div className="contactUsValues mt5">
+              <div><SocialMediaMenu /></div>
+            </div>
+          </div>
+
+
+        </div>
+        <div className="contactUsRight">
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15752.335475113237!2d76.62970754999999!3d9.236796850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0619b7c32320d3%3A0x8626062c65ae732c!2sIndian%20Oil%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1685078274678!5m2!1sen!2sin" width="600" height="450" style={{ border: '0' }}  allowFullScreen= {false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.080865456867!2d76.3742376!3d10.1740824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08078e115dcb43%3A0x857794c0f6fb60a7!2sBuildEasy!5e0!3m2!1sen!2sin!4v1690089517301!5m2!1sen!2sin" width="100%" height="100%" style={{ border: '0' }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
       <Footer />
@@ -306,5 +342,84 @@ export const SliderBottom = ({ cls }: classProps) => {
     </div>
   )
 }
+
+export const Testimonial = () => {
+  const testimonials = [
+    {
+      clientImg: "tony.png",
+      user: { name: "Tony Supervisor", location: "Ernakulam" },
+      testimonial: "BuildEasy is very easy to use and build. We used to do 1-2 m3 per day. Now with the same team, we can do up to 5 m3, with ease."
+    },
+    {
+      clientImg: "John.jpg",
+      user: { name: "John Aloshy", location: "Ernakulam" },
+      testimonial: "Huge savings in labor and work can be done quite fast. The most important 2 aspects of this product is, no wastage at all and can be stored very easily"
+    },
+    {
+      clientImg: "chacko.jpg",
+      user: { name: "JArc T J Chacko", location: "Ernakulam" },
+      testimonial: "Although we were initially sceptical about using this new product, the idea of having a professionally measured Cement mix and ease of use really caught our attention. Once we used it and understood how much time it can save us, there was no going back to the traditional ways. We would highly recommend Build Easy cement mix to anyone looking for quality and consistency.                            "
+    },
+    {
+      clientImg: "denu.jpg",
+      user: { name: "Adv. Denu Joseph", location: "Ernakulam" },
+      testimonial: "Our property is near the High Court of Kerala, which is a high-traffic area. This posed a difficulty for hiring skilled people to complete the job as well as storing the cement, and raw materials separately. Then I came to know about the team at BuildEasy for my problem. Just like their name, they had highly innovative solutions to our problem which helped to complete the project before time."
+    },
+
+  ]
+  const settings = {
+    autoplay: false,
+    dots: true,
+    className: "slickTestimonials",
+    dotsClass: "slick-dots marginTopDots",
+    // infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    // vertical: true,
+    // verticalSwiping: true,
+    responsive: [
+      {
+        autoplay: true,
+        breakpoint: 989,
+        settings: {
+          dots: false,
+          arrows: false,
+          centerMode: false,
+        }
+      }]
+  };
+
+  return (
+    <Slider {...settings}>
+      {testimonials.map((testimonial) => {
+        return <div className="happyClients">
+          <div className="happyClientsLeft">
+            <div className="testimonialContainer">
+              <div className="user">
+                <div className="row">
+                  <div className="avatar" style={{ backgroundImage: `url(Images/${testimonial.clientImg})` }}></div>
+                  <div className="userInfo">
+                    <div className="name" >{testimonial.user.name}</div>
+                    <div className="location">{testimonial.user.location}</div>
+                  </div>
+                </div>
+
+                <div className="testimonial">
+                  {testimonial.testimonial}
+                </div>
+                <div className="quote"><FaQuoteRight /></div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="happyClientsRight" style={{ backgroundImage: `url("/Images/videoThumb.png")` }}></div> */}
+        </div>
+      })}
+
+    </Slider>
+  )
+}
+
 
 export default Home;
