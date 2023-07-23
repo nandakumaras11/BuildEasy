@@ -2,6 +2,7 @@ import "./Slider.css"
 import shortCreteImg from "../../assets/shortcrete.png"
 import testImage from "../../assets/test.png"
 import plasteringMix from "../../assets/Plastering.png"
+import pillerMix from "../../assets/piller.png"
 import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa"
 import { useEffect, useState } from "react"
 import "slick-carousel/slick/slick.css";
@@ -25,10 +26,10 @@ export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
             productImage: plasteringMix
         },
         {
-            sliderText1: "Industrial mix 20",
-            sliderText2: "2 Advanced Shotcrete test Solutions",
-            sliderText3: "2 Test Your Smart Choice",
-            productImage: shortCreteImg
+            sliderText1: "Piller Mix",
+            sliderText2: "Perfect for erecting sturdy pillars/beams",
+            sliderText3: "Best for long lasting pillers",
+            productImage: pillerMix
         }
     ]
     var settings = {
@@ -64,8 +65,8 @@ export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
                 return <span><div className="sliderContainer">
                     {/* <div className="leftNavigation "><FaChevronLeft /></div> */}
                     <div className="sliderText">
-                        <div className="sliderText1">{slide.sliderText1}</div>
-                        <div className={"sliderText2"}>
+                        <div className="sliderText1" data-aos="slide-left">{slide.sliderText1}</div>
+                        <div className={"sliderText2"}  data-aos="slide-right">
                             {slide.sliderText2}
                         </div>
                         <div className="sliderText3">{slide.sliderText3}
@@ -73,7 +74,7 @@ export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
                         <div className="btn1">More Details</div>
                         {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
                     </div>
-                    <div className="productImage" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
+                    <div className="productImage"  data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
                     {/* <div className="rightNavigation"><FaChevronRight /></div> */}
                     {/* {props.children} */}
                 </div></span>

@@ -43,9 +43,9 @@ export const Home = () => {
     }
   ]
   const shotcretePanels = [
-    { image: panel1, text: "Single Panel", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
-    { image: panel2, text: "Double Panel", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" },
-    { image: panel3, text: "Floor Panel 3", caption: "BuildEasy Shotcrete Panels are manufactured by sandwiching" }
+    { image: panel1, text: "Single Panel", caption: "Made with Eps sandwiched between galvanised mesh’s on either side. Concrete is sprayed on either side forming a reinforced monolithic structure" },
+    { image: panel2, text: "Double Panel", caption: "Made of two EPS sandwiched panels with wire mesh on either side. Concrete is poured between the panels and shotcreted both sides, building a strong insulated wall quickly." },
+    { image: panel3, text: "Floor Panel 3", caption: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof." }
   ]
 
   const products = [
@@ -131,8 +131,8 @@ export const Home = () => {
       </div>
       <SliderBottom cls="mobile" />
       <section className="aboutContainer" id="about">
-        <div className="aboutImage wm100"></div>
-        <div className="aboutText wm100">
+        <div className="aboutImage wm100" data-aos="zoom-out"></div>
+        <div className="aboutText wm100" data-aos="zoom-out">
           <div className="line">
             <div className="first"></div>
             <div className="second"></div>
@@ -152,25 +152,25 @@ export const Home = () => {
       <section className="fasterStrongerSavingsContainer">
         {fasterStrongerSavings.map((item) => {
           return <div className="fasterStrongerSavingsItem">
-            <div className="fasterStrongerSavingsImage" style={{ backgroundImage: `url(${item.image})` }}></div>
+            <div className="fasterStrongerSavingsImage" data-aos="zoom-out" style={{ backgroundImage: `url(${item.image})` }}></div>
             {/* <img src={item.image} alt={item.text} className="src" /> */}
             <div className="fasterStrongerSavingsText">
-              <div className="percentage"> {item.text.split(" ")[0]}</div>
-              <div className="caption"> {item.text.split(" ")[1]}</div>
+              <div className="percentage" data-aos="zoom-in"> {item.text.split(" ")[0]}</div>
+              <div className="caption" data-aos="zoom-in"> {item.text.split(" ")[1]}</div>
             </div>
           </div>
         })}
       </section>
       <section className="customer">
-        <div className="customerHead">Our Customers Deserve the Best</div>
-        <div className="customerCaption">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
+        <div className="customerHead" data-aos="fade-down">Our Customers Deserve the Best</div>
+        <div className="customerCaption" data-aos="fade-up">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
           optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
-        <img src="/Images/process.png" alt="process_img" className="process_img" />
-        <div className="QaQ">Our Unique <span>QaQ</span> Approach</div>
+        <img src="/Images/process.png" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
+        <div className="QaQ" data-aos="zoom-out" data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
       </section>
       <section className="shortcreteproductContainer" id="product">
-        <div className="shortcreteImage"></div>
-        <div className="shortcreteContent">
+        <div className="shortcreteImage" data-aos-offset="1000" data-aos="zoom-out" ></div>
+        <div className="shortcreteContent" data-aos-offset="1000" data-aos="zoom-in" >
           <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Products</div>
           <div className="shortcreteContentContent3">BuildEasy Shotcrete Mix is the proprietary productof BuildEasy, boasting a
@@ -187,15 +187,15 @@ export const Home = () => {
       </section>
       <section className="shotcretePanelsContainer">
         <div className="shotcretePanelsLeft">
-          <div className="shortcreteContentContent1">Buildeasy</div>
-          <div className="shortcreteContentContent2">Shotcrete Panels</div>
-          <div className="shortcreteContentContent3">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
+          <div className="shortcreteContentContent1" data-aos="zoom-in" >Buildeasy</div>
+          <div className="shortcreteContentContent2" data-aos="fade-up">Shotcrete Panels</div>
+          <div className="shortcreteContentContent3" data-aos="fade-up">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
             mesh on either side. The mesh is cross welded for extra strength.
           </div>
           <div className="shortcretePanels">
             {shotcretePanels.map((shotcretePanel) => {
-              return <div className="shotcretePanel">
-                <div className="shotcretePanelImage" style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
+              return <div className="shotcretePanel" >
+                <div className="shotcretePanelImage" data-aos-offset="850" data-aos="zoom-out" style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
                 {/* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */}
                 <div className="shotcretePanelName">{shotcretePanel.text}</div>
                 <div className="shotcretePanelCaption">{shotcretePanel.caption}</div>
@@ -203,11 +203,11 @@ export const Home = () => {
             })}
           </div>
         </div>
-        <div className="shotcretePanelsRight" style={{ backgroundImage: `url(${house})` }}></div>
+        <div className="shotcretePanelsRight"data-aos-offset="1100" data-aos="slide-up" style={{ backgroundImage: `url(${house})` }}></div>
       </section>
       <section className="shortcreteMachineContainer">
-        <div className="shortcreteMachineLeft" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
-        <div className="shortcreteMachineRight">
+        <div className="shortcreteMachineLeft" data-aos-offset="1000" data-aos="zoom-out" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
+        <div className="shortcreteMachineRight" data-aos-offset="1000" data-aos="zoom-out">
           <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Machine</div>
           <div className="shortcreteContentContent3">BuildEasy Shotcrete Machine is the equipment developed by BuildEasy that
@@ -217,7 +217,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="buildEasyProductsContainer">
+      <section className="buildEasyProductsContainer" data-aos="fade-up">
         <div className="productSubHead">  Buildeasy Product</div>
         <div className="productHead">   Our BuildEasy Product</div>
         {/* <div className="productFilter">
@@ -227,7 +227,7 @@ export const Home = () => {
         {/* </div> */}
         <div className="buildEasyProducts">
           {products.map((product) => {
-            return <div className="buildEasyProduct">
+            return <div className="buildEasyProduct" data-aos="zoom-out" data-aos-offset="700">
               <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
@@ -242,7 +242,7 @@ export const Home = () => {
         <div className="howItWorksDescription">A peek at the implementation process</div>
         <div className="howItWorkItems">
           {howItWorks.map((item) => {
-            return <div className="howItWorkItem">
+            return <div className="howItWorkItem"  data-aos="zoom-out" data-aos-offset="700">
               <div className="img" style={{ backgroundImage: `url(/Images/${item.image})` }}></div>
               <div className="name">{item.name}</div>
             </div>
@@ -306,7 +306,7 @@ info@build-easy.in, +91 9645 799 933`}</div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.080865456867!2d76.3742376!3d10.1740824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08078e115dcb43%3A0x857794c0f6fb60a7!2sBuildEasy!5e0!3m2!1sen!2sin!4v1690089517301!5m2!1sen!2sin" width="100%" height="100%" style={{ border: '0' }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
-      <ScrollToTopBtn/>
+      <ScrollToTopBtn />
       <Footer />
     </>
   )
@@ -317,11 +317,11 @@ type classProps = {
 
 export const ScrollToTopBtn = () => {
   return (
-      <HashLink
+    <HashLink
       smooth={true}
-       className="scrollToTop nav pulse" to="#top" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth' });}}>
-          <FaArrowCircleUp />
-      </HashLink>
+      className="scrollToTop nav pulse" to="#top" onClick={() => { window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }); }}>
+      <FaArrowCircleUp />
+    </HashLink>
   )
 }
 export const SliderBottom = ({ cls }: classProps) => {
@@ -346,7 +346,7 @@ export const SliderBottom = ({ cls }: classProps) => {
   return (
     <div className={`sliderBottom ${cls}`}>
       {bottomItems.map(item => {
-        return <div className="sliderBottomItem">
+        return <div className="sliderBottomItem"  data-aos="zoom-out" data-aos-offset="300">
           <div className="itemImage" style={{ backgroundImage: `url(Images/${item.image})` }}> </div>
           <div className="itemText">{item.text}</div>
         </div>
