@@ -20,7 +20,7 @@ export const TopBar = () => {
     )
 }
 export const menus = [
-    { name: "Home", to: "/" },
+    { name: "Home", to: "/#top" },
     { name: "About", to: "/#about" },
     { name: "Products", to: "/#product" },
     // { name: "Gallery", to: "/Gallery" },

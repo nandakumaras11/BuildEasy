@@ -636,3 +636,10 @@
     }
 
 }
+.scrollToTop{
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    font-size: 2em;
+    color: var(--blue) !important;
+}

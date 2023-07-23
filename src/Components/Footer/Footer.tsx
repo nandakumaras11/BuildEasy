@@ -1,7 +1,8 @@
 import "./Footer.css"
 import logo from "../../assets/footerlogo.png"
 import { FaArrowRight, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
-import { SocialMediaMenu, menus } from "../../TopBar/TopBar"
+import { SocialMediaMenu, menus, scrollWithOffset } from "../../TopBar/TopBar"
+import { NavHashLink } from "react-router-hash-link"
 export const Footer = () => {
     return (<>
         <div className="footerContainer">
@@ -14,18 +15,20 @@ export const Footer = () => {
                     the smallest to the biggest project.</div>
                 <div className="follow">
                     <div className="footerHead">FOLLOW US ON</div>
-                
-                    <SocialMediaMenu cls="circle" />
+
+                    <SocialMediaMenu />
                 </div>
             </div>
             <div className="footerSection2">
                 <div className="footerHead">SERVICES</div>
                 <div className="footerMenus">
                     {menus.map((menu) => {
-                        return <div className="footerMenu">
+                        // <NavHashLink key={menu.name} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
+                        return <NavHashLink key={menu.name} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" > <div className="footerMenu">
                             <FaArrowRight className="icon" />
                             <div className="name">{menu.name}</div>
                         </div>
+                        </NavHashLink>
                     })}
                 </div>
                 <div className="makeInIndia" style={{ backgroundImage: `url(/Images/makeInIndia.png)` }} ></div>

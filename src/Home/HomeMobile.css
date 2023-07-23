@@ -97,12 +97,13 @@
     }
 
     .bannerContainer {
-        padding: 6% 0% 0% 0%;
+        padding: 6% 0% 5% 0%;
         height: auto;
         /* background-size: contain !important; */
 
         .sliderText {
             width: 58%;
+            line-height: 2;
         }
 
         .productImage {

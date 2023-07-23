@@ -8,7 +8,7 @@ import panel2 from "../assets/panel2.png";
 import panel3 from "../assets/panel3.png";
 import house from "../assets/house.png";
 import shotcreteMachine from "../assets/shortcreteMachine.png";
-import { FaHandshake, FaQuoteRight } from "react-icons/fa";
+import { FaArrowCircleUp, FaHandshake, FaQuoteRight } from "react-icons/fa";
 import { Footer } from "../Components/Footer/Footer";
 import masonryImg from "../assets/Masonry.png"
 import shortCreteImg from "../assets/shortcrete.png"
@@ -24,6 +24,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SocialMediaMenu } from "../TopBar/TopBar";
+import { HashLink } from "react-router-hash-link";
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
 
@@ -305,12 +306,23 @@ info@build-easy.in, +91 9645 799 933`}</div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.080865456867!2d76.3742376!3d10.1740824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08078e115dcb43%3A0x857794c0f6fb60a7!2sBuildEasy!5e0!3m2!1sen!2sin!4v1690089517301!5m2!1sen!2sin" width="100%" height="100%" style={{ border: '0' }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
+      <ScrollToTopBtn/>
       <Footer />
     </>
   )
 }
 type classProps = {
   cls: string
+}
+
+export const ScrollToTopBtn = () => {
+  return (
+      <HashLink
+      smooth={true}
+       className="scrollToTop nav pulse" to="#top" onClick={() => { window.scrollTo({top: 0, left: 0, behavior: 'smooth' });}}>
+          <FaArrowCircleUp />
+      </HashLink>
+  )
 }
 export const SliderBottom = ({ cls }: classProps) => {
   const bottomItems = [
