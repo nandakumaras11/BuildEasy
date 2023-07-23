@@ -165,7 +165,7 @@ export const Home = () => {
         <div className="customerHead" >Our Customers Deserve the Best</div>
         <div className="customerCaption" >Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
           optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
-        <img src="/Images/process.svg" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
+        <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
         <div className="QaQ"  data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
       </section>
       <section className="shortcreteproductContainer" id="product" data-aos-offset="600" data-aos="slide-up">
@@ -243,7 +243,7 @@ export const Home = () => {
         <div className="howItWorkItems">
           {howItWorks.map((item) => {
             return <div className="howItWorkItem" data-aos="zoom-out" data-aos-offset="800">
-              <div className="img" style={{ backgroundImage: `url(/Images/${item.image})` }}></div>
+              <div className="img" style={{ backgroundImage: `url(/images/${item.image})` }}></div>
               <div className="name">{item.name}</div>
             </div>
           })}
@@ -347,7 +347,7 @@ export const SliderBottom = ({ cls }: classProps) => {
     <div className={`sliderBottom ${cls}`}>
       {bottomItems.map(item => {
         return <div className="sliderBottomItem"  data-aos="zoom-out" data-aos-offset="300">
-          <div className="itemImage" style={{ backgroundImage: `url(Images/${item.image})` }}> </div>
+          <div className="itemImage" style={{ backgroundImage: `url(/images/${item.image})` }}> </div>
           <div className="itemText">{item.text}</div>
         </div>
       })}
@@ -411,7 +411,7 @@ export const Testimonial = () => {
             <div className="testimonialContainer">
               <div className="user">
                 <div className="row">
-                  <div className="avatar" style={{ backgroundImage: `url(Images/${testimonial.clientImg})` }}></div>
+                  <div className="avatar" style={{ backgroundImage: `url(images/${testimonial.clientImg})` }}></div>
                   <div className="userInfo">
                     <div className="name" >{testimonial.user.name}</div>
                     <div className="location">{testimonial.user.location}</div>
@@ -425,7 +425,7 @@ export const Testimonial = () => {
               </div>
             </div>
           </div>
-          {/* <div className="happyClientsRight" style={{ backgroundImage: `url("/Images/videoThumb.png")` }}></div> */}
+          {/* <div className="happyClientsRight" style={{ backgroundImage: `url("/images/videoThumb.png")` }}></div> */}
         </div>
       })}
 

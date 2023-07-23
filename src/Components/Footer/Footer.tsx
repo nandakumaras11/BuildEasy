@@ -31,7 +31,7 @@ export const Footer = () => {
                         </NavHashLink>
                     })}
                 </div>
-                <div className="makeInIndia" style={{ backgroundImage: `url(/Images/makeInIndia.png)` }} ></div>
+                <div className="makeInIndia" style={{ backgroundImage: `url(/images/makeInIndia.png)` }} ></div>
 
             </div>
             <div className="footerSection3">
@@ -45,7 +45,7 @@ export const Footer = () => {
                 <div className="email"><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
                 <div className="certification">
                     <div className="footerHead">CERTIFICATIONS</div>
-                    <div className="certificateLogo" style={{ backgroundImage: `url(/Images/certificate.png)` }}></div>
+                    <div className="certificateLogo" style={{ backgroundImage: `url(/images/certificate.png)` }}></div>
                 </div>
             </div>
         </div>

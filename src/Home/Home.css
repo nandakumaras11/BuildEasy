@@ -1,5 +1,5 @@
 .bannerContainer {
-    background-image: url(/Images/bannerbg.jpg);
+    background-image: url(/images/bannerbg.jpg);
     /* height: 78dvh; */
     padding: 8% 0%;
     background-position: center;
@@ -56,9 +56,9 @@
 }
 
 .aboutImage {
-    background-image: url("/Images/about.png");
+    background-image: url("/images/about.png");
     width: 45%;
-    background-image: url(/Images/about.png);
+    background-image: url(/images/about.png);
     background-position: center;
     width: 45%;
     height: 50dvh;
@@ -142,18 +142,11 @@
 
 
 .fasterStrongerSavingsImage {
-    /* height: 10dvh; */
-    background-color: #fdb30b;
-    /* width: 20%; */
-    /* width: 150px; */
     padding: 20%;
-    background-size: 70% 70%;
-    /* height: 20vh; */
+    background-size: contain;
     background-position: center;
-    /* background-size: contain; */
     background-repeat: no-repeat;
     border-radius: 50%;
-    /* background-image: ur; */
 }
 
 .percentage {
@@ -172,7 +165,7 @@
 }
 
 .customer {
-    background-image: url("/Images/customer.jpg");
+    background-image: url("/images/customer.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
