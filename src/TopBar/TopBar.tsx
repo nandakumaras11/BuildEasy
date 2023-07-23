@@ -1,5 +1,5 @@
 import "./TopBar.css"
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaBars, FaCross, FaWindowClose, FaTimes, FaMailBulk, FaEnvelope, FaEnvelopeOpen, FaWhatsapp } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaEnvelopeOpen, FaWhatsapp } from "react-icons/fa"
 import logo from "../assets/logo.png"
 import { NavHashLink } from 'react-router-hash-link';
 export const TopBar = () => {

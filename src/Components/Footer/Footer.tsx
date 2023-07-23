@@ -1,6 +1,6 @@
 import "./Footer.css"
 import logo from "../../assets/footerlogo.png"
-import { FaArrowRight, FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaArrowRight} from "react-icons/fa"
 import { SocialMediaMenu, menus, scrollWithOffset } from "../../TopBar/TopBar"
 import { NavHashLink } from "react-router-hash-link"
 export const Footer = () => {

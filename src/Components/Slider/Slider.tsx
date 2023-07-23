@@ -1,17 +1,11 @@
 import "./Slider.css"
 import shortCreteImg from "../../assets/shortcrete.png"
-import testImage from "../../assets/test.png"
 import plasteringMix from "../../assets/Plastering.png"
 import pillerMix from "../../assets/piller.png"
-import { FaChevronLeft, FaChevronRight, FaCircle } from "react-icons/fa"
-import { useEffect, useState } from "react"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-interface MyProps { }
-export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
-    // let activeSliderIndex = 0;
-
+export const SliderSimple = () => {
     const slider = [
         {
             sliderText1: "SHOTCRETE MIX 10",
@@ -63,7 +57,6 @@ export const SliderSimple = (props: React.PropsWithChildren<MyProps>) => {
         <Slider {...settings}>
             {slider.map((slide) => {
                 return <span><div className="sliderContainer">
-                    {/* <div className="leftNavigation "><FaChevronLeft /></div> */}
                     <div className="sliderText">
                         <div className="sliderText1" data-aos="slide-left">{slide.sliderText1}</div>
                         <div className={"sliderText2"}  data-aos="slide-right">
