@@ -1,6 +1,6 @@
 import "./Footer.css"
 import logo from "../../assets/footerlogo.png"
-import { FaArrowRight} from "react-icons/fa"
+import { FaArrowRight } from "react-icons/fa"
 import { SocialMediaMenu, menus, scrollWithOffset } from "../../TopBar/TopBar"
 import { NavHashLink } from "react-router-hash-link"
 export const Footer = () => {
@@ -37,8 +37,9 @@ export const Footer = () => {
             <div className="footerSection3">
                 <div className="footerHead">CONTACT INFO</div>
                 <div className="address">
-                    <div className="footerLine">Eco Best Build LLP,</div>
-                    <div className="footerLine">Angamaly South,</div>
+                    <div className="footerLine">Eco Best Build LLP</div>
+                    <div className="footerLine">6/38/BE, 1st Floor, Koyikkakudiyil Building,</div>
+                    <div className="footerLine">Above SBI De Paul Branch, Angamaly, Kerala-683589.</div>
                     <div className="footerLine">Ernakulam- 683573`</div>
                 </div>
                 <div className="mobile"><a href={`tel:${import.meta.env.VITE_MOBILE}`}>{import.meta.env.VITE_MOBILE}</a></div>

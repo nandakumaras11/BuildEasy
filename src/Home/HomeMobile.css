@@ -273,6 +273,7 @@
 
                 .shotcretePanelCaption {
                     font-size: 1em;
+                    text-align: left;
                 }
             }
         }
@@ -346,7 +347,8 @@
 
                 .name {
                     padding: 0% 6%;
-                    margin-top: 10%
+                    margin-top: 10%;
+                    text-transform: uppercase;
                 }
 
                 .img {
@@ -373,6 +375,7 @@
         .testimonialContainer {
             padding: 5%;
             margin: 0% 2%;
+            height: max-content;
         }
 
         .happyClientsRight {

@@ -1,23 +1,23 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import { MenuBar, MobileMenu, TopBar } from './TopBar/TopBar'
 import { Home } from './Home/Home'
 import "../src/Home/HomeMobile.css"
-import "aos/dist/aos.css";
-import AOS from 'aos';
+// import "aos/dist/aos.css";
+// import AOS from 'aos';
 function App() {
   const [showMenu, handleShowMenu] = useState(false)
-  useEffect(() => {
-    AOS.init({
-      duration:1000,
-      easing: 'ease',
-      delay: 100,
-      once: false,
-      disable: 'mobile'
-      // disable: 'mobile'
-    });
-    AOS.refresh();
-  }, [])
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration:1000,
+  //     easing: 'ease',
+  //     delay: 100,
+  //     once: false,
+  //     disable: 'mobile'
+  //     // disable: 'mobile'
+  //   });
+  //   AOS.refresh();
+  // }, [])
   return (
     <>
    <TopBar/>

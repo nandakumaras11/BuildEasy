@@ -25,9 +25,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SocialMediaMenu } from "../TopBar/TopBar";
 import { HashLink } from "react-router-hash-link";
+import { useEffect, useState } from "react";
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
-
+  const [productFilter, setFilter] = useState("all");
   const fasterStrongerSavings = [
     {
       image: faster,
@@ -35,7 +36,7 @@ export const Home = () => {
     },
     {
       image: strengthImg,
-      text: "30% Strong"
+      text: "30% Stronger"
     },
     {
       image: savings,
@@ -47,81 +48,134 @@ export const Home = () => {
     { image: panel2, text: "Double Panel", caption: "Made of two EPS sandwiched panels with wire mesh on either side. Concrete is poured between the panels and shotcreted both sides, building a strong insulated wall quickly." },
     { image: panel3, text: "Floor Panel 3", caption: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof." }
   ]
-
-  const products = [
-
-    {
+  type filteredProductsProps = {
+    image: String,
+    name: String,
+    description: String,
+    size: String
+  }
+  type productsProp = {
+    category: String,
+    product: filteredProductsProps[]
+  }[]
+  const products: productsProp = [{
+    category: "shortcrete",
+    product: [{
       image: shortCreteImg,
       name: "Shotcrete Mix",
       description: "Boasting a mix of raw materials with an ideal ratio",
-      size: "50 kg"
-
+      size: "Pack Size: 50 kg"
     },
     {
-      image: masonryImg,
-      name: "Masonry Mix",
-      description: "Best for masonry works using concrete sand",
-      size: "50 kg"
+      image: shortCreteImg,
+      name: "Shotcrete Mix 200",
+      description: "Boasting a mix of raw materials with an ideal ratio",
+      size: "Pack Size: 50 kg"
     },
     {
-      image: plasteringImg,
-      name: "Plastering Mix",
-      description: "Fitting solution for robust interior and exterior wall plastering",
-      size: "50 kg"
+      image: shortCreteImg,
+      name: "Shotcrete Mix 300",
+      description: "Boasting a mix of raw materials with an ideal ratio",
+      size: "Pack Size: 50 kg"
     },
     {
-      image: tileImg,
-      name: "Tile Mix 18",
-      description: "Best for tile works using concrete sand",
-      size: "50 kg"
+      image: panel1,
+      name: "Single Panel",
+      description: "Made with Eps sandwiched between galvanised mesh’s on either side",
+      size: ""
     },
     {
-      image: pillerSupr,
-      name: "Pillar Super Mix",
-      description: "Perfect for erecting sturdy pillars/beams",
-      size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
+      image: panel2,
+      name: "Double Panel",
+      description: "Made of two EPS sandwiched panels with wire mesh on either side",
+      size: ""
     },
     {
-      image: pillerImg,
-      name: "Pillar Mix",
-      description: "Perfect for erecting sturdy pillars/beams",
-      size: "Pack Size: 50 kg Grade: M30 | M20 Bags Per M3: 40"
-    },
-    {
-      image: floorImg,
-      name: "Floor Mix",
-      description: "Custom-made for perfecting high strength flooring",
-      size: "Pack Size: 50 kg Grade: M15 Bags Per M3: 40"
-    },
-    {
-      image: roofImg,
-      name: "Roof Mix",
-      description: "Appropriate for durable and strong roofing concrete",
-      size: "Pack Size: 50 kg Grade: M25 Bags Per M3:40"
-    },
-    {
-      image: pccImg,
-      name: "PCC Mix",
-      description: "Ideal for high strength PCC concrete",
-      size: "Pack Size: 50 kg Grade: M7.5 Bags Per M3: 40"
-    },
-    {
-      image: bags,
-      name: "JUMBO BAGS",
-      description: "",
-      size: "500KG , 750KG, 1000KG, 1500KG"
+      image: panel3,
+      name: "Floor Panel",
+      description: "Concrete is poured on top forming a structurally insulated strong roof.",
+      size: ""
     }
-  ]
+    ]
+  },
+  {
+    category: "dry",
+    product: [
+      {
+        image: masonryImg,
+        name: "Masonry Mix",
+        description: "Best for masonry works using concrete sand",
+        size: "Pack Size: 50 kg"
+      },
+      {
+        image: plasteringImg,
+        name: "Plastering Mix",
+        description: "Fitting solution for robust interior and exterior wall plastering",
+        size: "Pack Size: 50 kg"
+      },
+      {
+        image: tileImg,
+        name: "Tile Mix 18",
+        description: "Best for tile works using concrete sand",
+        size: "Pack Size: 50 kg"
+      },
+      {
+        image: pillerSupr,
+        name: "Pillar Super Mix",
+        description: "Perfect for erecting sturdy pillars/beams",
+        size: "Pack Size: 50 kg, Grade: M30, Bags Per M3: 40"
+      },
+      {
+        image: pillerImg,
+        name: "Pillar Mix",
+        description: "Perfect for erecting sturdy pillars/beams",
+        size: "Pack Size: 50 kg, Grade: M20, Bags Per M3: 40"
+      },
+      {
+        image: floorImg,
+        name: "Floor Mix",
+        description: "Custom-made for perfecting high strength flooring",
+        size: "Pack Size: 50 kg,Grade: M15, Bags Per M3: 40"
+      },
+      {
+        image: roofImg,
+        name: "Roof Mix",
+        description: "Appropriate for durable and strong roofing concrete",
+        size: "Pack Size: 50 kg, Grade: M25, Bags Per M3:40"
+      },
+      {
+        image: pccImg,
+        name: "PCC Mix",
+        description: "Ideal for high strength PCC concrete",
+        size: "Pack Size: 50 kg, Grade: M7.5, Bags Per M3: 40"
+      },
+      {
+        image: bags,
+        name: "JUMBO BAGS",
+        description: "Durable bags with modern technologies",
+        size: "500KG 750KG, 1000KG 1500KG"
+      }]
+  }]
 
 
   const howItWorks = [
     { image: "labour-day.png", name: "REDUCED LABOUR" },
+    { image: "brickwall.png", name: "Leveling and finishing" },
     { image: "paper.png", name: "ASSEMBLING OF PANELS" },
     { image: "interlocking.png", name: "INTERLOCKING OF PANELS" },
     { image: "sprinkler.png", name: "APPLICATION OF SHOTCRETE MIX" },
-    { image: "brickwall.png", name: "LEVELING FINISHING OF WALLS" },
     { image: "paintroller.png", name: "PUTTYING, PAINTING,TILING ETC" },
   ]
+
+  let filteredProducts: filteredProductsProps[] = [];
+
+  if (productFilter == "all") {
+    filteredProducts = [...products[0].product, ...products[1].product]
+  }
+  else {
+    const _filteredProducts = products.filter((product) => { return product.category == productFilter });
+    filteredProducts = _filteredProducts[0].product;
+  }
   return (
     <>
       <div className="bannerContainer" id="home">
@@ -130,8 +184,8 @@ export const Home = () => {
 
       </div>
       <SliderBottom cls="mobile" />
-      <section className="aboutContainer" data-aos="slide-up" id="about">
-        <div className="aboutImage wm100" ></div>
+      <section className="aboutContainer" data-aos="slide-up">
+        <div className="aboutImage wm100" id="about"></div>
         <div className="aboutText wm100">
           <div className="line">
             <div className="first"></div>
@@ -152,7 +206,7 @@ export const Home = () => {
       <section className="fasterStrongerSavingsContainer">
         {fasterStrongerSavings.map((item, index) => {
           return <div className="fasterStrongerSavingsItem" key={index}>
-            <div className="fasterStrongerSavingsImage"  style={{ backgroundImage: `url(${item.image})` }}></div>
+            <div className="fasterStrongerSavingsImage" style={{ backgroundImage: `url(${item.image})` }}></div>
             {/* <img src={item.image} alt={item.text} className="src" /> */}
             <div className="fasterStrongerSavingsText">
               <div className="percentage"> {item.text.split(" ")[0]}</div>
@@ -165,10 +219,10 @@ export const Home = () => {
         <div className="customerHead" >Our Customers Deserve the Best</div>
         <div className="customerCaption" >Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
           optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
-        <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="500" alt="process_img" className="process_img" />
-        <div className="QaQ"  data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
+        <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
+        <div className="QaQ" data-aos-offset="700" >Our Unique <span>QaQ</span> Approach</div>
       </section>
-      <section className="shortcreteproductContainer" id="product" data-aos-offset="600" data-aos="slide-up">
+      <section className="shortcreteproductContainer" id="product" data-aos-offset="500" data-aos="slide-up">
         <div className="shortcreteImage"   ></div>
         <div className="shortcreteContent">
           <div className="shortcreteContentContent1">Buildeasy</div>
@@ -185,7 +239,7 @@ export const Home = () => {
 
         </div>
       </section>
-      <section className="shotcretePanelsContainer" data-aos-offset="600" data-aos="slide-up">
+      <section className="shotcretePanelsContainer" data-aos-offset="500" data-aos="slide-up">
         <div className="shotcretePanelsLeft">
           <div className="shortcreteContentContent1"  >Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Panels</div>
@@ -195,7 +249,7 @@ export const Home = () => {
           <div className="shortcretePanels" data-aos="slide-up">
             {shotcretePanels.map((shotcretePanel, index) => {
               return <div className="shotcretePanel" key={index}>
-                <div className="shotcretePanelImage"  style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
+                <div className="shotcretePanelImage" style={{ backgroundImage: `url(${shotcretePanel.image})` }}></div>
                 {/* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */}
                 <div className="shotcretePanelName">{shotcretePanel.text}</div>
                 <div className="shotcretePanelCaption">{shotcretePanel.caption}</div>
@@ -203,10 +257,10 @@ export const Home = () => {
             })}
           </div>
         </div>
-        <div className="shotcretePanelsRight"data-aos-offset="900" data-aos="slide-up" style={{ backgroundImage: `url(${house})` }}></div>
+        <div className="shotcretePanelsRight" data-aos-offset="900" data-aos="slide-up" style={{ backgroundImage: `url(${house})` }}></div>
       </section>
-      <section className="shortcreteMachineContainer" data-aos-offset="700"  data-aos="slide-up">
-        <div className="shortcreteMachineLeft"   style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
+      <section className="shortcreteMachineContainer" data-aos-offset="500" data-aos="slide-up">
+        <div className="shortcreteMachineLeft" style={{ backgroundImage: `url(${shotcreteMachine})` }}></div>
         <div className="shortcreteMachineRight"  >
           <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Machine</div>
@@ -220,18 +274,19 @@ export const Home = () => {
       <section className="buildEasyProductsContainer" >
         <div className="productSubHead">  Buildeasy Product</div>
         <div className="productHead">   Our BuildEasy Product</div>
-        {/* <div className="productFilter">
-          <div className="ShotcreteBtn">Shotcrete</div>
-          <div className="mixProducts">Dry Mix</div> */}
-        {/* <div className="shotcreteBricks">Bricks</div> */}
-        {/* </div> */}
+        <div className="productFilter">
+          <div className={productFilter == "all" ? "all active" : "ShotcreteBtn"} onClick={() => { setFilter("all") }}>All</div>
+          <div className="ShotcreteBtn" onClick={() => { setFilter("shortcrete") }}>Shotcrete</div>
+          <div className="mixProducts" onClick={() => { setFilter("dry") }}>Dry Mix</div>
+          {/* <div className="shotcreteBricks">Bricks</div> */}
+        </div>
         <div className="buildEasyProducts" >
-          {products.map((product, index) => {
-            return <div  key={index} className="buildEasyProduct" data-aos-offset="800"  data-aos="zoom-out">
+          {filteredProducts.map((product, index) => {
+            return <div key={index} className="buildEasyProduct" data-aos-offset="800" data-aos="zoom-out">
               <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
-              <div className="size">Pack size: {product.size}</div>
+              <div className="size">{product.size.split(",").map((item) => { return <div>{item} </div> })}</div>
             </div>
 
           })}
@@ -242,7 +297,7 @@ export const Home = () => {
         <div className="howItWorksDescription">A peek at the implementation process</div>
         <div className="howItWorkItems">
           {howItWorks.map((item, index) => {
-            return <div  key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="800">
+            return <div key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="700">
               <div className="img" style={{ backgroundImage: `url(/images/${item.image})` }}></div>
               <div className="name">{item.name}</div>
             </div>
@@ -346,7 +401,7 @@ export const SliderBottom = ({ cls }: classProps) => {
   return (
     <div className={`sliderBottom ${cls}`}>
       {bottomItems.map((item, index) => {
-        return <div key={index} className="sliderBottomItem"  data-aos="zoom-out" data-aos-offset="300">
+        return <div key={index} className="sliderBottomItem" data-aos="zoom-out" data-aos-offset="300">
           <div className="itemImage" style={{ backgroundImage: `url(/images/${item.image})` }}> </div>
           <div className="itemText">{item.text}</div>
         </div>
@@ -406,7 +461,7 @@ export const Testimonial = () => {
   return (
     <Slider {...settings}>
       {testimonials.map((testimonial, index) => {
-        return <div  key={index} className="happyClients">
+        return <div key={index} className="happyClients">
           <div className="happyClientsLeft">
             <div className="testimonialContainer">
               <div className="user">
