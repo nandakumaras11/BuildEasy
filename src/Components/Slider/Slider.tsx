@@ -5,10 +5,12 @@ import pillerMix from "../../assets/piller.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { motion } from "framer-motion"
+
 export const SliderSimple = () => {
     const slider = [
         {
-            sliderText1: "SHOTCRETE MIX 10",
+            sliderText1: "SHOTCRETE MIX",
             sliderText2: "Magical mix of raw materials with an ideal ratio",
             sliderText3: "Vetted by Engineers ",
             productImage: shortCreteImg
@@ -47,7 +49,7 @@ export const SliderSimple = () => {
                     dots: false,
                     vertical: false,
                     verticalSwiping: false,
-                    arrows:false
+                    arrows: false
 
                 }
             }]
@@ -58,18 +60,35 @@ export const SliderSimple = () => {
             {slider.map((slide, index) => {
                 return <span key={index}><div className="sliderContainer">
                     <div className="sliderText">
-                        <div className="sliderText1" data-aos="slide-left">{slide.sliderText1}</div>
-                        <div className={"sliderText2"}  data-aos="slide-right">
+                        <motion.div
+                            initial="left"
+                            whileInView="right"
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
+                            variants={{
+                                left: { opacity: 0, translateX: -50 },
+                                right: { opacity: 1, translateX: 0 }
+                            }}
+                            className="sliderText1" data-aos="slide-left">{slide.sliderText1}</motion.div>
+                        <motion.div
+                            initial="right"
+                            whileInView="left"
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.6 }}
+                            variants={{
+                                right: { opacity: 1, translateX: 100 },
+                                left: { opacity: 1, translateX: 0 }
+                            }} className={"sliderText2"} data-aos="slide-right">
                             {slide.sliderText2}
-                        </div>
+                        </motion.div>
                         <div className="sliderText3">{slide.sliderText3}
                         </div>
                         <div className="btn1">
                             <a href="#product" className="href">More Details</a>
-                            </div>
+                        </div>
                         {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
                     </div>
-                    <div className="productImage"  data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
+                    <div className="productImage" data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
                     {/* <div className="rightNavigation"><FaChevronRight /></div> */}
                     {/* {props.children} */}
                 </div></span>

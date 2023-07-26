@@ -164,6 +164,60 @@
     font-weight: 600;
 }
 
+.advantages {
+    padding: 3% 12% 3% 12%;
+    margin-top: 5%;
+    background-color: var(--blue);
+    color: #fbc72f;
+    position: relative;
+
+    .productSubHead{
+        color: white;
+    }
+    .advantageRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        /* margin-top: 1%; */
+        align-items: center;
+        .column1 {
+            width: 47%;
+            color: var(--gray);
+            text-align: left;
+            line-height: 2;
+            font-size: 0.95rem;
+            color: white;
+            /* padding: 2% 0%; */
+            font-weight: 200;
+            .hundred {
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                left:10;
+                bottom: 1%;
+                padding: 5%;
+                /* margin-top: 5%; */
+            }
+        }
+
+        .column2 {
+            width: 50%;
+            padding: 25%;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* .column3 {
+            width: 30%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        } */
+    }
+}
+
 .customer {
     background-image: url("/images/customer.jpg");
     background-size: cover;
@@ -376,9 +430,21 @@
     text-transform: uppercase;
     color: var(--gray);
     font-weight: 600;
-    
+
+    .active {
+        background-color: var(--blue);
+        color: white;
+    }
+
+    .filterBtn {
+        font-size: 0.7em;
+        padding: 0% 3%;
+        line-height: 2.5;
+    }
+
 }
-.productFilter div{
+
+.productFilter div {
     cursor: pointer;
 }
 
@@ -414,7 +480,7 @@
     .size {
         color: var(--blue);
         font-weight: 700;
-        padding-top:3%;
+        padding-top: 3%;
         font-size: 0.7em;
     }
 }
@@ -568,22 +634,26 @@
 
 }
 
-.slickTestimonials{
-    .slick-prev{
+.slickTestimonials {
+    .slick-prev {
         left: -35px !important
     }
-    .slick-next{
+
+    .slick-next {
         right: -35px !important
     }
+
     .slick-prev:before,
     .slick-next:before {
         color: var(--blue) !important;
-    } 
-    .marginTopDots{
+    }
+
+    .marginTopDots {
         bottom: -16% !important;
     }
 }
-.contactUs{
+
+.contactUs {
     background-color: var(--blue);
     display: flex;
     line-height: 2em;
@@ -591,18 +661,22 @@
     padding: var(--padding);
     padding-right: 0;
     position: relative;
-    .mt5{
+
+    .mt5 {
         margin-top: 5%;
     }
-    .bold{
+
+    .bold {
         font-weight: 700;
     }
-    .subContents{
+
+    .subContents {
         font-size: 0.8em;
         line-height: 2.5;
-    
+
     }
-    .contactUsLeft{
+
+    .contactUsLeft {
         background-color: var(--blue);
         color: white;
         line-height: 2;
@@ -610,33 +684,38 @@
         position: relative;
         width: 50%;
         text-align: left;
-        div{
+
+        div {
             padding: 2% 0;
             margin-top: 12%;
         }
-    
-      
+
+
     }
-    .sectionHead{
+
+    .sectionHead {
         font-size: 1.5em;
         display: flex;
         align-items: center;
         gap: 3%;
     }
-    .aboutUsHead, .sectionMainHead {
+
+    .aboutUsHead,
+    .sectionMainHead {
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.3;
         padding-bottom: 2%;
         text-transform: uppercase;
     }
-    
-    .contactUsRight{
+
+    .contactUsRight {
         width: 100%;
     }
 
 }
-.scrollToTop{
+
+.scrollToTop {
     position: fixed;
     bottom: 3%;
     right: 3%;

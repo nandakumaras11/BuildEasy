@@ -17,6 +17,8 @@ import tileImg from "../assets/Tile.png"
 import pillerImg from "../assets/piller.png"
 import pillerSupr from "../assets/pillerSupr.png"
 import floorImg from "../assets/floor.png"
+import hundred from "../assets/100.png"
+import shortcreteadv from "../assets/shortcreteadv.png"
 import roofImg from "../assets/roof.png"
 import pccImg from "../assets/pcc.png"
 import bags from "../assets/bags.png"
@@ -25,7 +27,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { SocialMediaMenu } from "../TopBar/TopBar";
 import { HashLink } from "react-router-hash-link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion"
 // import aboutImage from "../assets/about.png"
 export const Home = () => {
   const [productFilter, setFilter] = useState("all");
@@ -159,10 +162,10 @@ export const Home = () => {
 
 
   const howItWorks = [
-    { image: "labour-day.png", name: "REDUCED LABOUR" },
-    { image: "brickwall.png", name: "Leveling and finishing" },
+    { image: "labour-day.png", name: "PLANNING and PREPARATION" },
     { image: "paper.png", name: "ASSEMBLING OF PANELS" },
     { image: "interlocking.png", name: "INTERLOCKING OF PANELS" },
+    { image: "brickwall.png", name: "Leveling and finishing" },
     { image: "sprinkler.png", name: "APPLICATION OF SHOTCRETE MIX" },
     { image: "paintroller.png", name: "PUTTYING, PAINTING,TILING ETC" },
   ]
@@ -194,12 +197,19 @@ export const Home = () => {
           </div>
           <div className="aboutUsHead1">About Us</div>
           <div className="aboutUsHead2">BUILDEASY SHOTCRETE</div>
-          <div className="aboutUsContent">A revolution under construction Shotcrete is the method of applying
-            concrete projected at high velocity primarily on to a vertical or overhead
-            surface. The sprayed concrete is conveyed through a hose and
-            pneumatically onto the surface that is typically reinforced
-            by steel mesh. Shotcrete is placed and compacted/consolidated at the
-            same time, thanks to the force with which it is ejected from the nozzle.</div>
+          <div className="aboutUsContent">At BuildEasy, we aim at delivering end-to-end basic
+            building material solutions by introducing a standard in
+            construction methodology. To this end, we employ
+            mechanised automated solutions that cater to every
+            requirement of our projects. Our solutions are the greenest
+            in the industry since we reduce wastage and ensure optimal
+            use of raw materials that will retain their property even in
+            extreme weather conditions. Moreover, we use our
+            hi-quality patented solutions for packing as well, to achieve
+            the best results possible. <p>We guarantee substantial cost saving measures for our
+              projects by reducing skilled labour, material purchase and
+              management without compromising quality
+            </p></div>
           {/* <div className="btn1">Read More</div> */}
         </div>
       </section>
@@ -214,6 +224,33 @@ export const Home = () => {
             </div>
           </div>
         })}
+      </section>
+      <section className="advantages">
+        <div className="productSubHead">Buildeasy</div>
+        <div className="productHead">Our Advantages</div>
+        <div className="advantageRow">
+          <div className="column1">
+
+            A revolution under construction Shotcrete is the method of applying concrete projected at high velocity primarily on to a vertical or overhead surface. The sprayed concrete is conveyed through a hose and pneumatically onto the surface that is typically reinforced by steel mesh. Shotcrete is placed and compacted/consolidated at the same time, thanks to the force with which it is ejected from the nozzle. Since the nature of the placement process results in an excellent bond with most substrates and rapid or instant capabilities, Shotcrete has the characteristics of high compressive strength, good durability, water tightness and frost resistance.
+
+            <p>BuildEasy Shotcrete solution is the first of its kind in India that consists of three components - BuildEasy Shotcrete Panels, BuildEasy Shotcrete Mix and BuildEasy Shotcrete Machines</p>
+            <div className="hundred" style={{ backgroundImage: `url(${hundred})` }} ></div>
+          </div>
+          <div className="column2" style={{ backgroundImage: `url(/images/process.png)` }}></div>
+          {/* <div className="column2" style={{ backgroundImage: `url(${shortcreteadv})` }}></div> */}
+        </div>
+      </section>
+      <section className="howItWorksContainer">
+        <div className="productHead"> How it Works</div>
+        <div className="howItWorksDescription">A peek at the implementation process</div>
+        <div className="howItWorkItems">
+          {howItWorks.map((item, index) => {
+            return <div key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="700">
+              <div className="img" style={{ backgroundImage: `url(/images/${item.image})` }}></div>
+              <div className="name">{item.name}</div>
+            </div>
+          })}
+        </div>
       </section>
       <section className="customer">
         <div className="customerHead" >Our Customers Deserve the Best</div>
@@ -275,19 +312,28 @@ export const Home = () => {
         <div className="productSubHead">  Buildeasy Product</div>
         <div className="productHead">   Our BuildEasy Product</div>
         <div className="productFilter">
-          <div className={productFilter == "all" ? "all active" : "ShotcreteBtn"} onClick={() => { setFilter("all") }}>All</div>
-          <div className="ShotcreteBtn" onClick={() => { setFilter("shortcrete") }}>Shotcrete</div>
-          <div className="mixProducts" onClick={() => { setFilter("dry") }}>Dry Mix</div>
+          <div className={productFilter == "all" ? "active filterBtn" : "filterBtn"} onClick={() => { setFilter("all") }}>All</div>
+          <div className={productFilter == "shortcrete" ? "active filterBtn" : "filterBtn"} onClick={() => { setFilter("shortcrete") }}>Shotcrete</div>
+          <div className={productFilter == "dry" ? "active filterBtn" : "filterBtn"} onClick={() => { setFilter("dry") }}>Dry Mix</div>
           {/* <div className="shotcreteBricks">Bricks</div> */}
         </div>
         <div className="buildEasyProducts" >
           {filteredProducts.map((product, index) => {
-            return <div key={index} className="buildEasyProduct" data-aos-offset="800" data-aos="zoom-out">
+            return <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              transition={{ duration: 0.4 }}
+              variants={{
+                visible: { opacity: 1, scale: 1 },
+                hidden: { opacity: 0, scale: 1.1 }
+              }}
+              key={`${product.name}+${new Date().getSeconds()}+`} className="buildEasyProduct" data-aos-offset="800" data-aos="zoom-out">
               <div className="productImg" style={{ backgroundImage: `url(${product.image})` }} />
               <div className="productName">{product.name}</div>
               <div className="description">{product.description}</div>
               <div className="size">{product.size.split(",").map((item) => { return <div>{item} </div> })}</div>
-            </div>
+            </motion.div>
 
           })}
         </div>
@@ -399,14 +445,19 @@ export const SliderBottom = ({ cls }: classProps) => {
     }
   ];
   return (
-    <div className={`sliderBottom ${cls}`}>
+    <motion.div
+      initial={{ scale: 0.8 }}
+      whileInView={{ scale: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+      className={`sliderBottom ${cls}`}>
       {bottomItems.map((item, index) => {
         return <div key={index} className="sliderBottomItem" data-aos="zoom-out" data-aos-offset="300">
           <div className="itemImage" style={{ backgroundImage: `url(/images/${item.image})` }}> </div>
           <div className="itemText">{item.text}</div>
         </div>
       })}
-    </div>
+    </motion.div>
   )
 }
 
