@@ -294,6 +294,34 @@
         }
     }
 
+    .advantages {
+        padding: var(--padding);
+        padding-top: 7%;
+        padding-bottom: 7%;
+
+        .advantageRow {
+            flex-direction: column;
+            width: 100%;
+
+            .column1 {
+                width: 100%;
+                font-size: 0.85rem;
+                font-size: 0.85rem;
+                padding: 2%;
+            }
+
+            .column2 {
+                width: 100%;
+                padding: 47%;
+            }
+
+            .hundred {
+                display: none;
+            }
+        }
+
+    }
+
     .buildEasyProductsContainer {
         padding: 10% 0%;
 
@@ -311,6 +339,7 @@
                 padding: 3% 2%;
                 margin-bottom: 5%;
                 width: 49%;
+
                 .size {
                     padding-bottom: 5%;
                     font-size: 0.9rem;
