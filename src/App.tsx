@@ -1,29 +1,25 @@
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
-import { MenuBar, MobileMenu, TopBar } from './TopBar/TopBar'
-import { Home } from './Home/Home'
+import { MenuBar, MobileMenu, SocialMediaMenu, TopBar } from './TopBar/TopBar'
+import { ScrollToTopBtn } from './Home/Home'
 import "../src/Home/HomeMobile.css"
-// import "aos/dist/aos.css";
-// import AOS from 'aos';
+import { Routes } from './AllRoutes'
+import { Footer } from './Components/Footer/Footer'
+import { Loader } from './Components/Loader/Loader'
 function App() {
   const [showMenu, handleShowMenu] = useState(false)
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration:1000,
-  //     easing: 'ease',
-  //     delay: 100,
-  //     once: false,
-  //     disable: 'mobile'
-  //     // disable: 'mobile'
-  //   });
-  //   AOS.refresh();
-  // }, [])
   return (
     <>
-   <TopBar/>
-   <MenuBar showMenu={showMenu} handleShowMenu={handleShowMenu}/>
-   <MobileMenu handleShowMenu={handleShowMenu}/>
-   <Home/>
+      <Suspense fallback={<Loader />}>
+        <TopBar />
+        <MenuBar showMenu={showMenu} handleShowMenu={handleShowMenu} />
+        <MobileMenu handleShowMenu={handleShowMenu} />
+        <Routes />
+        <ScrollToTopBtn />
+        <SocialMediaMenu cls="fixedIons" />
+
+        <Footer />
+      </Suspense>
     </>
   )
 }

@@ -11,19 +11,19 @@ export const SliderSimple = () => {
     const slider = [
         {
             sliderText1: "SHOTCRETE MIX",
-            sliderText2: "Magical mix of raw materials with an ideal ratio",
+            sliderText2: "Expertly Blended Raw Materials for Optimal Results",
             sliderText3: "Vetted by Engineers ",
             productImage: shortCreteImg
         },
         {
             sliderText1: "Plaster mix",
-            sliderText2: "The perfect blend of strength and smoothness.",
+            sliderText2: "The Perfect Strength-Smoothness Blend",
             sliderText3: "Perfect for your needs",
             productImage: plasteringMix
         },
         {
             sliderText1: "Piller Mix",
-            sliderText2: "Perfect for erecting sturdy pillars/beams",
+            sliderText2: "Unveiling the Perfect Strength-Smoothness Blend",
             sliderText3: "Best for long lasting pillers",
             productImage: pillerMix
         }

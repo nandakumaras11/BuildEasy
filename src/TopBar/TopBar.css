@@ -15,9 +15,19 @@
     align-items: center;
 
 }
+
 .menuBarContainer {
     line-height: 1;
+
+    .logo {
+        background-image: url(/src/assets/logo.png);
+        background-size: contain;
+        padding: 4% 7%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
+
 .topBar .connectWithUs {
     padding-right: 4%;
 }
@@ -35,6 +45,7 @@
 .socialMediaIcon {
     display: flex;
     gap: 1rem;
+    z-index: 100;
 }
 
 
@@ -54,7 +65,7 @@
     align-items: center;
 }
 
-.sliderIndicator{
+.sliderIndicator {
     line-height: 5;
     font-size: 0.7em;
 }

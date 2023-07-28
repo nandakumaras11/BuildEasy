@@ -4,7 +4,9 @@
         /* margin-bottom: 10% !important; */
 
     }
-
+    .fixedIons{
+        width: 15%;
+    }
     .showMenu {
         -webkit-transform: translateX(0) !important;
         transform: translateX(0) !important;
@@ -298,7 +300,7 @@
         padding: var(--padding);
         padding-top: 7%;
         padding-bottom: 7%;
-
+        background-image: none;
         .advantageRow {
             flex-direction: column;
             width: 100%;

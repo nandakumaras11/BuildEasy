@@ -2,6 +2,7 @@ import "./TopBar.css"
 import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaEnvelopeOpen, FaWhatsapp } from "react-icons/fa"
 import logo from "../assets/logo.png"
 import { NavHashLink } from 'react-router-hash-link';
+import { Link, useNavigate } from "react-router-dom";
 export const TopBar = () => {
     return (
         <div className="topBar">
@@ -23,19 +24,19 @@ export const menus = [
     { name: "Home", to: "/#top" },
     { name: "About", to: "/#about" },
     { name: "Products", to: "/#product" },
-    // { name: "Gallery", to: "/Gallery" },
+    { name: "Gallery", to: "/Gallery" },
     { name: "Contact Us", to: "/#contact" },
 ]
 
 
-export const SocialMediaMenu = () => {
+export const SocialMediaMenu = ({ cls = "" }) => {
     return (
-        <div className="socialMediaIcon">
-            <div className="fb"><a href="https://www.facebook.com/BuildEasyInd/" className="href"><FaFacebookF /></a></div>
-            <div className="insta"><a href="https://www.instagram.com/BuildEasyInd/" className="href"><FaInstagram /></a></div>
-            <div className="gmail"><a href={`mailto:${import.meta.env.VITE_EMAIL}`}><FaEnvelopeOpen /></a></div>
+        <div className={`socialMediaIcon ${cls}`}>
+            <div className="icon facebook"><a href="https://www.facebook.com/BuildEasyInd/" className="iconhref"><FaFacebookF /></a></div>
+            <div className="icon instagram"><a href="https://www.instagram.com/BuildEasyInd/" className="iconhref"><FaInstagram /></a></div>
+            <div className="icon gmail"><a href={`mailto:${import.meta.env.VITE_EMAIL}`} className="iconhref"><FaEnvelopeOpen /></a></div>
             {/* whatsapp://send?text=I am interested in Insourze.&amp;phone=+971505690203 */}
-            <div className="gmail"><a href={import.meta.env.VITE_WHATSAPP}><FaWhatsapp /></a></div>
+            <div className="icon whatsapp"><a href={import.meta.env.VITE_WHATSAPP} className="iconhref"><FaWhatsapp /></a></div>
 
             {/* <FaYoutube />
             <FaTwitter /> */}
@@ -48,7 +49,7 @@ export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
     return (
         <>
             <div className="menuBarContainer">
-                <div className="logo"><img src={logo} /></div>
+                <div className="logo" style={{ backgroundImage: `url(${logo})` }} ><Link to="/" ></Link></div>
                 <div className="menus">
                     {menus.map((menu, index) => {
                         return <NavHashLink key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
@@ -59,7 +60,7 @@ export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
                 <div className={showMenu ? "mobileMenuLeft showMenu" : "mobileMenuLeft"}>
                     <div className="close" onClick={() => handleShowMenu(false)}><FaTimes /></div>
                     {menus.map((menu, index) => {
-                        return <div  key={index} className="menuItemMobile"><NavHashLink onClick={() => handleShowMenu(false)} scroll={(el) => scrollWithOffset(el)} to={menu.to}  >{menu.name}</NavHashLink></div>
+                        return <div key={index} className="menuItemMobile"><NavHashLink onClick={() => handleShowMenu(false)} scroll={(el) => scrollWithOffset(el)} to={menu.to}  >{menu.name}</NavHashLink></div>
                     })}
                 </div>
             </div>
@@ -67,10 +68,11 @@ export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
     )
 }
 export const MobileMenu = ({ handleShowMenu }: any) => {
+    const navigate = useNavigate();
     return (
         <div className="mobileMenuContainer">
             <div className="mobileMenu">
-                <div className="mobileLogo" style={{ backgroundImage: `url(${logo})` }}></div>
+                <div className="mobileLogo" style={{ backgroundImage: `url(${logo})` }} onClick={() => navigate("/")}></div>
                 <div className="menuOpener" onClick={() => handleShowMenu(true)}><FaBars /></div>
             </div>
         </div>

@@ -40,6 +40,7 @@
     line-height: 1.5;
     color: black;
     font-weight: 500;
+    text-transform: capitalize;
 }
 
 .sliderBottomItem img {
@@ -49,25 +50,24 @@
 
 /* about */
 .aboutContainer {
-    display: flex;
     padding: var(--padding);
     margin-top: 18%;
     justify-content: space-between;
+        
+    display: flex;
 }
 
+
 .aboutImage {
-    background-image: url("/images/about.png");
-    width: 45%;
-    background-image: url(/images/about.png);
+    width: 35%;
     background-position: center;
-    width: 45%;
-    height: 50dvh;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 10%;
 }
 
 .aboutText {
-    width: 47%;
+    width: 59%;
     text-align: left;
 }
 
@@ -101,9 +101,10 @@
 }
 
 .aboutUsHead1 {
-    font-size: 1.2em;
-    color: #818390;
-    font-weight: 400;
+    font-size: 1.4em;
+    color: var(--blue);
+    font-weight: 600;
+    line-height: 2;
 }
 
 .aboutUsHead2 {
@@ -170,16 +171,23 @@
     background-color: var(--blue);
     color: #fbc72f;
     position: relative;
+    background-blend-mode: multiply;
+    background-image: url("/images/adv_bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
 
-    .productSubHead{
+    .productSubHead {
         color: white;
     }
+
     .advantageRow {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
         /* margin-top: 1%; */
         align-items: center;
+
         .column1 {
             width: 47%;
             color: var(--gray);
@@ -188,14 +196,15 @@
             font-size: 0.95rem;
             color: white;
             /* padding: 2% 0%; */
-            font-weight: 200;
+            font-weight: 300;
+
             .hundred {
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
                 position: absolute;
-                left:10;
-                bottom: 1%;
+                left: 12%;
+                bottom: 3%;
                 padding: 5%;
                 /* margin-top: 5%; */
             }
@@ -218,6 +227,50 @@
     }
 }
 
+.fixedIons {
+    position: fixed;
+    flex-direction: column !important;
+    right: 2%;
+    top: 40%;
+    width: 3%;
+    color: white;
+
+    .whatsapp {
+        background-color: green !important;
+    }
+
+    .gmail {
+        background-color: #e34033 !important;
+
+    }
+
+    .instagram {
+        background: #f09433;
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+
+    }
+
+    .icon {
+        background-color: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        border:2px solid white;
+
+        .iconhref {
+            /* padding: 4% 0%; */
+            width: 100%;
+            padding: 27% 0% 15% 0%;
+
+        }
+
+    }
+}
+
 .customer {
     background-image: url("/images/customer.jpg");
     background-size: cover;
@@ -226,7 +279,7 @@
     align-items: center;
     flex-direction: column;
     padding: 2% 0%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
 }
 
 .customerHead {
@@ -271,14 +324,15 @@
 
 .shortcreteImage {
     background-image: url(../assets/shortcrete.png);
-    width: 49%;
+    width: 43%;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .shortcreteContent {
     text-align: left;
-    width: 51%;
+    width: 55%;
     padding: 2%;
 }
 
@@ -302,11 +356,12 @@
     margin: 1% 0%;
 }
 
-.shortcreteContentContent3 div i {
-    background-color: var(--blue);
-    height: 1.2vh;
-    width: 2.2%;
-    border-radius: 50%;
+.shortcreteContentContent3 div .icon {
+    color: var(--blue);
+    font-size: 0.6rem;
+    /* height: 1.2vh;
+    width: 2.2%; */
+    /* border-radius: 50%; */
 }
 
 .shortcreteContentContent3 div {
@@ -329,7 +384,7 @@
     padding: var(--padding1);
     padding-right: 0px;
     padding-top: 5%;
-    padding-bottom: 5%;
+    /* padding-bottom: 5%; */
     text-align: left;
     justify-content: space-between;
     position: relative;
@@ -346,13 +401,17 @@
 }
 
 .shotcretePanel {
-    width: 30%;
+
+    width: 32.45%;
     margin: 5% 0%;
+    padding: 3%;
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
 }
 
 .shotcretePanelsLeft {
-    width: 50%;
+    width: 51%;
 }
 
 .shotcretePanelsRight {
@@ -360,17 +419,19 @@
 }
 
 .shotcretePanelImage {
-    padding: 55% 0%;
+    padding: 50% 0%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
 .shotcretePanelName {
-    padding-top: 15%;
-    font-weight: 500;
+    padding-top: 7%;
+    font-weight: 600;
     font-size: 0.9em;
     line-height: 2;
+    text-transform: uppercase;
+    color: var(--blue);
 }
 
 .shotcretePanelCaption {
@@ -382,7 +443,7 @@
 .shotcretePanelsRight {
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: top;
+    background-position: center;
     padding: 10% 0%;
     position: absolute;
     height: 100%;
@@ -393,21 +454,25 @@
 .shortcreteMachineContainer {
     display: flex;
     padding: var(--padding1);
-    margin: 5% 0%;
+    margin: 1% 0%;
     text-align: left;
-    gap: 8%
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* gap: 8% */
 }
 
 .shortcreteMachineLeft {
-    width: 50%;
+    width: 39%;
     background-size: contain;
     background-repeat: no-repeat;
     padding: 4% 0%;
+    display: none;
     background-position: center;
 }
 
 .shortcreteMachineRight {
-    width: 50%;
+    /* width: 58%; */
+    width: 100%;
     padding: 4% 0%;
 
 }
@@ -496,7 +561,7 @@
 /* howItWorks */
 .howItWorksContainer {
     padding: var(--padding2);
-    margin: 6% 0%;
+    margin: 6% 0% 0% 0%;
 
     .productHead {
         color: var(--blue);
@@ -721,4 +786,42 @@
     right: 3%;
     font-size: 2em;
     color: var(--blue) !important;
+}
+.dryProductContainer{
+    padding: var(--padding);
+    padding-top: 3%;
+    padding-top: 3%;
+    .aboutUsHead1{
+        text-align: left;
+    }
+    .dryMixInfo{
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        .dryImage{
+            /* padding: 10% 0%; */
+            width: 30%;
+            background-position: top;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 8%;
+            /* .logo{
+                position: absolute;
+                top: 0;
+                right: 10%;
+                width: 100% ;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            } */
+        }
+        .dryMixContent{
+            width: 65%;  
+            text-align: left;
+            color: var(--gray);
+            line-height: 1.5;
+            font-size: 0.96em;
+        }
+    }
 }
