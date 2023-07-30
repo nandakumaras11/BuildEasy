@@ -1,3 +1,6 @@
+.tJustify{
+    text-align: justify;
+}
 .bannerContainer {
     background-image: url(/images/bannerbg.jpg);
     /* height: 78dvh; */
@@ -52,9 +55,22 @@
 .aboutContainer {
     padding: var(--padding);
     margin-top: 18%;
-    justify-content: space-between;
-        
-    display: flex;
+    .aboutBEText{
+        color: var(--gray);
+        text-align: left;
+        line-height: 1.5;
+    }
+    .aboutBE_Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .shortCreateBEAbout{
+        display: flex;
+        padding: 4% 0%;
+        justify-content: space-between;
+    }
 }
 
 
@@ -211,7 +227,7 @@
         }
 
         .column2 {
-            width: 50%;
+            width: 100%;
             padding: 25%;
             background-position: center;
             background-size: contain;
@@ -561,6 +577,7 @@
 /* howItWorks */
 .howItWorksContainer {
     padding: var(--padding2);
+    padding-bottom: 5%;
     margin: 6% 0% 0% 0%;
 
     .productHead {

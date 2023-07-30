@@ -73,7 +73,7 @@ export const ProductDetails: productsProps = [
         description: "Fitting solution for robust interior and exterior wall plastering",
         size: "Pack Size: 50 kg",
         category: "dry",
-        details: " , the perfect fitting solution for robust interior and exterior plastering. Meticulously engineered with a precise blend of raw materials, this proprietary mix ensures exceptional performance and longevity in both indoor and outdoor applications. Plastering Mix incorporates high-quality cement, fine aggregates, and specialized additives, resulting in a smooth and seamless finish that stands the test of time. Whether it's for interior walls or exterior facades, this mix guarantees optimal adhesion and crack resistance, providing a durable and attractive plastering surface. With its superior workability, Plastering Mix streamlines the plastering process, allowing for efficient and precise applications. Embrace the confidence of flawless plastering with our Plastering Mix, where excellence in construction meets fitting solutions for enduring and beautiful interior and exterior finishes"
+        details: "The perfect fitting solution for robust interior and exterior plastering. Meticulously engineered with a precise blend of raw materials, this proprietary mix ensures exceptional performance and longevity in both indoor and outdoor applications. Plastering Mix incorporates high-quality cement, fine aggregates, and specialized additives, resulting in a smooth and seamless finish that stands the test of time. Whether it's for interior walls or exterior facades, this mix guarantees optimal adhesion and crack resistance, providing a durable and attractive plastering surface. With its superior workability, Plastering Mix streamlines the plastering process, allowing for efficient and precise applications. Embrace the confidence of flawless plastering with our Plastering Mix, where excellence in construction meets fitting solutions for enduring and beautiful interior and exterior finishes"
     },
     {
         image: masonryImg,
@@ -129,7 +129,7 @@ export const ProductDetails: productsProps = [
         description: "Made with Eps sandwiched between galvanised mesh’s on either side",
         size: "",
         category: "shortcrete",
-        details: ""
+        details: "Made with Eps sandwiched between galvanised mesh’s on either side. Concrete is sprayed on either side forming a reinforced monolithic structure"
     },
     {
         image: panel2,
@@ -137,7 +137,7 @@ export const ProductDetails: productsProps = [
         description: "Made of two EPS sandwiched panels with wire mesh on either side",
         size: "",
         category: "shortcrete",
-        details: ""
+        details: "Made of two EPS sandwiched panels with wire mesh on either side. Concrete is poured between the panels and shotcreted both sides, building a strong insulated wall quickly."
     },
     {
         image: panel3,
@@ -145,7 +145,7 @@ export const ProductDetails: productsProps = [
         description: "Concrete is poured on top forming a structurally insulated strong roof.",
         size: "",
         category: "shortcrete",
-        details: ""
+        details: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof."
     },
 ]
 
@@ -166,14 +166,14 @@ export const fasterStrongerSavings = [
   export const shotcretePanels = [
     { image: panel1, text: "Single Panel", caption: "Made with Eps sandwiched between galvanised mesh’s on either side. Concrete is sprayed on either side forming a reinforced monolithic structure" },
     { image: panel2, text: "Double Panel", caption: "Made of two EPS sandwiched panels with wire mesh on either side. Concrete is poured between the panels and shotcreted both sides, building a strong insulated wall quickly." },
-    { image: panel3, text: "Floor Panel 3", caption: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof." }
+    { image: panel3, text: "Floor Panel", caption: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof." }
   ]
 
   export const howItWorks = [
     { image: "labour-day.png", name: "PLANNING and PREPARATION" },
     { image: "paper.png", name: "ASSEMBLING OF PANELS" },
     { image: "interlocking.png", name: "INTERLOCKING OF PANELS" },
-    { image: "brickwall.png", name: "Leveling and finishing" },
     { image: "sprinkler.png", name: "APPLICATION OF SHOTCRETE MIX" },
+    { image: "brickwall.png", name: "Leveling and finishing" },
     { image: "paintroller.png", name: "PUTTYING, PAINTING,TILING ETC" },
   ]

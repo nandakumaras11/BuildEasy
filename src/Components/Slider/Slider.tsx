@@ -23,7 +23,7 @@ export const SliderSimple = () => {
         },
         {
             sliderText1: "Piller Mix",
-            sliderText2: "Unveiling the Perfect Strength-Smoothness Blend",
+            sliderText2: "Building Sturdy Pillars and Beams with Ease",
             sliderText3: "Best for long lasting pillers",
             productImage: pillerMix
         }

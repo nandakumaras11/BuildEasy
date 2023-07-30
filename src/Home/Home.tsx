@@ -1,11 +1,8 @@
 import { SliderSimple } from "../Components/Slider/Slider"
 import "./Home.css"
-import panel1 from "../assets/panel1.png";
-import panel2 from "../assets/panel2.png";
-import panel3 from "../assets/panel3.png";
 import house from "../assets/house.png";
 import shotcreteMachine from "../assets/shortcreteMachine.png";
-import { FaArrowCircleUp, FaHandshake, FaQuoteRight,FaArrowRight } from "react-icons/fa";
+import { FaArrowCircleUp, FaHandshake, FaQuoteRight, FaArrowRight } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -14,27 +11,46 @@ import { HashLink } from "react-router-hash-link";
 import { useState } from "react";
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
-import hundred from "../assets/100.png";
+// import hundred from "../assets/100.png";
 import shortcreteLogo from "../assets/shortcreteLogo.png";
 import dryLogo from "../assets/dry.png";
+import shortcreteAdv from "../assets/shortcreteadv.png"
 import { ProductDetails, fasterStrongerSavings, howItWorks, productsProps, shotcretePanels } from "../constant";
 // import aboutImage from "../assets/about.png"
 
 function About() {
-  return (<section className="aboutContainer" data-aos="slide-up">
-    <div className="aboutImage wm100" id="about"  style={{ backgroundImage: `url(${shortcreteLogo})` }}></div>
-    <div className="aboutText wm100">
-      <div className="line">
+  return (<section className="aboutContainer" id="about" data-aos="slide-up">
+    <div className="aboutBE_Container">
+      {/* <div className="line">
         <div className="first"></div>
         <div className="second"></div>
         <div className="third"></div>
-      </div>
+      </div> */}
       <div className="aboutUsHead2">About Us</div>
-      <div className="aboutUsHead1">BuildEasy Shotcrete</div>
-      <div className="aboutUsContent">
-        A revolution under construction, Shotcrete is the method of applying concrete projected at high velocity primarily on to a vertical or overhead surface. The sprayed concrete is conveyed through a hose and pneumatically onto the surface that is typically reinforced by steel mesh. Shotcrete is placed and compacted/consolidated at the same time, thanks to the force with which it is ejected from the nozzle. Since the nature of the placement process results in an excellent bond with most substrates and rapid or instant capabilities, Shotcrete has the characteristics of high compressive strength, good durability, water tightness and frost resistance.
-        <p> BuildEasy Shotcrete solution is the first of its kind in India that consists of three components – BuildEasy Shotcrete Panels, BuildEasy Shotcrete Mix and BuildEasy Shotcrete Machines
-        </p>
+      <div className="aboutBEText tJustify">At BuildEasy, we aim at delivering end-to-end basic
+        building material solutions by introducing a standard in
+        construction methodology. To this end, we employ
+        mechanised automated solutions that cater to every
+        requirement of our projects. Our solutions are the greenest
+        in the industry since we reduce wastage and ensure optimal
+        use of raw materials that will retain their property even in
+        extreme weather conditions. Moreover, we use our
+        hi-quality patented solutions for packing as well, to achieve
+        the best results possible</div>
+    </div>
+    <div className="shortCreateBEAbout">
+      <div className="aboutImage wm100" style={{ backgroundImage: `url(${shortcreteLogo})` }}></div>
+      <div className="aboutText wm100">
+
+        <div className="aboutUsHead1">BuildEasy Shotcrete</div>
+        <div className="aboutUsContent tJustify">
+          BuildEasy Shotcrete solution is the first of its kind in India that consists of three components – BuildEasy Shotcrete Panels, BuildEasy Shotcrete Mix and BuildEasy Shotcrete Machines
+        </div>
+        <div className="aboutUsHead1">BuildEasy Shotcrete Mix</div>
+        <div className="aboutUsContent tJustify">
+          A revolution under construction, Shotcrete is the method of applying concrete projected at high velocity primarily on to a vertical or overhead surface. The sprayed concrete is conveyed through a hose and pneumatically onto the surface that is typically reinforced by steel mesh. Shotcrete is placed and compacted/consolidated at the same time, thanks to the force with which it is ejected from the nozzle. Since the nature of the placement process results in an excellent bond with most substrates and rapid or instant capabilities, Shotcrete has the characteristics of high compressive strength, good durability, water tightness and frost resistance.
+
+        </div>
       </div>
     </div>
   </section>);
@@ -43,16 +59,16 @@ function About() {
 
 
 function ShortcreteProducts() {
-  return (<section className="shortcreteproductContainer" id="product" data-aos-offset="500" data-aos="slide-up">
+  return (<section className="shortcreteproductContainer" data-aos-offset="500" data-aos="slide-up">
     <div className="shortcreteImage"></div>
     <div className="shortcreteContent">
       <div className="shortcreteContentContent1">Buildeasy</div>
       <div className="shortcreteContentContent2">Shotcrete Products</div>
-      <div className="shortcreteContentContent3"> Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
-        <div><FaArrowRight className="icon"/> Cement</div>
-        <div> <FaArrowRight className="icon"/> Sand</div>
-        <div><FaArrowRight className="icon"/>  Aggregates (with size less than 10mm only)</div>
-        <div><FaArrowRight className="icon"/> Fiber & Admixtures etc.</div>
+      <div className="shortcreteContentContent3 tJustify"> Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
+        <div><FaArrowRight className="icon" /> Cement</div>
+        <div> <FaArrowRight className="icon" /> Sand</div>
+        <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
+        <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
       </div>
 
     </div>
@@ -85,9 +101,9 @@ function FasterStrongerSavings() {
 function Advantages() {
   return (<section className="advantages">
     <div className="productSubHead">Buildeasy</div>
-    <div className="productHead">Our Advantages</div>
+    <div className="productHead">Shotcrete Advantages</div>
     <div className="advantageRow">
-      <div className="column1">
+      {/* <div className="column1">
         At BuildEasy, we aim at delivering end-to-end basic
         building material solutions by introducing a standard in
         construction methodology. To this end, we employ
@@ -104,9 +120,9 @@ function Advantages() {
         <div className="hundred" style={{
           backgroundImage: `url(${hundred})`
         }}></div>
-      </div>
+      </div> */}
       <div className="column2" style={{
-        backgroundImage: `url(/images/process.png)`
+        backgroundImage: `url(${shortcreteAdv})`
       }}></div>
       {
         /* <div className="column2" style={{ backgroundImage: `url(${shortcreteadv})` }}></div> */
@@ -141,8 +157,8 @@ function ShortcretePanels() {
     <div className="shotcretePanelsLeft">
       <div className="shortcreteContentContent1">Buildeasy</div>
       <div className="shortcreteContentContent2">Shotcrete Panels</div>
-      <div className="shortcreteContentContent3">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
-            mesh on either side. The mesh is cross welded for extra strength..
+      <div className="shortcreteContentContent3 tJustify">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
+        mesh on either side. The mesh is cross welded for extra strength..
       </div>
       <div className="shortcretePanels" data-aos="slide-up">
         {shotcretePanels.map((shotcretePanel, index) => {
@@ -154,7 +170,7 @@ function ShortcretePanels() {
               /* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */
             }
             <div className="shotcretePanelName">{shotcretePanel.text}</div>
-            <div className="shotcretePanelCaption">{shotcretePanel.caption}</div>
+            <div className="shotcretePanelCaption tJustify">{shotcretePanel.caption}</div>
           </div>;
         })}
       </div>
@@ -175,7 +191,7 @@ function SHortcreteMachine() {
     <div className="shortcreteMachineRight">
       <div className="shortcreteContentContent1">Buildeasy</div>
       <div className="shortcreteContentContent2">Shotcrete Machine</div>
-      <div className="shortcreteContentContent3">Discover the cutting-edge BuildEasy Shotcrete Machine, a state-of-the-art equipment designed to revolutionize concrete application. Engineered by BuildEasy, this advanced machine empowers construction professionals with the ability to project concrete mixture at high pressure, ensuring precise and efficient placement. The Shotcrete Machine features a seamlessly integrated system, including a powerful mixer, a reliable additive pump, a robust compressor, a versatile sprayer arm, and an intuitive control system. With this innovative equipment at your disposal, you can effortlessly tackle a wide range of projects, from commercial building to residential projects. Embrace the future of concrete application with the BuildEasy Shotcrete Machine, where efficiency, precision, and performance converge to elevate your construction endeavors to new heights
+      <div className="shortcreteContentContent3 tJustify">Discover the cutting-edge BuildEasy Shotcrete Machine, a state-of-the-art equipment designed to revolutionize concrete application. Engineered by BuildEasy, this advanced machine empowers construction professionals with the ability to project concrete mixture at high pressure, ensuring precise and efficient placement. The Shotcrete Machine features a seamlessly integrated system, including a powerful mixer, a reliable additive pump, a robust compressor, a versatile sprayer arm, and an intuitive control system. With this innovative equipment at your disposal, you can effortlessly tackle a wide range of projects, from commercial building to residential projects. Embrace the future of concrete application with the BuildEasy Shotcrete Machine, where efficiency, precision, and performance converge to elevate your construction endeavors to new heights
       </div>
     </div>
   </section>);
@@ -184,7 +200,7 @@ function SHortcreteMachine() {
 
 
 function BEProducts(props: any) {
-  return (<section className="buildEasyProductsContainer">
+  return (<section className="buildEasyProductsContainer" id="product">
     <div className="productSubHead">  Buildeasy Product</div>
     <div className="productHead">   Our BuildEasy Product</div>
     <div className="productFilter">
@@ -238,7 +254,7 @@ function BEProducts(props: any) {
 function Customers() {
   return (<section className="customer">
     <div className="customerHead">Our Customers Deserve the Best</div>
-    <div className="customerCaption">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
+    <div className="customerCaption ">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
       optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
     <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
     <div className="QaQ" data-aos-offset="700">Our Unique <span>QaQ</span> Approach</div>
@@ -273,8 +289,7 @@ function ContactUs() {
         <div className="contactUsValues">
           <div className="linebreak subContents">{`Eco Best Build LLP
 6/38/BE, 1st Floor, Koyikkakudiyil Building,
-Above SBI De Paul Branch, Angamaly, Kerala-683589.
-info@build-easy.in, +91 9645 799 933`}</div>
+Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div>
 
         </div>
       </div>
@@ -327,7 +342,7 @@ function DryProducts() {
     <section className="dryProductContainer" data-aos-offset="500" data-aos="slide-up">
       <div className="aboutUsHead1">BE Dry Ready to Mix</div>
       <div className="dryMixInfo">
-        <div className="dryMixContent">
+        <div className="dryMixContent tJustify">
           Discover the unmatched convenience and reliability of our Dry Mix Concrete – the ultimate solution for all your construction needs. Designed to streamline your building projects, our dry mix concrete eliminates the hassle of on-site mixing, ensuring consistent and superior results every time. With precise proportions of cement, aggregates, and additives pre-blended by our experts, you can be confident in achieving the ideal mix for your specific application. Whether it's for foundations, slabs, or structural elements, our dry mix concrete guarantees optimal strength and durability. <p>Say goodbye to time-consuming mixing processes and hello to efficient construction with our Dry Mix Concrete. Experience the freedom to focus on the art of building, knowing that the groundwork is laid with excellence, backed by our commitment to quality and performance. Trust in our Dry Mix Concrete to elevate your construction endeavors and revolutionize the way you build</p>.
         </div>
         <div className="dryImage" style={{ backgroundImage: `url(${dryLogo})` }}>
@@ -369,10 +384,10 @@ export const Home = () => {
       <DryProducts />
       <ShortcreteProducts />
       <FasterStrongerSavings />
-      <Advantages />
-      <HowItWorks />
       <ShortcretePanels />
       <SHortcreteMachine />
+      <Advantages />
+      <HowItWorks />
       <BEProducts productFilter={productFilter} setFilter={setFilter} navigate={navigate} filteredProducts={filteredProducts} />
       <Customers />
       <HappyClients />

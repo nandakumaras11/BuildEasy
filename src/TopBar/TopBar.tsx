@@ -2,7 +2,7 @@ import "./TopBar.css"
 import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaEnvelopeOpen, FaWhatsapp } from "react-icons/fa"
 import logo from "../assets/logo.png"
 import { NavHashLink } from 'react-router-hash-link';
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const TopBar = () => {
     return (
         <div className="topBar">
@@ -46,13 +46,14 @@ export const SocialMediaMenu = ({ cls = "" }) => {
 
 export default TopBar
 export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
+    const navigate = useNavigate();
     return (
         <>
             <div className="menuBarContainer">
-                <div className="logo" style={{ backgroundImage: `url(${logo})` }} ><Link to="/" ></Link></div>
+                <div className="logo" style={{ backgroundImage: `url(${logo})` }} onClick={() => navigate("/")}></div>
                 <div className="menus">
                     {menus.map((menu, index) => {
-                        return <NavHashLink key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
+                        return <NavHashLink smooth={true} key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
                     })}
                 </div>
             </div>

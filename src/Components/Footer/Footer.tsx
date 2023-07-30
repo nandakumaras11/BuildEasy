@@ -3,12 +3,23 @@ import logo from "../../assets/footerlogo.png"
 import { FaArrowRight } from "react-icons/fa"
 import { SocialMediaMenu, menus, scrollWithOffset } from "../../TopBar/TopBar"
 import { NavHashLink } from "react-router-hash-link"
+import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
 export const Footer = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    }, [pathname]);
     return (<>
         <div className="footerContainer">
             <div className="footerSection1">
                 <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
-                <div className="aboutCompany">At BuildEasy we are focused on delivering end-to-end basic
+                <div className="aboutCompany tJustify">At BuildEasy we are focused on delivering end-to-end basic
                     building material solutions by introducing a standard for our
                     construction methodology with the help of mechanised
                     automated solutions that can cater to every need right from
