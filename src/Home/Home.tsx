@@ -41,12 +41,7 @@ function About() {
     <div className="shortCreateBEAbout">
       <div className="aboutImage wm100" style={{ backgroundImage: `url(${shortcreteLogo})` }}></div>
       <div className="aboutText wm100">
-
         <div className="aboutUsHead1">BuildEasy Shotcrete</div>
-        <div className="aboutUsContent tJustify">
-          BuildEasy Shotcrete solution is the first of its kind in India that consists of three components – BuildEasy Shotcrete Panels, BuildEasy Shotcrete Mix and BuildEasy Shotcrete Machines
-        </div>
-        <div className="aboutUsHead1">BuildEasy Shotcrete Mix</div>
         <div className="aboutUsContent tJustify">
           A revolution under construction, Shotcrete is the method of applying concrete projected at high velocity primarily on to a vertical or overhead surface. The sprayed concrete is conveyed through a hose and pneumatically onto the surface that is typically reinforced by steel mesh. Shotcrete is placed and compacted/consolidated at the same time, thanks to the force with which it is ejected from the nozzle. Since the nature of the placement process results in an excellent bond with most substrates and rapid or instant capabilities, Shotcrete has the characteristics of high compressive strength, good durability, water tightness and frost resistance.
 
@@ -59,20 +54,29 @@ function About() {
 
 
 function ShortcreteProducts() {
-  return (<section className="shortcreteproductContainer" data-aos-offset="500" data-aos="slide-up">
-    <div className="shortcreteImage"></div>
-    <div className="shortcreteContent">
+  return (
+    <>
       <div className="shortcreteContentContent1">Buildeasy</div>
-      <div className="shortcreteContentContent2">Shotcrete Products</div>
-      <div className="shortcreteContentContent3 tJustify"> Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
-        <div><FaArrowRight className="icon" /> Cement</div>
-        <div> <FaArrowRight className="icon" /> Sand</div>
-        <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
-        <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
-      </div>
+      <div className="aboutUsHead2">Shotcrete Products</div>
+      <section className="shortcreteproductContainer" data-aos-offset="500" data-aos="slide-up">
 
-    </div>
-  </section>);
+        <div className="shortcreteImage"></div>
+        <div className="shortcreteContent">
+          {/* <div className="shortcreteContentContent1">Buildeasy</div>
+          <div className="shortcreteContentContent2">Shotcrete Products</div> */}
+
+          <div className="shortcreteContentContent3 tJustify"> Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
+            <div><FaArrowRight className="icon" /> Cement</div>
+            <div> <FaArrowRight className="icon" /> Sand</div>
+            <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
+            <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
+          </div>
+          <div className="aboutUsHead1">BuildEasy Shotcrete Mix</div>
+          <div className="aboutUsContent tJustify">
+            BuildEasy Shotcrete solution is the first of its kind in India that consists of three components – BuildEasy Shotcrete Panels, BuildEasy Shotcrete Mix and BuildEasy Shotcrete Machines.
+          </div>
+        </div>
+      </section></>);
 }
 
 
@@ -140,10 +144,13 @@ function HowItWorks() {
     <div className="howItWorkItems">
       {howItWorks.map((item, index) => {
         return <div key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="700">
+          {/* <div className="howItWorkItemInnnerContainer"> */}
+          <div className="number">{index + 1}</div>
           <div className="img" style={{
             backgroundImage: `url(/images/${item.image})`
           }}></div>
           <div className="name">{item.name}</div>
+          {/* </div> */}
         </div>;
       })}
     </div>
@@ -254,7 +261,7 @@ function BEProducts(props: any) {
 function Customers() {
   return (<section className="customer">
     <div className="customerHead">Our Customers Deserve the Best</div>
-    <div className="customerCaption ">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
+    <div className="customerCaption tJustify">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
       optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
     <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
     <div className="QaQ" data-aos-offset="700">Our Unique <span>QaQ</span> Approach</div>
@@ -508,7 +515,7 @@ export const Testimonial = () => {
                   </div>
                 </div>
 
-                <div className="testimonial">
+                <div className="testimonial tJustify">
                   {testimonial.testimonial}
                 </div>
                 <div className="quote"><FaQuoteRight /></div>

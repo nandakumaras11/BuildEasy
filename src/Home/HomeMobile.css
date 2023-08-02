@@ -1,6 +1,6 @@
 @media screen and (max-width: 990px) {
     body {
-        --padding: 1% 5% !important;
+        --padding: 1% 4% !important;
         /* margin-bottom: 10% !important; */
 
     }
@@ -170,7 +170,7 @@
             .aboutImage {
                 width: 100%;
                 padding: 9% 0%;
-                margin-top: 0%;
+                margin-top: 5%;
             }
         }
 
@@ -234,6 +234,10 @@
         }
     }
 
+    .shortcreteContentContent1 {
+        margin-top: 5%;
+    }
+
     .shortcreteContentContent3 div i {
         padding: 1.5%;
         height: auto;
@@ -273,6 +277,7 @@
 
             .shotcretePanel {
                 width: 100%;
+                padding: 5% 2%;
 
                 .shotcretePanelName {
                     padding-top: 5%;
@@ -283,13 +288,14 @@
                 }
 
                 .shotcretePanelImage {
-                    padding: 40% 0%;
+                    padding: 25% 0%;
 
                 }
 
                 .shotcretePanelCaption {
-                    font-size: 1em;
-                    text-align: left;
+                    font-size: 0.8em;
+                    padding: 0% 2%;
+                    /* text-align: left; */
                 }
             }
         }
@@ -391,13 +397,13 @@
                 margin-bottom: 5%;
 
                 .name {
-                    padding: 0% 6%;
+                    padding: 6% 2%;
                     margin-top: 10%;
                     text-transform: uppercase;
                 }
 
                 .img {
-                    padding: 30%;
+                    padding: 15%;
                 }
             }
         }
@@ -445,31 +451,47 @@
 
         }
     }
+
     .dryMixInfo {
         display: flex;
         flex-direction: column;
-        .dryMixContent{
+
+        .dryMixContent {
             width: 100% !important;
         }
-        .dryImage{
+
+        .dryImage {
             width: 100% !important;
             padding: 9% 0%;
             margin-top: 0%;
         }
     }
-    .productDetailContainer{
+
+    .productDetailContainer {
         flex-direction: column;
-        .productImage, .productInfo{
+
+        .backBtn {
+            right: 10% !important;
+            font-size: 1.2em !important;
+            padding: 0.4rem 0.4rem !important;
+        }
+
+        .productImage,
+        .productInfo {
             width: 100% !important;
         }
-        .productInfo{
+
+        .productInfo {
             padding: 0;
-            .size{
-                padding:7% 0%
+
+            .size {
+                padding: 7% 0%
             }
         }
-        .productImage{
+
+        .productImage {
             padding: 40% 0%;
         }
     }
+
 }

@@ -1,6 +1,7 @@
-.tJustify{
-    text-align: justify;
+.tJustify {
+    text-align: justify !important;
 }
+
 .bannerContainer {
     background-image: url(/images/bannerbg.jpg);
     /* height: 78dvh; */
@@ -55,18 +56,21 @@
 .aboutContainer {
     padding: var(--padding);
     margin-top: 18%;
-    .aboutBEText{
+
+    .aboutBEText {
         color: var(--gray);
         text-align: left;
         line-height: 1.5;
     }
-    .aboutBE_Container{
+
+    .aboutBE_Container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .shortCreateBEAbout{
+
+    .shortCreateBEAbout {
         display: flex;
         padding: 4% 0%;
         justify-content: space-between;
@@ -275,7 +279,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 4px;
-        border:2px solid white;
+        border: 2px solid white;
 
         .iconhref {
             /* padding: 4% 0%; */
@@ -334,7 +338,7 @@
 .shortcreteproductContainer {
     display: flex;
     padding: var(--padding1);
-    margin: 5% 0%;
+    /* margin: 5% 0%; */
     justify-content: space-between;
 }
 
@@ -420,7 +424,7 @@
 
     width: 32.45%;
     margin: 5% 0%;
-    padding: 3%;
+    padding: 2%;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 7px 15px 0 rgba(0, 0, 0, .13), 0 1px 4px 0 rgba(0, 0, 0, .11);
@@ -435,7 +439,7 @@
 }
 
 .shotcretePanelImage {
-    padding: 50% 0%;
+    padding: 35% 0%;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -594,12 +598,27 @@
         display: flex;
         width: 100%;
         flex-wrap: wrap;
+        justify-content: space-between;
+
         /* gap: 10%; */
     }
 
     .howItWorkItem {
-        width: 33%;
+        width: 28%;
         margin-top: 5%;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        padding-bottom: 1%;
+        border-radius: 11px;
+
+        .number {
+            background-color: var(--blue);
+            color: white;
+            padding: 2%;
+            font-weight: 600;
+            width: 10%;
+            border-bottom-right-radius: 12px;
+        }
     }
 
     .img {
@@ -612,8 +631,7 @@
     .name {
         line-height: 1.5;
         font-size: 0.8em;
-        padding: 0% 24%;
-        margin-top: 3%;
+        padding: 7% 24%;
     }
 }
 
@@ -804,18 +822,22 @@
     font-size: 2em;
     color: var(--blue) !important;
 }
-.dryProductContainer{
+
+.dryProductContainer {
     padding: var(--padding);
     padding-top: 3%;
     padding-top: 3%;
-    .aboutUsHead1{
+
+    .aboutUsHead1 {
         text-align: left;
     }
-    .dryMixInfo{
+
+    .dryMixInfo {
         display: flex;
         position: relative;
         justify-content: space-between;
-        .dryImage{
+
+        .dryImage {
             /* padding: 10% 0%; */
             width: 30%;
             background-position: top;
@@ -833,8 +855,9 @@
                 background-size: contain;
             } */
         }
-        .dryMixContent{
-            width: 65%;  
+
+        .dryMixContent {
+            width: 65%;
             text-align: left;
             color: var(--gray);
             line-height: 1.5;

@@ -1,0 +1,9 @@
+.loaderContainer {
+    background-color: whitesmoke;
+    height: 100dvh;
+
+    .logo {
+        background: url(/src/assets/loader.png) no-repeat center;
+        height: 100%;
+    }
+}

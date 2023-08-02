@@ -9,21 +9,20 @@ export const Footer = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-      });
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        });
     }, [pathname]);
     return (<>
         <div className="footerContainer">
             <div className="footerSection1">
                 <div className="logo" style={{ backgroundImage: `url(${logo})` }}></div>
-                <div className="aboutCompany tJustify">At BuildEasy we are focused on delivering end-to-end basic
-                    building material solutions by introducing a standard for our
-                    construction methodology with the help of mechanised
-                    automated solutions that can cater to every need right from
-                    the smallest to the biggest project.</div>
+                <div className="aboutCompany tJustify">Have a question or feedback?<br />
+                    Contact us! We're here to assist you.
+                    <br />
+                    We value your input and are eager to hear from you!.</div>
                 <div className="follow">
                     <div className="footerHead">FOLLOW US ON</div>
 
