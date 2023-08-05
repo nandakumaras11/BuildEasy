@@ -101,13 +101,15 @@
     }
 
     .bannerContainer {
-        padding: 6% 0% 5% 0%;
-        height: auto;
-        /* background-size: contain !important; */
+        /* padding: 6% 0% 5% 0%; */
+        height: 30dvh;
+        background-size: cover !important;
+        display: flex !important;
+        align-items: center;
 
         .sliderText {
             width: 58%;
-            line-height: 2;
+            line-height: 3;
         }
 
         .productImage {
@@ -124,7 +126,6 @@
         .sliderContainer {
             line-height: 1.5;
             padding: 1%;
-            /* padding: var(--padding); */
 
             .sliderText1 {
                 font-size: 1rem;
@@ -161,11 +162,19 @@
 
     }
 
+    .dryProductContainer {
+        margin-top: 5% !important;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
     .aboutContainer {
         margin-top: 10%;
 
         .shortCreateBEAbout {
             flex-direction: column-reverse;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 3% 3% 5% 3%;
+            margin-top: 5%;
 
             .aboutImage {
                 width: 100%;
@@ -187,7 +196,7 @@
         flex-direction: column;
         margin: var(--padding);
         gap: 2em;
-        padding: 10% 5%;
+        padding: 1% 5%;
         margin-bottom: 5%;
         box-shadow: none;
 
@@ -235,7 +244,7 @@
     }
 
     .shortcreteContentContent1 {
-        margin-top: 5%;
+        margin-top: 10%;
     }
 
     .shortcreteContentContent3 div i {
@@ -260,6 +269,11 @@
 
     }
 
+    .homeImage {
+        display: block !important;
+        height: 50vh;
+    }
+
     .shotcretePanelsContainer {
         padding: var(--padding);
         line-height: 1.5;
@@ -271,6 +285,8 @@
         .shotcretePanelsRight {
             display: none;
         }
+
+
 
         .shortcretePanels {
             flex-direction: column;
@@ -462,7 +478,7 @@
 
         .dryImage {
             width: 100% !important;
-            padding: 9% 0%;
+            padding: 75% 0%;
             margin-top: 0%;
         }
     }
@@ -471,7 +487,12 @@
         flex-direction: column;
 
         .backBtn {
-            right: 10% !important;
+            /* right: 10% !important; */
+            left: 3% !important;
+            bottom: 4% !important;
+            right: 87% !important;
+            position: fixed !important;
+
             font-size: 1.2em !important;
             padding: 0.4rem 0.4rem !important;
         }

@@ -2,8 +2,24 @@
     text-align: justify !important;
 }
 
+.bannerSliderContainer {
+    position: relative;
+}
+
+.bannerBg1 {
+    background-image: url(/images/bannerbg1.jpg);
+}
+
+.bannerBg2 {
+    background-image: url(/images/bannerbg2.jpg);
+}
+
+.bannerBg3 {
+    background-image: url(/images/bannerbg3.jpg) !important;
+}
+
 .bannerContainer {
-    background-image: url(/images/bannerbg.jpg);
+    /* background-image: url(/images/bannerbg.jpg); */
     /* height: 78dvh; */
     padding: 8% 0%;
     background-position: center;
@@ -12,6 +28,7 @@
     background-blend-mode: multiply;
     background-color: hsla(40, 1%, 55%, .5);
     position: relative;
+
 }
 
 .sliderBottom {
@@ -133,6 +150,7 @@
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 0.02em;
     padding-bottom: 1%;
+    color: var(--blue);
 }
 
 .aboutUsContent {
@@ -141,11 +159,13 @@
     font-size: 0.96em;
 }
 
+
 /* fasterStrongerSavings */
 .fasterStrongerSavingsContainer {
     display: flex;
     margin: var(--margin);
-    margin-top: 4%;
+    /* margin-top: 4%; */
+    margin-bottom: 2%;
     border-radius: 15px;
     justify-content: space-evenly;
     padding: 3% 2%;
@@ -186,7 +206,7 @@
 }
 
 .advantages {
-    padding: 3% 12% 3% 12%;
+    padding: 3% 5% 3% 12%;
     margin-top: 5%;
     background-color: var(--blue);
     color: #fbc72f;
@@ -197,8 +217,9 @@
     background-size: contain;
     background-position: left;
 
-    .productSubHead {
-        color: white;
+    .productSubHead,
+    .productHead {
+        color: white !important;
     }
 
     .advantageRow {
@@ -207,9 +228,11 @@
         align-items: stretch;
         /* margin-top: 1%; */
         align-items: center;
+        /* transition: all 5s ease-in-out; */
+        transition: all 4s ease-in-out;
 
         .column1 {
-            width: 47%;
+            width: 40%;
             color: var(--gray);
             text-align: left;
             line-height: 2;
@@ -217,6 +240,48 @@
             color: white;
             /* padding: 2% 0%; */
             font-weight: 300;
+
+            .advantageItem {
+                background-color: whitesmoke;
+                padding: 1.5%;
+                text-align: center;
+                color: black;
+                margin-top: 2%;
+                border-radius: 5px;
+
+
+                .name {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0% 1%;
+                    cursor: pointer;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                }
+
+                .active {
+                    max-height: 20dvh;
+                    /* opacity: 1; */
+                }
+
+                .nonActive {
+                    max-height: 0px;
+                    /* opacity: 0; */
+                }
+
+                .description {
+                    overflow: scroll;
+                    transition: all 1s ease-in-out;
+                    text-align: justify;
+                    font-size: 0.8rem;
+                    line-height: 1.7;
+                    color: gray;
+                    /* height: 0;
+                    opacity: 0; */
+
+                }
+            }
 
             .hundred {
                 background-position: center;
@@ -231,7 +296,7 @@
         }
 
         .column2 {
-            width: 100%;
+            width: 60%;
             padding: 25%;
             background-position: center;
             background-size: contain;
@@ -353,7 +418,7 @@
 .shortcreteContent {
     text-align: left;
     width: 55%;
-    padding: 2%;
+    padding: 0%;
 }
 
 .shortcreteContentContent1,
@@ -367,6 +432,7 @@
 .productHead {
     font-size: 1.5rem;
     font-weight: 500;
+    color: var(--blue);
 }
 
 .shortcreteContentContent3 {
@@ -403,7 +469,7 @@
     display: flex;
     padding: var(--padding1);
     padding-right: 0px;
-    padding-top: 5%;
+    padding-top: 1%;
     /* padding-bottom: 5%; */
     text-align: left;
     justify-content: space-between;
@@ -436,6 +502,10 @@
 
 .shotcretePanelsRight {
     width: 40%;
+}
+
+.homeImage {
+    display: none;
 }
 
 .shotcretePanelImage {
@@ -635,6 +705,10 @@
     }
 }
 
+.mt3 {
+    margin-top: 3%;
+}
+
 /* happyClients */
 .happyClientsContainer {
     display: flex;
@@ -753,6 +827,10 @@
     }
 }
 
+.slick-vertical .slick-slide {
+    border: 0px !important;
+}
+
 .contactUs {
     background-color: var(--blue);
     display: flex;
@@ -824,7 +902,7 @@
 }
 
 .dryProductContainer {
-    padding: var(--padding);
+    /* padding: var(--padding); */
     padding-top: 3%;
     padding-top: 3%;
 
@@ -843,7 +921,7 @@
             background-position: top;
             background-size: contain;
             background-repeat: no-repeat;
-            margin-top: 8%;
+            /* margin-top: 8%; */
             /* .logo{
                 position: absolute;
                 top: 0;

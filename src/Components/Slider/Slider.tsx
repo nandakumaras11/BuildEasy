@@ -58,40 +58,50 @@ export const SliderSimple = () => {
     return (
         <Slider {...settings}>
             {slider.map((slide, index) => {
-                return <span key={index}><div className="sliderContainer">
-                    <div className="sliderText">
+                return <div key={index} className={`bannerContainer bannerBg${index + 1}`}>
+                    <div className="sliderContainer" >
+                        <div className="sliderText">
+                            <motion.div
+                                initial="left"
+                                whileInView="right"
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6 }}
+                                variants={{
+                                    left: { opacity: 0, translateX: -50 },
+                                    right: { opacity: 1, translateX: 0 }
+                                }}
+                                className="sliderText1" data-aos="slide-left">{slide.sliderText1}</motion.div>
+                            <motion.div
+                                initial="right"
+                                whileInView="left"
+                                viewport={{ once: false }}
+                                transition={{ duration: 0.6 }}
+                                variants={{
+                                    right: { opacity: 1, translateX: 100 },
+                                    left: { opacity: 1, translateX: 0 }
+                                }} className={"sliderText2"} data-aos="slide-right">
+                                {slide.sliderText2}
+                            </motion.div>
+                            <div className="sliderText3">{slide.sliderText3}
+                            </div>
+                            <div className="btn1">
+                                <a href="#product" className="href">More Details</a>
+                            </div>
+                            {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
+                        </div>
                         <motion.div
-                            initial="left"
-                            whileInView="right"
+                            initial="start"
+                            whileInView="end"
                             viewport={{ once: false }}
                             transition={{ duration: 0.6 }}
                             variants={{
-                                left: { opacity: 0, translateX: -50 },
-                                right: { opacity: 1, translateX: 0 }
+                                start: { translateY: -100 },
+                                end: { translateY: 0 }
                             }}
-                            className="sliderText1" data-aos="slide-left">{slide.sliderText1}</motion.div>
-                        <motion.div
-                            initial="right"
-                            whileInView="left"
-                            viewport={{ once: false }}
-                            transition={{ duration: 0.6 }}
-                            variants={{
-                                right: { opacity: 1, translateX: 100 },
-                                left: { opacity: 1, translateX: 0 }
-                            }} className={"sliderText2"} data-aos="slide-right">
-                            {slide.sliderText2}
-                        </motion.div>
-                        <div className="sliderText3">{slide.sliderText3}
-                        </div>
-                        <div className="btn1">
-                            <a href="#product" className="href">More Details</a>
-                        </div>
-                        {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
-                    </div>
-                    <div className="productImage" data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></div>
-                    {/* <div className="rightNavigation"><FaChevronRight /></div> */}
-                    {/* {props.children} */}
-                </div></span>
+                            className="productImage" data-aos="slide-down" style={{ backgroundImage: `url(${slide.productImage})` }}></motion.div>
+                        {/* <div className="rightNavigation"><FaChevronRight /></div> */}
+                        {/* {props.children} */}
+                    </div></div>
             })}
 
         </Slider>
