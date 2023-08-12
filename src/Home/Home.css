@@ -72,7 +72,7 @@
 /* about */
 .aboutContainer {
     padding: var(--padding);
-    margin-top: 18%;
+    margin-top: 15%;
 
     .aboutBEText {
         color: var(--gray);
@@ -82,29 +82,49 @@
 
     .aboutBE_Container {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        /* flex-direction: column; */
+        justify-content: space-between;
         align-items: center;
+        color: var(--gray);
+
+        .aboutLeft {
+            width: 30%;
+            height: 39dvh;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 15px !important;
+
+        }
+
+
+        .aboutRight {
+            width: 65%;
+            line-height: 1.7;
+        }
     }
 
     .shortCreateBEAbout {
         display: flex;
         padding: 4% 0%;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
 
 .aboutImage {
-    width: 35%;
+    width: 28%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 10%;
+    /* margin-top: 10%; */
+    padding: 17% 0%;
+    border-radius: 12px;
 }
 
 .aboutText {
-    width: 59%;
+    width: 69%;
     text-align: left;
 }
 
@@ -155,7 +175,7 @@
 
 .aboutUsContent {
     color: var(--gray);
-    line-height: 1.5;
+    line-height: 1.7;
     font-size: 0.96em;
 }
 
@@ -169,7 +189,9 @@
     border-radius: 15px;
     justify-content: space-evenly;
     padding: 3% 2%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 3px 0px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+
     text-align: left;
 }
 
@@ -207,7 +229,7 @@
 
 .advantages {
     padding: 3% 5% 3% 12%;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     background-color: var(--blue);
     color: #fbc72f;
     position: relative;
@@ -251,13 +273,14 @@
 
 
                 .name {
+                    text-transform: uppercase;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     padding: 0% 1%;
                     cursor: pointer;
-                    font-weight: 700;
-                    font-size: 1.2rem;
+                    font-weight: 300;
+                    font-size: 1rem;
                 }
 
                 .active {
@@ -272,7 +295,7 @@
 
                 .description {
                     overflow: scroll;
-                    transition: all 1s ease-in-out;
+                    transition: all 0.4s linear;
                     text-align: justify;
                     font-size: 0.8rem;
                     line-height: 1.7;
@@ -297,9 +320,9 @@
 
         .column2 {
             width: 60%;
-            padding: 25%;
+            padding: 27% 0%;
             background-position: center;
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
         }
 
@@ -400,6 +423,10 @@
 
 /* shortcreteproduct */
 
+.shortcreteproductDescription {
+    padding: var(--padding1);
+}
+
 .shortcreteproductContainer {
     display: flex;
     padding: var(--padding1);
@@ -438,11 +465,11 @@
 .shortcreteContentContent3 {
     color: var(--gray);
     line-height: 2;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin: 1% 0%;
 }
 
-.shortcreteContentContent3 div .icon {
+.aboutUsContent div .icon {
     color: var(--blue);
     font-size: 0.6rem;
     /* height: 1.2vh;
@@ -509,7 +536,7 @@
 }
 
 .shotcretePanelImage {
-    padding: 35% 0%;
+    height: 20dvh;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -563,7 +590,7 @@
 .shortcreteMachineRight {
     /* width: 58%; */
     width: 100%;
-    padding: 4% 0%;
+    padding: 2% 0%;
 
 }
 
@@ -917,10 +944,11 @@
 
         .dryImage {
             /* padding: 10% 0%; */
-            width: 30%;
+            width: 27%;
             background-position: top;
             background-size: contain;
             background-repeat: no-repeat;
+            border-radius: 10px;
             /* margin-top: 8%; */
             /* .logo{
                 position: absolute;
@@ -935,7 +963,7 @@
         }
 
         .dryMixContent {
-            width: 65%;
+            width: 69%;
             text-align: left;
             color: var(--gray);
             line-height: 1.5;

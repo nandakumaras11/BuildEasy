@@ -13,7 +13,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
         padding-bottom: 5%;
-        /* column-gap: 3%; */
     }
 
     .galleryItem {
@@ -38,4 +37,10 @@
             padding: 40% 0%;
         }
     }
+
+
+}
+
+.videoItem iframe {
+    width: 100%;
 }

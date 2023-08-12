@@ -5,6 +5,22 @@
 
     }
 
+    .aboutBE_Container {
+        flex-direction: column-reverse;
+
+        .aboutLeft {
+            margin-top: 3%;
+            height: 49dvh !important;
+
+        }
+
+        .aboutRight,
+        .aboutLeft {
+            width: 100% !important;
+            line-height: 1.5;
+        }
+    }
+
     .fixedIons {
         width: 15%;
     }
@@ -108,12 +124,13 @@
         align-items: center;
 
         .sliderText {
-            width: 58%;
+            width: 55%;
             line-height: 3;
         }
 
         .productImage {
-            width: 35%;
+            width: 44%;
+            height: 30dvh;
             background-position: left;
         }
 
@@ -125,10 +142,11 @@
 
         .sliderContainer {
             line-height: 1.5;
-            padding: 1%;
+            padding: 0% 3%;
+            justify-content: space-between;
 
             .sliderText1 {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
 
             .sliderText3 {
@@ -136,7 +154,7 @@
             }
 
             .sliderText2 {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
             }
 
             .btn1 {
@@ -165,6 +183,8 @@
     .dryProductContainer {
         margin-top: 5% !important;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 3% 3% 5% 3%;
+        border-radius: 10px;
     }
 
     .aboutContainer {
@@ -175,10 +195,11 @@
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             padding: 3% 3% 5% 3%;
             margin-top: 5%;
+            border-radius: 10px;
 
             .aboutImage {
                 width: 100%;
-                padding: 9% 0%;
+                padding: 61% 0%;
                 margin-top: 5%;
             }
         }
@@ -289,11 +310,13 @@
 
 
         .shortcretePanels {
-            flex-direction: column;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
 
             .shotcretePanel {
-                width: 100%;
-                padding: 5% 2%;
+                width: 49%;
+                padding: 2%;
+                margin: 2% 0%;
 
                 .shotcretePanelName {
                     padding-top: 5%;
@@ -304,8 +327,8 @@
                 }
 
                 .shotcretePanelImage {
-                    padding: 25% 0%;
-
+                    /* padding: 25% 0%; */
+                    height: 20dvh;
                 }
 
                 .shotcretePanelCaption {
@@ -313,6 +336,10 @@
                     padding: 0% 2%;
                     /* text-align: left; */
                 }
+            }
+
+            .shotcretePanel:last-child {
+                width: 100%;
             }
         }
     }
@@ -478,7 +505,7 @@
 
         .dryImage {
             width: 100% !important;
-            padding: 75% 0%;
+            padding: 75% 0% 52% 0%;
             margin-top: 0%;
         }
     }
@@ -515,4 +542,7 @@
         }
     }
 
+    .shortcreteproductDescription {
+        padding: var(--mPadding);
+    }
 }

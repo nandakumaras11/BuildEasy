@@ -12,16 +12,18 @@ import { useRef, useState } from "react";
 import { motion } from "framer-motion"
 import { useNavigate } from "react-router-dom";
 // import hundred from "../assets/100.png";
-import shortcreteLogo from "../assets/shortcreteLogo.png";
+import shortcretebg from "../assets/shortcretebg.jpg";
+
 import dryLogo from "../assets/dry.png";
 import dryBg from "../assets/drybg.jpg";
 import shortcreteAdv from "../assets/shortcreteadv.png"
+import aboutImage from "../assets/aboutimage.jpg"
 import { ProductDetails, fasterStrongerSavings, howItWorks, productsProps, shotcretePanels } from "../constant";
 
 function ShotCreteAbout() {
   return (<div className="shortCreateBEAbout">
     <div className="aboutImage wm100" style={{
-      backgroundImage: `url(${shortcreteLogo})`
+      backgroundImage: `url(${shortcretebg})`
     }}></div>
     <div className="aboutText wm100">
       <div className="aboutUsHead1">BuildEasy Shotcrete</div>
@@ -38,14 +40,18 @@ function ShotCreteAbout() {
 
 function About() {
   return (<section className="aboutContainer" id="about" data-aos="slide-up">
+    <div className="aboutUsHead2">About Us</div>
     <div className="aboutBE_Container">
       {/* <div className="line">
         <div className="first"></div>
         <div className="second"></div>
         <div className="third"></div>
       </div> */}
-      <div className="aboutUsHead2">About Us</div>
-      <div className="aboutBEText tJustify">At BuildEasy, we aim at delivering end-to-end basic
+      {/* <div className="aboutBEText tJustify"></div> */}
+      <div className="aboutLeft" style={{
+        backgroundImage: `url(${aboutImage})`
+      }}></div>
+      <div className="aboutRight tJustify">At BuildEasy, we aim at delivering end-to-end basic
         building material solutions by introducing a standard in
         construction methodology. To this end, we employ
         mechanised automated solutions that cater to every
@@ -53,7 +59,7 @@ function About() {
         in the industry since we reduce wastage and ensure optimal
         use of raw materials that will retain their property even in
         extreme weather conditions. Moreover, we use our
-        hi-quality patented solutions for packing as well, to achieve
+        hi-quality solutions for packing as well, to achieve
         the best results possible</div>
     </div>
     <DryProducts />
@@ -70,7 +76,8 @@ function ShortcreteProducts() {
       <div className="shortcreteContentContent1 mt5">Buildeasy</div>
       <div className="aboutUsHead2">Shotcrete Products</div>
       <FasterStrongerSavings />
-
+      <div className="shortcreteContentContent3 tJustify shortcreteproductDescription">BuildEasy shotcreting is a scaled-down version of the conventional shotcrete method, involving the high-velocity application of concrete onto vertical or overhead surfaces. Similar to traditional shotcreting, the concrete mix is conveyed through a hose and pneumatically projected onto the surface, often reinforced with steel mesh. This process ensures simultaneous placement and compaction, facilitated by the forceful ejection from the nozzle. As with regular shotcrete, BuildEasy shotcreting creates a strong bond with most substrates, offering rapid setting capabilities and boasting high compressive strength, good durability, water tightness, and frost resistance. This innovative technique is well-suited for various construction projects where efficient and reliable concrete application is required.
+      </div>
       <section className="shortcreteproductContainer" data-aos-offset="500" data-aos="slide-up">
 
         <div className="shortcreteImage"></div>
@@ -78,16 +85,14 @@ function ShortcreteProducts() {
           {/* <div className="shortcreteContentContent1">Buildeasy</div>
           <div className="shortcreteContentContent2">Shotcrete Products</div> */}
 
-          <div className="shortcreteContentContent3 tJustify">BuildEasy shotcreting is a scaled-down version of the conventional shotcrete method, involving the high-velocity application of concrete onto vertical or overhead surfaces. Similar to traditional shotcreting, the concrete mix is conveyed through a hose and pneumatically projected onto the surface, often reinforced with steel mesh. This process ensures simultaneous placement and compaction, facilitated by the forceful ejection from the nozzle. As with regular shotcrete, BuildEasy shotcreting creates a strong bond with most substrates, offering rapid setting capabilities and boasting high compressive strength, good durability, water tightness, and frost resistance. This innovative technique is well-suited for various construction projects where efficient and reliable concrete application is required.
-            {/* <div className="shortcreteContentContent3 tJustify"> Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before */}
-            <div><FaArrowRight className="icon" /> Cement</div>
-            <div> <FaArrowRight className="icon" /> Sand</div>
-            <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
-            <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
-          </div>
+
           <div className="aboutUsHead1">BuildEasy Shotcrete Mix</div>
           <div className="aboutUsContent tJustify">
             Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
+            <div className="mt3"><FaArrowRight className="icon" /> Cement</div>
+            <div> <FaArrowRight className="icon" /> Sand</div>
+            <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
+            <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
           </div>
         </div>
       </section></>);
@@ -121,15 +126,15 @@ function Advantages() {
   const descriptionRef = useRef<HTMLDivElement | null>(null)
   const advantages = [
     {
-      name: "Temperature insulation",
+      name: "Faster constrution",
+      descriptiom: "BuildEasy Shotcrete introduces a faster construction methodology that revolutionizes the building industry.By leveraging the use of lightweight EPS sandwiched panels and advanced shotcreting techniques, this innovative approach accelerates construction timelines significantly.The lightweight panels enable easy handling and assembly, requiring fewer manpower resources and reducing construction time.Moreover, shotcreting with specialized machines & panels  expedites the concrete application process, eliminating the need for conventional formwork.The high - velocity projection of concrete ensures rapid placement, consolidation, and compaction, resulting in efficient construction without compromising on structural strength and durability.This speed and efficiency make BuildEasy Shotcrete ideal for various projects, from residential and commercial buildings to infrastructure and emergency constructions.Not only does BuildEasy Shotcrete deliver faster results, but it also offers excellent quality with strength.By shortening construction timelines, it reduces labor and overhead expenses, making it an attractive option for clients seeking efficient, reliable, and time - sensitive construction solutions.Embracing this faster construction methodology opens up new possibilities and paves the way for more streamlined and successful building projects."
+    },
+    {
+      name: "Higher thermal insulation",
       descriptiom: "BuildEasy Shotcrete offers an exceptional level of temperature insulation, thanks to its unique EPS sandwiched panels used in construction. These panels effectively limit the transfer of outside temperatures to the interior, providing a comfortable and stable atmosphere for occupants. By preventing external heat or cold from penetrating the structure, BuildEasy Shotcrete helps maintain the desired indoor temperature for an extended period. This impressive temperature insulation not only creates a comfortable environment for people inside but also significantly reduces the need for energy consumption in air conditioning devices. The energy-saving benefits make BuildEasy Shotcrete a sustainable and cost-effective solution for construction projects, promoting environmental consciousness and enhancing occupant comfort."
     },
     {
-      name: "Huge Energy savings",
-      descriptiom: "BuildEasy Shotcrete offers the significant advantage of huge energy savings in construction projects. The innovative construction method, with its precise temperature control and EPS sandwiched panels, contributes to the overall energy efficiency of the building. This results in substantial reductions in energy consumption, leading to lower utility bills and a reduced carbon footprint. The combination of outstanding temperature insulation and energy-saving capabilities makes BuildEasy Shotcrete an eco-friendly and cost-effective choice for modern construction, aligning with sustainable building practices and promoting environmental stewardship."
-    },
-    {
-      name: "Excellent sound insulation",
+      name: "Excellent Acoustics",
       descriptiom: "BuildEasy Shotcrete offers the significant advantage of huge energy savings in construction projects. The innovative construction method, with its precise temperature control and EPS sandwiched panels, contributes to the overall energy efficiency of the building. By limiting the transfer of external temperatures to the interior and maintaining a comfortable indoor environment, the need for excessive heating or cooling is minimized. This results in substantial reductions in energy consumption, leading to lower utility bills and a reduced carbon footprint. The combination of outstanding temperature insulation and energy-saving capabilities makes BuildEasy Shotcrete an eco-friendly and cost-effective choice for modern construction, aligning with sustainable building practices and promoting environmental stewardship."
     },
     {
@@ -145,21 +150,21 @@ function Advantages() {
       descriptiom: "One of the notable advantages of BuildEasy Shotcrete is its ability to provide reduced structural weight in construction projects. The shotcrete application method allows for precise and controlled placement of concrete, resulting in a thin yet durable layer. The efficient use of materials reduces the overall weight of the structure without compromising its strength and integrity. Additionally, the incorporation of EPS sandwiched panels in BuildEasy Shotcrete further contributes to weight reduction while maintaining structural stability. The lighter weight of shotcrete structures not only eases the construction process but also offers benefits such as reduced foundation requirements and transportation costs. This advantage makes BuildEasy Shotcrete an attractive option for various applications, including building facades, architectural elements, and infrastructure projects, where the optimization of structural weight is essential."
     },
     {
-      name: "Faster constrution menthodology",
-      descriptiom: "BuildEasy Shotcrete introduces a faster construction methodology that revolutionizes the building industry.By leveraging the use of lightweight EPS sandwiched panels and advanced shotcreting techniques, this innovative approach accelerates construction timelines significantly.The lightweight panels enable easy handling and assembly, requiring fewer manpower resources and reducing construction time.Moreover, shotcreting with specialized machines & panels  expedites the concrete application process, eliminating the need for conventional formwork.The high - velocity projection of concrete ensures rapid placement, consolidation, and compaction, resulting in efficient construction without compromising on structural strength and durability.This speed and efficiency make BuildEasy Shotcrete ideal for various projects, from residential and commercial buildings to infrastructure and emergency constructions.Not only does BuildEasy Shotcrete deliver faster results, but it also offers excellent quality with strength.By shortening construction timelines, it reduces labor and overhead expenses, making it an attractive option for clients seeking efficient, reliable, and time - sensitive construction solutions.Embracing this faster construction methodology opens up new possibilities and paves the way for more streamlined and successful building projects."
+      name: "Ease of Maintenance",
+      descriptiom: "BuildEasy Shotcrete offers the advantage of ease of maintenance, simplifying the upkeep and care of constructed structures. The durable and compacted shotcrete surface, along with the protective EPS sandwiched panels, reduces the need for frequent maintenance and repairs. The shotcreting process ensures a strong bond with most substrates, minimizing the likelihood of cracks or deterioration.Furthermore, the uniformity and homogeneity of shotcrete surfaces result in smoother finishes, making them easier to clean and maintain over time. Unlike other construction methods that may require extensive and costly maintenance, BuildEasy Shotcrete provides a low-maintenance solution that saves both time and resources.Incorporating BuildEasy Shotcrete in construction projects ensures buildings and infrastructure remain resilient and easily maintainable throughout their lifecycle, contributing to long-term cost savings and hassle-free maintenance for property owners and managers."
     },
     {
       name: "Increased Durability ",
       descriptiom: "BuildEasy Shotcrete excels in providing increased durability, making it a preferred choice for long-lasting structures. The shotcreting process ensures a homogenous and compacted concrete placement, resulting in a robust and uniform structure that can withstand various environmental challenges. The excellent bonding properties of shotcrete create a strong bond with most substrates, enhancing the overall durability of the construction.The incorporation of EPS sandwiched panels further contributes to durability, as they protect the concrete from moisture ingress and reduce the risk of cracks and deterioration. The reduced water absorption characteristic of BuildEasy Shotcrete plays a crucial role in preventing potential damage due to chemical exposure.With its ability to resist wear and tear, weathering, and other adverse conditions, BuildEasy Shotcrete structures have an extended service life, reducing the need for frequent maintenance and repair. This enhanced durability ensures that buildings and infrastructure constructed using BuildEasy Shotcrete stand the test of time, providing reliable and resilient solutions for a wide range of construction projects."
     },
     {
-      name: "Reduced wastage",
-      descriptiom: "BuildEasy Shotcrete offers the advantage of reduced wastage in construction projects. The precise application process of shotcreting allows for efficient and controlled placement of concrete, minimizing the amount of material needed. Unlike conventional methods that may result in excess concrete or formwork waste, shotcrete's high-velocity projection ensures that only the necessary amount of concrete is used.By optimizing material usage and minimizing on-site waste, BuildEasy Shotcrete promotes sustainable construction practices, reduces disposal costs, and contributes to a more eco-friendly building process. This reduction in wastage aligns with modern environmental standards, making BuildEasy Shotcrete a responsible and efficient choice for construction projects"
-    },
-    {
-      name: "Ease of Maintenance",
-      descriptiom: "BuildEasy Shotcrete offers the advantage of ease of maintenance, simplifying the upkeep and care of constructed structures. The durable and compacted shotcrete surface, along with the protective EPS sandwiched panels, reduces the need for frequent maintenance and repairs. The shotcreting process ensures a strong bond with most substrates, minimizing the likelihood of cracks or deterioration.Furthermore, the uniformity and homogeneity of shotcrete surfaces result in smoother finishes, making them easier to clean and maintain over time. Unlike other construction methods that may require extensive and costly maintenance, BuildEasy Shotcrete provides a low-maintenance solution that saves both time and resources.Incorporating BuildEasy Shotcrete in construction projects ensures buildings and infrastructure remain resilient and easily maintainable throughout their lifecycle, contributing to long-term cost savings and hassle-free maintenance for property owners and managers."
+      name: "Huge Energy savings",
+      descriptiom: "BuildEasy Shotcrete offers the significant advantage of huge energy savings in construction projects. The innovative construction method, with its precise temperature control and EPS sandwiched panels, contributes to the overall energy efficiency of the building. This results in substantial reductions in energy consumption, leading to lower utility bills and a reduced carbon footprint. The combination of outstanding temperature insulation and energy-saving capabilities makes BuildEasy Shotcrete an eco-friendly and cost-effective choice for modern construction, aligning with sustainable building practices and promoting environmental stewardship."
     }
+    // {
+    //   name: "Reduced wastage",
+    //   descriptiom: "BuildEasy Shotcrete offers the advantage of reduced wastage in construction projects. The precise application process of shotcreting allows for efficient and controlled placement of concrete, minimizing the amount of material needed. Unlike conventional methods that may result in excess concrete or formwork waste, shotcrete's high-velocity projection ensures that only the necessary amount of concrete is used.By optimizing material usage and minimizing on-site waste, BuildEasy Shotcrete promotes sustainable construction practices, reduces disposal costs, and contributes to a more eco-friendly building process. This reduction in wastage aligns with modern environmental standards, making BuildEasy Shotcrete a responsible and efficient choice for construction projects"
+    // },
   ]
   return (<section className="advantages">
     <div className="productSubHead">Buildeasy</div>
@@ -313,7 +318,7 @@ function Customers() {
     <div className="customerHead">Our Customers Deserve the Best</div>
     <div className="customerCaption tJustify">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
       optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
-    <img src="/images/process.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
+    <img src="/images/qaq.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
     <div className="QaQ" data-aos-offset="700">Our Unique <span>QaQ</span> Approach</div>
   </section>);
 }
@@ -400,7 +405,7 @@ function DryProducts() {
       <div className="aboutUsHead1">BE Dry Ready to Mix</div>
       <div className="dryMixInfo">
         <div className="dryMixContent tJustify">
-          Discover the unmatched convenience and reliability of our Dry Mix Concrete – the ultimate solution for all your construction needs. Designed to streamline your building projects, our dry mix concrete eliminates the hassle of on-site mixing, ensuring consistent and superior results every time. With precise proportions of cement, aggregates, and additives pre-blended by our experts, you can be confident in achieving the ideal mix for your specific application. Whether it's for foundations, slabs, or structural elements, our dry mix concrete guarantees optimal strength and durability. <p>Say goodbye to time-consuming mixing processes and hello to efficient construction with our Dry Mix Concrete. Experience the freedom to focus on the art of building, knowing that the groundwork is laid with excellence, backed by our commitment to quality and performance. Trust in our Dry Mix Concrete to elevate your construction endeavors and revolutionize the way you build</p>.
+          Discover the unmatched convenience and reliability of our Dry Mix Concrete – the ultimate solution for all your construction needs. Designed to streamline your building projects, our dry mix concrete eliminates the hassle of on-site mixing, ensuring consistent and superior results every time. With precise proportions of cement, aggregates, and additives pre-blended by our experts, you can be confident in achieving the ideal mix for your specific application. Whether it's for foundations, slabs, or structural elements, our dry mix concrete guarantees optimal strength and durability. <p>Say goodbye to time-consuming mixing processes and hello to efficient construction with our Dry Mix Concrete. Experience the freedom to focus on the art of building, knowing that the groundwork is laid with excellence, backed by our commitment to quality and performance. Trust in our Dry Mix Concrete to elevate your construction endeavors and revolutionize the way you build</p>
         </div>
         <div className="logo" style={{ backgroundImage: `url(${dryLogo})` }}></div>
         <div className="dryImage" style={{ backgroundImage: `url(${dryBg})` }}>

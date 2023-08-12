@@ -29,7 +29,7 @@ export const SliderSimple = () => {
         }
     ]
     var settings = {
-        autoplay: false,
+        autoplay: true,
         dots: true,
         dotsClass: "slick-dots sliderDot",
         infinite: true,

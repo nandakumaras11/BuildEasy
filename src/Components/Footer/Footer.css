@@ -78,8 +78,15 @@
         width: 30%;
         font-size: 0.7rem;
 
+        .footerIcon {
+            font-size: 1.5rem;
+            margin-right: 2% !important;
+        }
+
         .address {
             margin-top: 7%;
+
+
         }
 
         .footerLine {
@@ -89,6 +96,14 @@
         .mobile,
         .email {
             margin: 5% 0%;
+        }
+
+        .email {
+            display: flex;
+            align-items: center;
+            /* gap: 3%; */
+            width: 85%;
+            justify-content: space-between;
         }
 
         .certification {
@@ -135,6 +150,7 @@
         padding: var(--padding);
         flex-direction: column;
         padding: 10%;
+
         .footerSection1,
         .footerSection2,
         .footerSection3 {
@@ -171,19 +187,21 @@
 
             .certification {
                 margin: 10% 0% 0% 0%;
+
                 .certificateLogo {
                     margin-top: 10%;
                     background-position: center;
                 }
             }
 
-           
+
         }
 
         .footerSection1 {
-            .logo{
+            .logo {
                 padding: 15%;
             }
+
             .follow {
                 margin: 7% 0%;
             }
