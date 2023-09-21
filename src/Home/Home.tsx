@@ -346,55 +346,103 @@ function ContactUs() {
       </div>
       <div className="sectionMainHead gap">Get In Touch</div>
 
-      <div className="address mt5">
-        <div className="conatctUsSubHead bold">Address</div>
-        <div className="contactUsValues">
-          <div className="linebreak subContents">{`Eco Best Build LLP
-6/38/BE, 1st Floor, Koyikkakudiyil Building,
-Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div>
+      <h2 className="conatctUsSubHead bold">Our Locations</h2>
+      <hr className="contactLine"></hr>
+      <div className="addressContainer">
+        <div className="address mt5">
+          <div className="conatctUsSubHead bold">Australia</div>
+          <div className="contactUsValues">
+            <div className="linebreak subContents">Sydney</div>
+            <div className="linebreak subContents">19/103 George St</div>
+            <div className="linebreak subContents">Parramatta, NSW</div>
+            <div className="linebreak subContents">Australia -2150</div>
+            <div className="linebreak subContents">Contact no - +61 481363093</div>
 
+
+          </div>
+        </div>
+        {/* <hr className="contactLine mt5"></hr> */}
+        <div className="address mt5">
+          <div className="conatctUsSubHead bold">Oman</div>
+          <div className="contactUsValues">
+            <div className="linebreak subContents">Muscat</div>
+            <div className="linebreak subContents">Near Indian public school</div>
+            <div className="linebreak subContents">Darsite, Muscat</div>
+            <div className="linebreak subContents">Contact no - +96871151194</div>
+            {/* <div className="linebreak subContents"></div> */}
+            {/* <div className="linebreak subContents">{`Eco Best Build LLP
+6/38/BE, 1st Floor, Koyikkakudiyil Building,
+Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div> */}
+
+          </div>
+        </div>
+        {/* <hr className="contactLine"></hr> */}
+        <div className="address mt5">
+          <div className="conatctUsSubHead bold">India</div>
+          <div className="contactUsValues">
+            <div className="linebreak subContents">Bangalore 4th Main,,</div>
+            <div className="linebreak subContents"> No,849  12th Cross Rd,</div>
+            <div className="linebreak subContents"> near BDA Complex, </div>
+            <div className="linebreak subContents">Indira Nagar 1st Stage, </div>
+            <div className="linebreak subContents">Bengaluru, Karnataka 560038</div>
+            {/* <div className="linebreak subContents">{`Eco Best Build LLP
+6/38/BE, 1st Floor, Koyikkakudiyil Building,
+Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div> */}
+
+          </div>
+        </div>
+        {/* <hr className="contactLine"></hr> */}
+        <div className="address mt5">
+          <div className="conatctUsSubHead bold">India</div>
+          <div className="contactUsValues">
+
+            <div className="linebreak subContents">Research and development</div>
+            <div className="linebreak subContents">Angamaly              6/38/BE, 1st floor, </div>
+            {/* <div className="linebreak subContents">koyikkakudiyil building
+            </div> */}
+            <div className="linebreak subContents">Above SBI de Paul branch angamaly Kerala - 683589</div>
+            <div className="linebreak subContents">       Contact no - +91 9645799933</div>
+
+          </div>
+          {/* <hr className="contactLine "></hr> */}
         </div>
       </div>
       <hr className="contactLine mt5"></hr>
-      <div className="callUs">
-        <div className="conatctUsSubHead bold">Call US</div>
-        <div className="contactUsValues subContents">
-          {
-            /* {import.meta.env.VITE_EMAIL} */
-          }
-          <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a>
+      <div className="mailCallContainer mt5">
+        {/* <div className="callUs">
+          <div className="conatctUsSubHead bold">Call US</div>
+          <div className="contactUsValues subContents">
+            <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a>
+          </div>
+        </div> */}
+        {/* <hr className="contactLine"></hr> */}
+        <div className="mail">
+          <div className="conatctUsSubHead bold">Email</div>
+          <div className="contactUsValues subContents">
+            <div><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
+
+          </div>
+        </div>
+        <div className="followUs">
+          <div className="conatctUsSubHead bold followUsHead">FOLLOW US</div>
+          <div className="contactUsValues mt5">
+            <div><SocialMediaMenu /></div>
+          </div>
         </div>
       </div>
-      <hr className="contactLine"></hr>
-      <div className="mail">
-        <div className="conatctUsSubHead bold">Email</div>
-        <div className="contactUsValues subContents">
-          {
-            /* <a href={`tel:${import.meta.env.VITE_MOBILE}`}><div>{import.meta.env.VITE_MOBILE}</div></a> */
-          }
-
-          <div><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL}</a></div>
-        </div>
-      </div>
-      <hr className="contactLine"></hr>
-      <div className="followUs mt5">
-        <div className="conatctUsSubHead bold followUsHead">FOLLOW US</div>
-        <div className="contactUsValues mt5">
-          <div><SocialMediaMenu /></div>
-        </div>
-      </div>
+      {/* <hr className="contactLine"></hr> */}
 
 
-    </div>
-    <div className="contactUsRight">
-      {
-        /* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15752.335475113237!2d76.62970754999999!3d9.236796850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0619b7c32320d3%3A0x8626062c65ae732c!2sIndian%20Oil%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1685078274678!5m2!1sen!2sin" width="600" height="450" style={{ border: '0' }}  allowFullScreen= {false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */
-      }
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.080865456867!2d76.3742376!3d10.1740824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08078e115dcb43%3A0x857794c0f6fb60a7!2sBuildEasy!5e0!3m2!1sen!2sin!4v1690089517301!5m2!1sen!2sin" width="100%" height="100%" style={{
-        border: '0'
-      }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>);
+  // <div className="contactUsRight">
+  //   {
+  //     /* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15752.335475113237!2d76.62970754999999!3d9.236796850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0619b7c32320d3%3A0x8626062c65ae732c!2sIndian%20Oil%20Petrol%20Pump!5e0!3m2!1sen!2sin!4v1685078274678!5m2!1sen!2sin" width="600" height="450" style={{ border: '0' }}  allowFullScreen= {false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */
+  //   }
+  //   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.080865456867!2d76.3742376!3d10.1740824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b08078e115dcb43%3A0x857794c0f6fb60a7!2sBuildEasy!5e0!3m2!1sen!2sin!4v1690089517301!5m2!1sen!2sin" width="100%" height="100%" style={{
+  //     border: '0'
+  //   }} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+  // </div>
 }
 
 
@@ -481,7 +529,7 @@ export const SliderBottom = ({ cls }: classProps) => {
     },
     {
       image: "bottomItem2.png",
-      text: "Compatible with the building standards in India"
+      text: "Compatible with international building standards"
     },
     {
       image: "bottomItem3.png",

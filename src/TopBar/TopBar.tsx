@@ -32,8 +32,8 @@ export const menus = [
 export const SocialMediaMenu = ({ cls = "" }) => {
     return (
         <div className={`socialMediaIcon ${cls}`}>
-            <div className="icon facebook"><a href="https://www.facebook.com/BuildEasyInd/" className="iconhref"><FaFacebookF /></a></div>
-            <div className="icon instagram"><a href="https://www.instagram.com/BuildEasyInd/" className="iconhref"><FaInstagram /></a></div>
+            <div className="icon facebook"><a href="https://www.facebook.com/BuildEasyGlobal" className="iconhref"><FaFacebookF /></a></div>
+            <div className="icon instagram"><a href="https://www.instagram.com/buildeasyglobal/" className="iconhref"><FaInstagram /></a></div>
             <div className="icon gmail"><a href={`mailto:${import.meta.env.VITE_EMAIL}`} className="iconhref"><FaEnvelopeOpen /></a></div>
             {/* whatsapp://send?text=I am interested in Insourze.&amp;phone=+971505690203 */}
             <div className="icon whatsapp"><a href={import.meta.env.VITE_WHATSAPP} className="iconhref"><FaWhatsapp /></a></div>

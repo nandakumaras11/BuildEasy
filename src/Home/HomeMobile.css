@@ -485,6 +485,29 @@
 
         .contactUsLeft {
             width: 100%;
+            padding: var(--padding);
+            padding-top: 5%;
+            padding-bottom: 5%;
+
+            .addressContainer {
+                flex-direction: column;
+                width: 100%;
+                padding: var(--mPadding);
+
+                .address {
+                    width: 100%;
+
+                }
+            }
+
+            .mailCallContainer {
+                flex-direction: column;
+
+                .callUs,
+                .mail {
+                    padding-bottom: 5%;
+                }
+            }
         }
 
         .contactUsRight {
