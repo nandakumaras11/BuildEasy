@@ -26,7 +26,7 @@ export type productsProps = {
 
 }[]
 export const ProductDetails: productsProps = [
-   
+
     {
         image: pillerSupr,
         name: "Pillar Super Mix",
@@ -151,29 +151,29 @@ export const ProductDetails: productsProps = [
 
 export const fasterStrongerSavings = [
     {
-      image: faster,
-      text: "60% Faster"
+        image: faster,
+        text: "60% Faster"
     },
     {
-      image: strengthImg,
-      text: "30% Stronger"
+        image: strengthImg,
+        text: "30% Stronger"
     },
     {
-      image: savings,
-      text: "20% Savings"
+        image: savings,
+        text: "20% Savings"
     }
-  ]
-  export const shotcretePanels = [
-    { image: panel1, text: "Single Panel", caption: "Made with Eps sandwiched between galvanised mesh’s on either side. Concrete is sprayed on either side forming a reinforced monolithic structure" },
-    { image: panel2, text: "Double Panel", caption: "Made of two EPS sandwiched panels with wire mesh on either side. Concrete is poured between the panels and shotcreted both sides, building a strong insulated wall quickly." },
-    { image: panel3, text: "Floor Panel", caption: "Build with EPS sandwiched with wire mesh on either side and two groves provided in the panels to run rebars for additional structural strength. Concrete is poured on top forming a structurally insulated strong roof." }
-  ]
+]
+export const shotcretePanels = [
+    { image: panel1, text: "Single Panel", caption: "singlePanelCaption" },
+    { image: panel2, text: "Double Panel", caption: "doublePanelCaption" },
+    { image: panel3, text: "Floor Panel", caption: "floorPanelCaption" }
+]
 
-  export const howItWorks = [
+export const howItWorks = [
     { image: "labour-day.png", name: "PLANNING and PREPARATION" },
     { image: "paper.png", name: "ASSEMBLING OF PANELS" },
     { image: "interlocking.png", name: "INTERLOCKING OF PANELS" },
     { image: "sprinkler.png", name: "APPLICATION OF SHOTCRETE MIX" },
     { image: "brickwall.png", name: "Leveling and finishing" },
     { image: "paintroller.png", name: "PUTTYING, PAINTING,TILING ETC" },
-  ]
+]

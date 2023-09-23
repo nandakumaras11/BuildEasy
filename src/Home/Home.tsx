@@ -19,6 +19,7 @@ import dryBg from "../assets/drybg.jpg";
 import shortcreteAdv from "../assets/shortcreteadv.png"
 import aboutImage from "../assets/aboutimage.jpg"
 import { ProductDetails, fasterStrongerSavings, howItWorks, productsProps, shotcretePanels } from "../constant";
+import { t } from "i18next";
 
 function ShotCreteAbout() {
   return (<div className="shortCreateBEAbout">
@@ -26,9 +27,9 @@ function ShotCreteAbout() {
       backgroundImage: `url(${shortcretebg})`
     }}></div>
     <div className="aboutText wm100">
-      <div className="aboutUsHead1">BuildEasy Shotcrete</div>
+      <div className="aboutUsHead1">{t("BuildEasy Shotcrete")}</div>
       <div className="aboutUsContent tJustify">
-        A revolution under construction, Shotcrete is the method of applying concrete projected at high velocity primarily on to a vertical or overhead surface. The sprayed concrete is conveyed through a hose and pneumatically onto the surface that is typically reinforced by steel mesh. Shotcrete is placed and compacted/consolidated at the same time, thanks to the force with which it is ejected from the nozzle. Since the nature of the placement process results in an excellent bond with most substrates and rapid or instant capabilities, Shotcrete has the characteristics of high compressive strength, good durability, water tightness and frost resistance.
+        {t("shortP1")}
 
       </div>
     </div>
@@ -40,7 +41,7 @@ function ShotCreteAbout() {
 
 function About() {
   return (<section className="aboutContainer" id="about" data-aos="slide-up">
-    <div className="aboutUsHead2">About Us</div>
+    <div className="aboutUsHead2">{t("About Us")}</div>
     <div className="aboutBE_Container">
       {/* <div className="line">
         <div className="first"></div>
@@ -51,16 +52,7 @@ function About() {
       <div className="aboutLeft" style={{
         backgroundImage: `url(${aboutImage})`
       }}></div>
-      <div className="aboutRight tJustify">At BuildEasy, we aim at delivering end-to-end basic
-        building material solutions by introducing a standard in
-        construction methodology. To this end, we employ
-        mechanised automated solutions that cater to every
-        requirement of our projects. Our solutions are the greenest
-        in the industry since we reduce wastage and ensure optimal
-        use of raw materials that will retain their property even in
-        extreme weather conditions. Moreover, we use our
-        hi-quality solutions for packing as well, to achieve
-        the best results possible</div>
+      <div className="aboutRight tJustify">{t("aboutP1")}</div>
     </div>
     <DryProducts />
 
@@ -73,10 +65,10 @@ function About() {
 function ShortcreteProducts() {
   return (
     <>
-      <div className="shortcreteContentContent1 mt5">Buildeasy</div>
-      <div className="aboutUsHead2">Shotcrete Products</div>
+      <div className="shortcreteContentContent1 mt5">{t("Buildeasy")}</div>
+      <div className="aboutUsHead2">{t("Shotcrete Products")}</div>
       <FasterStrongerSavings />
-      <div className="shortcreteContentContent3 tJustify shortcreteproductDescription">BuildEasy shotcreting is a scaled-down version of the conventional shotcrete method, involving the high-velocity application of concrete onto vertical or overhead surfaces. Similar to traditional shotcreting, the concrete mix is conveyed through a hose and pneumatically projected onto the surface, often reinforced with steel mesh. This process ensures simultaneous placement and compaction, facilitated by the forceful ejection from the nozzle. As with regular shotcrete, BuildEasy shotcreting creates a strong bond with most substrates, offering rapid setting capabilities and boasting high compressive strength, good durability, water tightness, and frost resistance. This innovative technique is well-suited for various construction projects where efficient and reliable concrete application is required.
+      <div className="shortcreteContentContent3 tJustify shortcreteproductDescription">{t("spP1")}
       </div>
       <section className="shortcreteproductContainer" data-aos-offset="500" data-aos="slide-up">
 
@@ -86,13 +78,13 @@ function ShortcreteProducts() {
           <div className="shortcreteContentContent2">Shotcrete Products</div> */}
 
 
-          <div className="aboutUsHead1">BuildEasy Shotcrete Mix</div>
+          <div className="aboutUsHead1">{t("BuildEasy Shotcrete Mix")}</div>
           <div className="aboutUsContent tJustify">
-            Introducing the groundbreaking BE Shotcrete Mix, proudly developed by BuildEasy as our exclusive proprietary product. With an impeccable combination of raw materials in the perfect ratio, this innovative mix redefines construction standards. Offering unrivaled strength and durability, BE Shotcrete Mix is designed to excel in various applications. From structural reinforcements to rapid repairs, its versatility knows no bounds. Crafted with precision and expertise, this game-changing product ensures consistent and reliable results on every project. Embrace the future of construction with confidence, as BE Shotcrete Mix from BuildEasy revolutionizes the way you build, delivering exceptional performance and quality like never before
-            <div className="mt3"><FaArrowRight className="icon" /> Cement</div>
-            <div> <FaArrowRight className="icon" /> Sand</div>
-            <div><FaArrowRight className="icon" />  Aggregates (with size less than 10mm only)</div>
-            <div><FaArrowRight className="icon" /> Fiber & Admixtures etc.</div>
+            {t("spP2")}
+            <div className="mt3"><FaArrowRight className="icon" /> {t("Cement")}</div>
+            <div> <FaArrowRight className="icon" /> {t("Sand")}</div>
+            <div><FaArrowRight className="icon" /> {t("aggregate")}</div>
+            <div><FaArrowRight className="icon" />{t("fiber")}</div>
           </div>
         </div>
       </section></>);
@@ -112,7 +104,7 @@ function FasterStrongerSavings() {
         }
         <div className="fasterStrongerSavingsText">
           <div className="percentage"> {item.text.split(" ")[0]}</div>
-          <div className="caption"> {item.text.split(" ")[1]}</div>
+          <div className="caption"> {t(item.text.split(" ")[1])}</div>
         </div>
       </div>;
     })}
@@ -167,7 +159,7 @@ function Advantages() {
     // },
   ]
   return (<section className="advantages">
-    <div className="productSubHead">Buildeasy</div>
+    <div className="productSubHead">{t("Buildeasy")}</div>
     <div className="productHead">Shotcrete Advantages</div>
     <div className="advantageRow">
       <div className="column2" style={{
@@ -216,10 +208,9 @@ function HowItWorks() {
 function ShortcretePanels() {
   return (<section className="shotcretePanelsContainer" data-aos-offset="500" data-aos="slide-up">
     <div className="shotcretePanelsLeft">
-      <div className="shortcreteContentContent1">Buildeasy</div>
-      <div className="shortcreteContentContent2">Shotcrete Panels</div>
-      <div className="shortcreteContentContent3 tJustify">BuildEasy Shotcrete Panels are manufactured by sandwiching eps between square
-        mesh on either side. The mesh is cross welded for extra strength..
+      <div className="shortcreteContentContent1">{t("Buildeasy")}</div>
+      <div className="shortcreteContentContent2">{t("Shotcrete Panels")}</div>
+      <div className="shortcreteContentContent3 tJustify">{t("spP1")}
       </div>
       <div className="shortcretePanels" data-aos="slide-up">
         {shotcretePanels.map((shotcretePanel, index) => {
@@ -230,8 +221,8 @@ function ShortcretePanels() {
             {
               /* <div className="shotcretePanelImage" >{shotcretePanel.image}</div> */
             }
-            <div className="shotcretePanelName">{shotcretePanel.text}</div>
-            <div className="shotcretePanelCaption tJustify">{shotcretePanel.caption}</div>
+            <div className="shotcretePanelName">{t(shotcretePanel.text)}</div>
+            <div className="shotcretePanelCaption tJustify">{t(shotcretePanel.caption)}</div>
           </div>;
         })}
       </div>
@@ -251,9 +242,9 @@ function SHortcreteMachine() {
       backgroundImage: `url(${shotcreteMachine})`
     }}></div>
     <div className="shortcreteMachineRight">
-      <div className="shortcreteContentContent1">Buildeasy</div>
-      <div className="shortcreteContentContent2">Shotcrete Machine</div>
-      <div className="shortcreteContentContent3 tJustify">Discover the cutting-edge BuildEasy Shotcrete Machine, a state-of-the-art equipment designed to revolutionize concrete application. Engineered by BuildEasy, this advanced machine empowers construction professionals with the ability to project concrete mixture at high pressure, ensuring precise and efficient placement. The Shotcrete Machine features a seamlessly integrated system, including a powerful mixer, a reliable additive pump, a robust compressor, a versatile sprayer arm, and an intuitive control system. With this innovative equipment at your disposal, you can effortlessly tackle a wide range of projects, from commercial building to residential projects. Embrace the future of concrete application with the BuildEasy Shotcrete Machine, where efficiency, precision, and performance converge to elevate your construction endeavors to new heights
+      <div className="shortcreteContentContent1">{t("Buildeasy")}</div>
+      <div className="shortcreteContentContent2">{t("Shotcrete Machine")}</div>
+      <div className="shortcreteContentContent3 tJustify">{t("machineP1")}
       </div>
     </div>
   </section>);
@@ -450,10 +441,10 @@ Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div> */}
 function DryProducts() {
   return (
     <section className="dryProductContainer" data-aos-offset="500" data-aos="slide-up">
-      <div className="aboutUsHead1">BE Dry Ready to Mix</div>
+      <div className="aboutUsHead1">{t("BE Dry Ready to Mix")}</div>
       <div className="dryMixInfo">
         <div className="dryMixContent tJustify">
-          Discover the unmatched convenience and reliability of our Dry Mix Concrete – the ultimate solution for all your construction needs. Designed to streamline your building projects, our dry mix concrete eliminates the hassle of on-site mixing, ensuring consistent and superior results every time. With precise proportions of cement, aggregates, and additives pre-blended by our experts, you can be confident in achieving the ideal mix for your specific application. Whether it's for foundations, slabs, or structural elements, our dry mix concrete guarantees optimal strength and durability. <p>Say goodbye to time-consuming mixing processes and hello to efficient construction with our Dry Mix Concrete. Experience the freedom to focus on the art of building, knowing that the groundwork is laid with excellence, backed by our commitment to quality and performance. Trust in our Dry Mix Concrete to elevate your construction endeavors and revolutionize the way you build</p>
+          {t("bdryP1")} <p>{t("bdryP2")}</p>
         </div>
         <div className="logo" style={{ backgroundImage: `url(${dryLogo})` }}></div>
         <div className="dryImage" style={{ backgroundImage: `url(${dryBg})` }}>
@@ -525,19 +516,19 @@ export const SliderBottom = ({ cls }: classProps) => {
   const bottomItems = [
     {
       image: "bottomItem1.png",
-      text: "100+ Projects Completed"
+      text: "item1Text"
     },
     {
       image: "bottomItem2.png",
-      text: "Compatible with international building standards"
+      text: "item2Text"
     },
     {
       image: "bottomItem3.png",
-      text: "Patented Technology"
+      text: "item3Text"
     },
     {
       image: "bottomItem4.png",
-      text: "Expert Team Synergizes With Industry Experts"
+      text: "item4Text"
     }
   ];
   return (
@@ -550,7 +541,7 @@ export const SliderBottom = ({ cls }: classProps) => {
       {bottomItems.map((item, index) => {
         return <div key={index} className="sliderBottomItem" data-aos="zoom-out" data-aos-offset="300">
           <div className="itemImage" style={{ backgroundImage: `url(/images/${item.image})` }}> </div>
-          <div className="itemText">{item.text}</div>
+          <div className="itemText">{t(item.text)}</div>
         </div>
       })}
     </motion.div>

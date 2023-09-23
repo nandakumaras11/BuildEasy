@@ -1,6 +1,17 @@
 .topBar {
-    background-color: #252d39;
+    background-color: var(--blue);
     color: white;
+}
+
+.language {
+    /* background-color: var(--blue); */
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2%;
+    border-radius: 10px;
 }
 
 .topBar,
@@ -11,7 +22,7 @@
     font-size: 0.85rem;
     line-height: 2.5rem;
     padding: 0 20%;
-    font-weight: 200;
+    font-weight: 700;
     align-items: center;
 
 }

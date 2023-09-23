@@ -6,8 +6,10 @@ import "../src/Home/HomeMobile.css"
 import { Routes } from './AllRoutes'
 import { Footer } from './Components/Footer/Footer'
 import { Loader } from './Components/Loader/Loader'
+import { useTranslation } from 'react-i18next';
+// ...
 function App() {
-  const [showMenu, handleShowMenu] = useState(false)
+  const [showMenu, handleShowMenu] = useState(false);
   return (
     <>
       <Suspense fallback={<Loader />}>

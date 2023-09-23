@@ -3,19 +3,25 @@ import { FaFacebookF, FaInstagram, FaBars, FaTimes, FaEnvelopeOpen, FaWhatsapp }
 import logo from "../assets/logo.png"
 import { NavHashLink } from 'react-router-hash-link';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+// import i18next from "i18next";
+import { useEffect } from "react";
+import { t } from "i18next";
 export const TopBar = () => {
+    const { t, i18n } = useTranslation();
     return (
         <div className="topBar">
             <div className="leftBar">
                 <div className="connectWithUs">
-                    Connect With Us:
+                    {/* Connect With Us: */}
+                    {t('TopBar.connect')}
                 </div>
                 <SocialMediaMenu />
             </div>
             <div className="rightBar">
                 <div className="email"><a href={`mailto:${import.meta.env.VITE_EMAIL}`}>{import.meta.env.VITE_EMAIL} </a>{`  `} </div>
                 <span>|</span>
-                <div className="mobileNumber"> Call us Now: <a href={`tel:${import.meta.env.VITE_MOBILE}`}>{`${import.meta.env.VITE_MOBILE}`}</a></div>
+                <div className="mobileNumber"> {t("TopBar.callus")} <a href={`tel:${import.meta.env.VITE_MOBILE}`}>{`${import.meta.env.VITE_MOBILE}`}</a></div>
             </div>
         </div>
     )
@@ -47,15 +53,22 @@ export const SocialMediaMenu = ({ cls = "" }) => {
 export default TopBar
 export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
     const navigate = useNavigate();
+    // useEffect()
+    const { i18n } = useTranslation('home');
+
     return (
         <>
             <div className="menuBarContainer">
                 <div className="logo" style={{ backgroundImage: `url(${logo})` }} onClick={() => navigate("/")}></div>
                 <div className="menus">
                     {menus.map((menu, index) => {
-                        return <NavHashLink smooth={true} key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{menu.name}</NavHashLink>
+                        return <NavHashLink smooth={true} key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{t(menu.name)}</NavHashLink>
                     })}
+                    <div className="language" style={{ width: "100px" }}>
+                        <div onClick={() => { i18n.changeLanguage(i18n.language == "ar" ? "en" : "ar") }}>{i18n.language}</div>
+                    </div>
                 </div>
+
             </div>
             <div className="mobile">
                 <div className={showMenu ? "mobileMenuLeft showMenu" : "mobileMenuLeft"}>

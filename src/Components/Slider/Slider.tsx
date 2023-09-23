@@ -6,25 +6,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next";
 
 export const SliderSimple = () => {
+    const { t } = useTranslation();
     const slider = [
         {
-            sliderText1: "SHOTCRETE MIX",
-            sliderText2: "Expertly Blended Raw Materials for Optimal Results",
-            sliderText3: "Vetted by Engineers ",
+            sliderText1: t("SHOTCRETE MIX"),
+            sliderText2: t("Slider1Text2"),
+            sliderText3: t("Slider1Text3"),
             productImage: shortCreteImg
         },
         {
-            sliderText1: "Plaster mix",
-            sliderText2: "The Perfect Strength-Smoothness Blend",
-            sliderText3: "Perfect for your needs",
+            sliderText1: t("SliderText21"),
+            sliderText2: t("SliderText22"),
+            sliderText3: t("SliderText23"),
             productImage: plasteringMix
         },
         {
-            sliderText1: "Piller Mix",
-            sliderText2: "Building Sturdy Pillars and Beams with Ease",
-            sliderText3: "Best for long lasting pillers",
+            sliderText1: t("SliderText31"),
+            sliderText2: t("SliderText32"),
+            sliderText3: t("SliderText33"),
             productImage: pillerMix
         }
     ]
@@ -85,7 +87,7 @@ export const SliderSimple = () => {
                             <div className="sliderText3">{slide.sliderText3}
                             </div>
                             <div className="btn1">
-                                <a href="#product" className="href">More Details</a>
+                                <a href="#product" className="href">{t("moreInfo")}</a>
                             </div>
                             {/* <div className="sliderIndicator"><FaCircle /> <FaCircle /> <FaCircle /></div> */}
                         </div>
