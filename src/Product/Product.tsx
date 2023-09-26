@@ -2,11 +2,12 @@ import "./Product.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { ProductDetails } from "../constant";
 import { FaArrowLeft } from "react-icons/fa";
+import { t } from "i18next";
 
 const Product = () => {
     let { productName } = useParams();
     const navigate = useNavigate();
-    let filteredProductDetails = ProductDetails.filter((product) => {
+    let filteredProductDetails = ProductDetails.filter((product: any) => {
         return product.name.replaceAll(" ", "_") == productName;
     })
     console.log(productName && productName.replaceAll(" ", "_"));
@@ -17,9 +18,9 @@ const Product = () => {
             <div className="backBtn"><FaArrowLeft onClick={() => { navigate(-1) }} /></div>
             <div className="productImage" style={{ backgroundImage: `url(${image})` }}></div>
             <div className="productInfo">
-                <div className="productName">{name}</div>
-                <div className="productDetails">{details}</div>
-                <div className="size">{size}</div>
+                <div className="productName">{t(name)}</div>
+                <div className="productDetails">{t(details)}</div>
+                <div className="size">{t(size)}</div>
             </div>
         </div>
     )

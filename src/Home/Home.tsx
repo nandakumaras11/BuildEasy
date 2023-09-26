@@ -119,39 +119,39 @@ function Advantages() {
   const advantages = [
     {
       name: "Faster constrution",
-      descriptiom: "BuildEasy Shotcrete introduces a faster construction methodology that revolutionizes the building industry.By leveraging the use of lightweight EPS sandwiched panels and advanced shotcreting techniques, this innovative approach accelerates construction timelines significantly.The lightweight panels enable easy handling and assembly, requiring fewer manpower resources and reducing construction time.Moreover, shotcreting with specialized machines & panels  expedites the concrete application process, eliminating the need for conventional formwork.The high - velocity projection of concrete ensures rapid placement, consolidation, and compaction, resulting in efficient construction without compromising on structural strength and durability.This speed and efficiency make BuildEasy Shotcrete ideal for various projects, from residential and commercial buildings to infrastructure and emergency constructions.Not only does BuildEasy Shotcrete deliver faster results, but it also offers excellent quality with strength.By shortening construction timelines, it reduces labor and overhead expenses, making it an attractive option for clients seeking efficient, reliable, and time - sensitive construction solutions.Embracing this faster construction methodology opens up new possibilities and paves the way for more streamlined and successful building projects."
+      descriptiom: t("FC_description")
     },
     {
       name: "Higher thermal insulation",
-      descriptiom: "BuildEasy Shotcrete offers an exceptional level of temperature insulation, thanks to its unique EPS sandwiched panels used in construction. These panels effectively limit the transfer of outside temperatures to the interior, providing a comfortable and stable atmosphere for occupants. By preventing external heat or cold from penetrating the structure, BuildEasy Shotcrete helps maintain the desired indoor temperature for an extended period. This impressive temperature insulation not only creates a comfortable environment for people inside but also significantly reduces the need for energy consumption in air conditioning devices. The energy-saving benefits make BuildEasy Shotcrete a sustainable and cost-effective solution for construction projects, promoting environmental consciousness and enhancing occupant comfort."
+      descriptiom: t("HT_description")
     },
     {
       name: "Excellent Acoustics",
-      descriptiom: "BuildEasy Shotcrete offers the significant advantage of huge energy savings in construction projects. The innovative construction method, with its precise temperature control and EPS sandwiched panels, contributes to the overall energy efficiency of the building. By limiting the transfer of external temperatures to the interior and maintaining a comfortable indoor environment, the need for excessive heating or cooling is minimized. This results in substantial reductions in energy consumption, leading to lower utility bills and a reduced carbon footprint. The combination of outstanding temperature insulation and energy-saving capabilities makes BuildEasy Shotcrete an eco-friendly and cost-effective choice for modern construction, aligning with sustainable building practices and promoting environmental stewardship."
+      descriptiom: t("EA_description")
     },
     {
       name: "Seismic Resistance",
-      descriptiom: "BuildEasy Shotcrete stands as an exceptional construction method renowned for its remarkable seismic resistance. In regions prone to earthquakes, the structural integrity of buildings becomes paramount. The application process of shotcrete ensures thorough and uniform distribution of concrete, resulting in a monolithic structure capable of withstanding seismic forces. The combination of high compressive strength, bonding properties, and steel reinforcement equips the shotcrete structure to flex and absorb seismic energy, minimizing damage during earthquakes. Its inherent ductility allows for controlled deformation without catastrophic failure, providing a reliable safeguard for occupants. With BuildEasy Shotcrete, structures gain the resilience needed to endure seismic events, offering peace of mind and protection for inhabitants, and reinforcing the confidence in constructing durable and robust buildings in seismically active areas."
+      descriptiom: t("SR_description")
     },
     {
       name: "Reduced Water absorption",
-      descriptiom: "BuildEasy Shotcrete presents a distinctive advantage with its reduced water absorption properties. The application process and the inherent characteristics of shotcrete contribute to its low porosity, limiting water infiltration into the structure. This reduced water absorption not only enhances the material's durability but also prevents potential issues such as cracking, corrosion of reinforcement, and degradation due to water-related damage. The ability of BuildEasy Shotcrete to resist water absorption makes it an ideal choice for a wide range of applications, including swimming pools, underground structures etc, where water tightness is crucial. The minimized water permeability ensures longevity and longevity of the structures, promoting sustainable and long-lasting construction solutions with BuildEasy Shotcrete."
+      descriptiom: t("RW_description")
     },
     {
       name: "Reduced structural weight",
-      descriptiom: "One of the notable advantages of BuildEasy Shotcrete is its ability to provide reduced structural weight in construction projects. The shotcrete application method allows for precise and controlled placement of concrete, resulting in a thin yet durable layer. The efficient use of materials reduces the overall weight of the structure without compromising its strength and integrity. Additionally, the incorporation of EPS sandwiched panels in BuildEasy Shotcrete further contributes to weight reduction while maintaining structural stability. The lighter weight of shotcrete structures not only eases the construction process but also offers benefits such as reduced foundation requirements and transportation costs. This advantage makes BuildEasy Shotcrete an attractive option for various applications, including building facades, architectural elements, and infrastructure projects, where the optimization of structural weight is essential."
+      descriptiom: t("RW_description")
     },
     {
       name: "Ease of Maintenance",
-      descriptiom: "BuildEasy Shotcrete offers the advantage of ease of maintenance, simplifying the upkeep and care of constructed structures. The durable and compacted shotcrete surface, along with the protective EPS sandwiched panels, reduces the need for frequent maintenance and repairs. The shotcreting process ensures a strong bond with most substrates, minimizing the likelihood of cracks or deterioration.Furthermore, the uniformity and homogeneity of shotcrete surfaces result in smoother finishes, making them easier to clean and maintain over time. Unlike other construction methods that may require extensive and costly maintenance, BuildEasy Shotcrete provides a low-maintenance solution that saves both time and resources.Incorporating BuildEasy Shotcrete in construction projects ensures buildings and infrastructure remain resilient and easily maintainable throughout their lifecycle, contributing to long-term cost savings and hassle-free maintenance for property owners and managers."
+      descriptiom: t("EM_description")
     },
     {
       name: "Increased Durability ",
-      descriptiom: "BuildEasy Shotcrete excels in providing increased durability, making it a preferred choice for long-lasting structures. The shotcreting process ensures a homogenous and compacted concrete placement, resulting in a robust and uniform structure that can withstand various environmental challenges. The excellent bonding properties of shotcrete create a strong bond with most substrates, enhancing the overall durability of the construction.The incorporation of EPS sandwiched panels further contributes to durability, as they protect the concrete from moisture ingress and reduce the risk of cracks and deterioration. The reduced water absorption characteristic of BuildEasy Shotcrete plays a crucial role in preventing potential damage due to chemical exposure.With its ability to resist wear and tear, weathering, and other adverse conditions, BuildEasy Shotcrete structures have an extended service life, reducing the need for frequent maintenance and repair. This enhanced durability ensures that buildings and infrastructure constructed using BuildEasy Shotcrete stand the test of time, providing reliable and resilient solutions for a wide range of construction projects."
+      descriptiom: t("ID_description")
     },
     {
       name: "Huge Energy savings",
-      descriptiom: "BuildEasy Shotcrete offers the significant advantage of huge energy savings in construction projects. The innovative construction method, with its precise temperature control and EPS sandwiched panels, contributes to the overall energy efficiency of the building. This results in substantial reductions in energy consumption, leading to lower utility bills and a reduced carbon footprint. The combination of outstanding temperature insulation and energy-saving capabilities makes BuildEasy Shotcrete an eco-friendly and cost-effective choice for modern construction, aligning with sustainable building practices and promoting environmental stewardship."
+      descriptiom: t("HE_description")
     }
     // {
     //   name: "Reduced wastage",
@@ -160,7 +160,7 @@ function Advantages() {
   ]
   return (<section className="advantages">
     <div className="productSubHead">{t("Buildeasy")}</div>
-    <div className="productHead">Shotcrete Advantages</div>
+    <div className="productHead">{t("Shotcrete Advantages")}</div>
     <div className="advantageRow">
       <div className="column2" style={{
         backgroundImage: `url(${shortcreteAdv})`
@@ -169,7 +169,7 @@ function Advantages() {
       <div className="column1" >
         {advantages.map((advantage, index) => {
           return <div key={index} className="advantageItem">
-            <div className="name" onClick={() => { activeItem == index ? setActiveItem(-1) : setActiveItem(index) }}>{advantage.name} <FaAngleDown /></div>
+            <div className="name" onClick={() => { activeItem == index ? setActiveItem(-1) : setActiveItem(index) }}>{t(advantage.name)} <FaAngleDown /></div>
             <div className={activeItem == index ? "description active" : "description nonActive"} ref={descriptionRef}
 
             >{advantage.descriptiom}</div>
@@ -185,8 +185,8 @@ function Advantages() {
 
 function HowItWorks() {
   return (<section className="howItWorksContainer">
-    <div className="productHead"> How it Works</div>
-    <div className="howItWorksDescription">A peek at the implementation process</div>
+    <div className="productHead"> {t("How it Works")}</div>
+    <div className="howItWorksDescription">{t("A peek at the implementation process")}</div>
     <div className="howItWorkItems">
       {howItWorks.map((item, index) => {
         return <div key={index} className="howItWorkItem" data-aos="zoom-out" data-aos-offset="700">
@@ -195,7 +195,7 @@ function HowItWorks() {
           <div className="img" style={{
             backgroundImage: `url(/images/${item.image})`
           }}></div>
-          <div className="name">{item.name}</div>
+          <div className="name">{t(item.name)}</div>
           {/* </div> */}
         </div>;
       })}
@@ -254,18 +254,18 @@ function SHortcreteMachine() {
 
 function BEProducts(props: any) {
   return (<section className="buildEasyProductsContainer" id="product">
-    <div className="productSubHead">  Buildeasy Product</div>
-    <div className="productHead">   Our BuildEasy Product</div>
+    <div className="productSubHead">  {t("Buildeasy Product")}</div>
+    <div className="productHead">   {t("Our BuildEasy Product")}</div>
     <div className="productFilter">
       <div className={props.productFilter == "all" ? "active filterBtn" : "filterBtn"} onClick={() => {
         props.setFilter("all");
-      }}>All</div>
+      }}>{t("All")}</div>
       <div className={props.productFilter == "shortcrete" ? "active filterBtn" : "filterBtn"} onClick={() => {
         props.setFilter("shortcrete");
-      }}>Shotcrete</div>
+      }}>{t("Shotcrete")}</div>
       <div className={props.productFilter == "dry" ? "active filterBtn" : "filterBtn"} onClick={() => {
         props.setFilter("dry");
-      }}>Dry Mix</div>
+      }}>{t("Dry Mix")}</div>
       {
         /* <div className="shotcreteBricks">Bricks</div> */
       }
@@ -291,9 +291,9 @@ function BEProducts(props: any) {
           <div className="productImg" style={{
             backgroundImage: `url(${product.image})`
           }} />
-          <div className="productName">{product.name}</div>
-          <div className="description">{product.description}</div>
-          <div className="size">{product.size.split(",").map((item: any) => {
+          <div className="productName">{t(product.name)}</div>
+          <div className="description">t{t(product.description)}</div>
+          <div className="size">{t(product.size).split(",").map((item: any) => {
             return <div>{item} </div>;
           })}</div>
         </motion.div>;
@@ -306,11 +306,10 @@ function BEProducts(props: any) {
 
 function Customers() {
   return (<section className="customer">
-    <div className="customerHead">Our Customers Deserve the Best</div>
-    <div className="customerCaption tJustify">Our advanced dry mix concrete solutions are the greenest in the industry since we reduce wastage and involve
-      optimal use of raw materials, which will retain their property even in extreme weather conditions.</div>
+    <div className="customerHead">{t('Our Customers Deserve the Best')}</div>
+    <div className="customerCaption tJustify">{t("customerDes")}</div>
     <img src="/images/qaq.png" data-aos="zoom-in" data-aos-offset="300" alt="process_img" className="process_img" />
-    <div className="QaQ" data-aos-offset="700">Our Unique <span>QaQ</span> Approach</div>
+    <div className="QaQ" data-aos-offset="700">{t("Our Unique")} <span>QaQ</span> {t("Approach")}</div>
   </section>);
 }
 
@@ -318,8 +317,8 @@ function Customers() {
 
 function HappyClients() {
   return (<section className="happyClientsContainer" data-aos="slide-up">
-    <div className="productSubHead">Buildeasy Client</div>
-    <div className="productHead">Our Happy Clients</div>
+    <div className="productSubHead">{t("Buildeasy Client")}</div>
+    <div className="productHead">{t("Our Happy Clients")}</div>
     <Testimonial />
   </section>);
 }
@@ -335,7 +334,7 @@ function ContactUs() {
       <div className="sectionHead">
         <FaHandshake color="white" /> Contact&nbsp;<span>Us</span>
       </div>
-      <div className="sectionMainHead gap">Get In Touch</div>
+      <div className="sectionMainHead gap">{t("Get In Touch")}</div>
 
       <h2 className="conatctUsSubHead bold">Our Locations</h2>
       <hr className="contactLine"></hr>
@@ -464,7 +463,7 @@ export const Home = () => {
     filteredProducts = ProductDetails;
   }
   else {
-    const _filteredProducts = ProductDetails.filter((product) => { return product.category == productFilter });
+    const _filteredProducts = ProductDetails.filter((product: any) => { return product.category == productFilter });
     filteredProducts = _filteredProducts;
   }
   return (
@@ -552,23 +551,23 @@ export const Testimonial = () => {
   const testimonials = [
     {
       clientImg: "tony.png",
-      user: { name: "Tony Supervisor", location: "Ernakulam" },
-      testimonial: "BuildEasy is very easy to use and build. We used to do 1-2 m3 per day. Now with the same team, we can do up to 5 m3, with ease."
+      user: { name: "Tony Supervisor", location: "" },
+      testimonial: "tm1"
     },
     {
       clientImg: "John.jpg",
-      user: { name: "John Aloshy", location: "Ernakulam" },
-      testimonial: "Huge savings in labor and work can be done quite fast. The most important 2 aspects of this product is, no wastage at all and can be stored very easily"
+      user: { name: "John Aloshy", location: "" },
+      testimonial: "tm2"
     },
     {
       clientImg: "chacko.jpg",
-      user: { name: "JArc T J Chacko", location: "Ernakulam" },
-      testimonial: "Although we were initially sceptical about using this new product, the idea of having a professionally measured Cement mix and ease of use really caught our attention. Once we used it and understood how much time it can save us, there was no going back to the traditional ways. We would highly recommend Build Easy cement mix to anyone looking for quality and consistency.                            "
+      user: { name: "JArc T J Chacko", location: "" },
+      testimonial: "tm3"
     },
     {
       clientImg: "denu.jpg",
       user: { name: "Adv. Denu Joseph", location: "Ernakulam" },
-      testimonial: "Our property is near the High Court of Kerala, which is a high-traffic area. This posed a difficulty for hiring skilled people to complete the job as well as storing the cement, and raw materials separately. Then I came to know about the team at BuildEasy for my problem. Just like their name, they had highly innovative solutions to our problem which helped to complete the project before time."
+      testimonial: "tm4"
     },
 
   ]
@@ -612,7 +611,7 @@ export const Testimonial = () => {
                 </div>
 
                 <div className="testimonial tJustify">
-                  {testimonial.testimonial}
+                  {t(testimonial.testimonial)}
                 </div>
                 <div className="quote"><FaQuoteRight /></div>
               </div>
