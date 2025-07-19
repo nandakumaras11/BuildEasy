@@ -19,9 +19,10 @@ import dryBg from "../assets/drybg.jpg";
 import shortcreteAdv from "../assets/shortcreteadv.png"
 import aboutImage from "../assets/aboutimage.jpg"
 import { ProductDetails, fasterStrongerSavings, howItWorks, productsProps, shotcretePanels } from "../constant";
-import { t } from "i18next";
-
+// import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 function ShotCreteAbout() {
+  const { t } = useTranslation();
   return (<div className="shortCreateBEAbout">
     <div className="aboutImage wm100" style={{
       backgroundImage: `url(${shortcretebg})`
@@ -40,6 +41,7 @@ function ShotCreteAbout() {
 // import aboutImage from "../assets/about.png"
 
 function About() {
+  const { t } = useTranslation();
   return (<section className="aboutContainer" id="about" data-aos="slide-up">
     <div className="aboutUsHead2">{t("About Us")}</div>
     <div className="aboutBE_Container">
@@ -54,15 +56,16 @@ function About() {
       }}></div>
       <div className="aboutRight tJustify">{t("aboutP1")}</div>
     </div>
+    <ShotCreteAbout />
     <DryProducts />
 
-    <ShotCreteAbout />
   </section>);
 }
 
 
 
 function ShortcreteProducts() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="shortcreteContentContent1 mt5">{t("Buildeasy")}</div>
@@ -93,6 +96,7 @@ function ShortcreteProducts() {
 
 
 function FasterStrongerSavings() {
+  const { t } = useTranslation();
   return (<section className="fasterStrongerSavingsContainer">
     {fasterStrongerSavings.map((item, index) => {
       return <div className="fasterStrongerSavingsItem" key={index}>
@@ -114,6 +118,7 @@ function FasterStrongerSavings() {
 
 
 function Advantages() {
+  const { t } = useTranslation();
   const [activeItem, setActiveItem] = useState(-1);
   const descriptionRef = useRef<HTMLDivElement | null>(null)
   const advantages = [
@@ -184,6 +189,7 @@ function Advantages() {
 
 
 function HowItWorks() {
+  const { t } = useTranslation();
   return (<section className="howItWorksContainer">
     <div className="productHead"> {t("How it Works")}</div>
     <div className="howItWorksDescription">{t("A peek at the implementation process")}</div>
@@ -206,6 +212,7 @@ function HowItWorks() {
 
 
 function ShortcretePanels() {
+  const { t } = useTranslation();
   return (<section className="shotcretePanelsContainer" data-aos-offset="500" data-aos="slide-up">
     <div className="shotcretePanelsLeft">
       <div className="shortcreteContentContent1">{t("Buildeasy")}</div>
@@ -237,6 +244,7 @@ function ShortcretePanels() {
 
 
 function SHortcreteMachine() {
+  const { t } = useTranslation();
   return (<section className="shortcreteMachineContainer" data-aos-offset="500" data-aos="slide-up">
     <div className="shortcreteMachineLeft" style={{
       backgroundImage: `url(${shotcreteMachine})`
@@ -253,6 +261,7 @@ function SHortcreteMachine() {
 
 
 function BEProducts(props: any) {
+  const { t } = useTranslation();
   return (<section className="buildEasyProductsContainer" id="product">
     <div className="productSubHead">  {t("Buildeasy Product")}</div>
     <div className="productHead">   {t("Our BuildEasy Product")}</div>
@@ -305,6 +314,7 @@ function BEProducts(props: any) {
 
 
 function Customers() {
+  const { t } = useTranslation();
   return (<section className="customer">
     <div className="customerHead">{t('Our Customers Deserve the Best')}</div>
     <div className="customerCaption tJustify">{t("customerDes")}</div>
@@ -316,6 +326,7 @@ function Customers() {
 
 
 function HappyClients() {
+  const { t } = useTranslation();
   return (<section className="happyClientsContainer" data-aos="slide-up">
     <div className="productSubHead">{t("Buildeasy Client")}</div>
     <div className="productHead">{t("Our Happy Clients")}</div>
@@ -326,6 +337,7 @@ function HappyClients() {
 
 
 function ContactUs() {
+  const { t } = useTranslation();
   return (<section className="contactUs" id="contact" data-aos="slide-up">
     <div className="contactUsLeft">
       <div className="map">
@@ -387,10 +399,11 @@ Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div> */}
           <div className="contactUsValues">
 
             <div className="linebreak subContents">Research and development</div>
-            <div className="linebreak subContents">Angamaly              6/38/BE, 1st floor, </div>
+            <div className="linebreak subContents">No. C.C 55/1854 K. P. Vallon Road.
+            </div>
             {/* <div className="linebreak subContents">koyikkakudiyil building
             </div> */}
-            <div className="linebreak subContents">Above SBI de Paul branch angamaly Kerala - 683589</div>
+            <div className="linebreak subContents">Kadavanthra P O  Ernakulam - 682020 Near Silver Line Hospital</div>
             <div className="linebreak subContents">       Contact no - +91 9645799933</div>
 
           </div>
@@ -438,6 +451,7 @@ Above SBI De Paul Branch, Angamaly, Kerala-683589.`}</div> */}
 
 
 function DryProducts() {
+  const { t } = useTranslation();
   return (
     <section className="dryProductContainer" data-aos-offset="500" data-aos="slide-up">
       <div className="aboutUsHead1">{t("BE Dry Ready to Mix")}</div>
@@ -512,6 +526,7 @@ export const ScrollToTopBtn = () => {
   )
 }
 export const SliderBottom = ({ cls }: classProps) => {
+  const { t } = useTranslation();
   const bottomItems = [
     {
       image: "bottomItem1.png",
@@ -548,6 +563,7 @@ export const SliderBottom = ({ cls }: classProps) => {
 }
 
 export const Testimonial = () => {
+  const { t } = useTranslation();
   const testimonials = [
     {
       clientImg: "tony.png",

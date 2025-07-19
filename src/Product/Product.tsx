@@ -2,9 +2,11 @@ import "./Product.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { ProductDetails } from "../constant";
 import { FaArrowLeft } from "react-icons/fa";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+// import { t } from "i18next";
 
 const Product = () => {
+    const { t } = useTranslation();
     let { productName } = useParams();
     const navigate = useNavigate();
     let filteredProductDetails = ProductDetails.filter((product: any) => {

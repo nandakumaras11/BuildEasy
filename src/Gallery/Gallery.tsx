@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./Gallery.css"
 const Gallery = () => {
     const gallery = [
@@ -20,6 +21,12 @@ const Gallery = () => {
         { url: "uA9cTD1fz2M" },
         { url: "nEh4ae12hfo" },
     ]
+    useEffect(() => {
+        fetch('http://localhost/buildeasy/public/api/gallery')
+            .then(res => res.json())
+            .then(data => console.log(data.data));
+    }, []);
+
     return (<>
         <div className="galleryContainer mt3">
             <div className="productSubHead">Buildeasy Gallery</div>

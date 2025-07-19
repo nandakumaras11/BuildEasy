@@ -5,10 +5,11 @@ import { NavHashLink } from 'react-router-hash-link';
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 // import i18next from "i18next";
-import { useEffect } from "react";
-import { t } from "i18next";
+
+// import { t } from "i18next";
+// const { t } = useTranslation();
 export const TopBar = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <div className="topBar">
             <div className="leftBar">
@@ -54,8 +55,8 @@ export default TopBar
 export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
     const navigate = useNavigate();
     // useEffect()
-    const { i18n } = useTranslation('home');
-
+    const { t, i18n } = useTranslation();
+    // console.log(i18n.language)
     return (
         <>
             <div className="menuBarContainer">
@@ -65,7 +66,7 @@ export const MenuBar = ({ handleShowMenu, showMenu }: any) => {
                         return <NavHashLink smooth={true} key={index} scroll={(el) => scrollWithOffset(el)} to={menu.to} className="menuItem" >{t(menu.name)}</NavHashLink>
                     })}
                     <div className="language" style={{ width: "100px" }}>
-                        <div onClick={() => { i18n.changeLanguage(i18n.language == "ar" ? "en" : "ar") }}>{i18n.language}</div>
+                        <div onClick={() => { i18n.changeLanguage(i18n.language == "ar" ? "en" : "ar") }}>{i18n.language == "ar" ? "English" : "Arabic"}</div>
                     </div>
                 </div>
 

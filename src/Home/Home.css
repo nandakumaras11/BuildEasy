@@ -72,7 +72,7 @@
 /* about */
 .aboutContainer {
     padding: var(--padding);
-    margin-top: 15%;
+    margin-top: 20em;
 
     .aboutBEText {
         color: var(--gray);
@@ -85,6 +85,7 @@
         /* flex-direction: column; */
         justify-content: space-between;
         align-items: center;
+        flex-direction: row-reverse;
         color: var(--gray);
 
         .aboutLeft {
@@ -913,8 +914,8 @@
         }
 
         div {
-            padding: 2% 0;
-            margin-top: 12%;
+            /* padding: 2% 0; */
+            /* margin-top: 12%; */
         }
 
     }
