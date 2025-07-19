@@ -1,30 +1,29 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Gallery.css"
 const Gallery = () => {
-    const gallery = [
-        { galleryText: "", image: 'gallery_img1.jpg' },
-        { galleryText: "", image: 'gallery_img2.jpg' },
-        { galleryText: "", image: 'gallery_img3.jpg' },
-        { galleryText: "", image: 'gallery_img4.jpg' },
-        { galleryText: "", image: 'gallery_img5.jpg' },
-        { galleryText: "", image: 'gallery_img6.jpg' },
-        { galleryText: "", image: 'gallery_img7.jpg' },
-        { galleryText: "", image: 'gallery_img8.jpg' },
-        { galleryText: "", image: 'gallery_img9.jpg' },
-        { galleryText: "", image: 'gallery_img10.jpg' },
-        { galleryText: "", image: 'gallery_img11.jpg' },
-        { galleryText: "", image: 'gallery_img12.jpg' },
-        { galleryText: "", image: 'gallery_img13.jpg' },
-    ]
-    const videos = [
-        { url: "7lUhSYh0154" },
-        { url: "uA9cTD1fz2M" },
-        { url: "nEh4ae12hfo" },
-    ]
+    const [gallery, setGallery] = useState([]);
+    const [videos, setVideos] = useState([]);
+    // const videos = [
+    //     { url: "7lUhSYh0154" },
+    //     { url: "uA9cTD1fz2M" },
+    //     { url: "nEh4ae12hfo" },
+    // ]
+
     useEffect(() => {
         fetch('http://localhost/buildeasy/public/api/gallery')
             .then(res => res.json())
-            .then(data => console.log(data.data));
+            .then(data => setGallery(data.data));
+
+        fetch('http://localhost/buildeasy/public/api/videos')
+            .then(res => res.json())
+            .then(data => data.data.map((video: any) => {
+                return {
+                    url: video.url.split('v=')[1].split('&')[0]
+                }
+            }))
+            .then(data => setVideos(data));
+
+
     }, []);
 
     return (<>
@@ -33,7 +32,7 @@ const Gallery = () => {
             <div className="productHead">Building with passion and precision</div>
             <div className="galleryImages mt3">
                 {gallery.map((galleryItem) => {
-                    return <div className="galleryItem" style={{ backgroundImage: `url("/images/gallery/${galleryItem.image}")` }}></div>
+                    return <div className="galleryItem" style={{ backgroundImage: `url("${import.meta.env.VITE_IMAGE_URL}${galleryItem.image}")` }}></div>
                 })}
             </div>
 
